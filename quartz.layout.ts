@@ -5,11 +5,22 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: "giscus",
+      options: {
+        repo: "redia90/redia90.github.io",
+        repoId: "R_kgDOSgrrFQ",
+        category: "Announcements",
+        categoryId: "DIC_kwDOSgrrFc4C9ZQo",
+        mapping: "pathname",
+        lang: "ko",
+      },
+    }),
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/redia90/redia90.github.io",
     },
   }),
 }
