@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.Comments({
       provider: "disqus",
       options: {
-        // https://disqus.com/admin/create/ 에서 사이트 생성 후 shortname을 맞추거나 여기 값을 변경하세요.
+        // Disqus 관리자에서 만든 사이트 shortname과 동일해야 합니다.
         shortname: "redia90-github-io",
         language: "ko",
       },
