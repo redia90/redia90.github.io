@@ -3,8 +3,14 @@ title: HER2 표적치료
 category: treatment
 tags: [HER2, 허셉틴, 트라스투주맙, 퍼투주맙, T-DM1, T-DXd, 표적치료]
 created: 2026-04-24
-last_updated: 2026-04-24
-sources: []
+last_updated: 2026-05-20
+sources:
+  - "한원식. 유방암 진단을 받았다면 꼭 알아야 할 것들. 의학채널 비온뒤. 2024-01-30. https://youtu.be/e6xr1NpsXXU"
+  - "심성훈. 유방암이라고 다 똑같은 유방암이 아니다?! 국립암센터. 2025-07-04. https://youtu.be/hXWvtk0HTr8"
+  - "Threads @junetapa. #암_유방암_자세히알자. 2026-01-10. https://www.threads.com/@junetapa/post/DTVE5Xaj5x_"
+  - "Modi S, et al. DESTINY-Breast04. NEJM. 2022;387:9-20."
+  - "한원식. 유방암 치료 트렌드 2026. 의학채널 비온뒤 신년특집. 2026-01-01. https://youtu.be/qjA2HmEGDkM"
+  - "네이버 카페 '유방암이야기' — 관련 기사 TOP50 (Notion 큐레이션). 2026-05-20. https://www.notion.so/366bae8c4f598196a25de9f3fd323c7d"
 confidence: high
 ---
 
@@ -47,7 +53,9 @@ HER2(Human Epidermal Growth Factor Receptor 2) 과발현 유방암은 전체의 
 
 ### 라파티닙 / 투카티닙 / 네라티닙 (소분자 TKI)
 - 뇌전이 HER2+ 유방암에 특히 유용 (뇌혈관장벽 통과)
-- [[투카티닙]]+트라스투주맙+카페시타빈: HER-SUR 연구에서 뇌전이 환자 OS 개선
+- 투카티닙+트라스투주맙+카페시타빈: HER2CLIMB 연구에서 뇌전이 환자 OS 개선
+- **2026 국내 시판 허가** 완료 (#722405) — HER2 양성 재발·전이, 특히 뇌전이 동반 환자에게 옵션 추가
+- 엔허투 (건강보험 적용 — #747502)
 
 ## 조기 HER2+ 신보조화학요법: TCHP
 
@@ -107,6 +115,10 @@ HER2(Human Epidermal Growth Factor Receptor 2) 과발현 유방암은 전체의 
 - [[신보조화학요법]] — TCHP 레지멘, 엔허투 신보조 확장
 - [[유방암치료트렌드2026]] — ADC 조기 유방암 확장 트렌드
 - [[면역조직화학검사(IHC)]] — HER2 판정 방법
+- [[유방암신약파이프라인2026]] — 투카티닙 국내 허가, 엔허투 급여, HER2 백신 임상
+- [[전이경고신호]] — 뇌전이 시 투카티닙 검토
+- [[장기생존_4기경험담]] — HER2 양성 4기 휴약 사례
+- [[TCHP항암_요양병원케이스]] — TCHP 6회 항암 실제 케이스
 
 ## 미해결 질문 / 연구 방향
 > 💡 엔허투 신보조요법 — 조기 HER2+ 대상 최적 용법·기간 확립
@@ -127,3 +139,4 @@ HER2(Human Epidermal Growth Factor Receptor 2) 과발현 유방암은 전체의 
 - 2026-04-26: 부작용 프로파일 추가 (국립암센터 심성훈 강의)
 - 2026-04-26: HER2-low/ultralow DESTINY-Breast04 수치, ILD 발생률, 판독 일치도, 재검사 필요성, 생존율 개선 추가 (Threads @junetapa)
 - 2026-04-27: 엔허투 신보조요법 2025 결과 추가 (비온뒤 2026 신년특집)
+- 2026-05-20: Notion 관련 기사 TOP50 — 투카티닙 국내 시판 허가(#722405), 엔허투 건강보험 적용(#747502), 유방암 백신 임상(메이요·워싱턴대) 반영; [[유방암신약파이프라인2026]]·[[전이경고신호]]·[[장기생존_4기경험담]] 링크

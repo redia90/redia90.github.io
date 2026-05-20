@@ -3,11 +3,12 @@ title: HER2-low 유방암 치료 — ADC 혁명
 category: treatment
 tags: [HER2low, ADC, 엔허투, DESTINY-Breast04, 항체약물접합체, 전이성유방암, ILD, 간질성폐렴]
 created: 2026-04-26
-last_updated: 2026-04-27
+last_updated: 2026-05-20
 sources:
   - "Threads @junetapa. #암_유방암_자세히알자. HER2-low와 ADC 혁명. 2026-01-10 (추정). https://www.threads.com/@junetapa/post/DTVE5Xaj5x_"
   - "Modi S et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. NEJM. 2022;387:9-20. (DESTINY-Breast04)"
   - "한원식. 유방암 치료 트렌드 2026. 의학채널 비온뒤 신년특집. 2026-01-01. https://youtu.be/qjA2HmEGDkM"
+  - "네이버 카페 '유방암이야기' — 관련 기사 TOP50 (Notion). 2026-05-20. https://www.notion.so/366bae8c4f598196a25de9f3fd323c7d"
 confidence: medium
 ---
 
@@ -138,3 +139,4 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 ## 업데이트 히스토리
 - 2026-04-26: threads @junetapa 포스트 + DESTINY-Breast04 논문 기반 신규 생성
 - 2026-04-27: 2025 신보조요법 확장 결과, [[유방암치료트렌드2026]] 링크 추가
+- 2026-05-20: 엔허투 국내 건강보험 적용(#747502, 카페 기사 TOP50) 반영, [[유방암신약파이프라인2026]] 연결
