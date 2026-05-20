@@ -7,14 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.Comments({
-      provider: "giscus",
+      provider: "disqus",
       options: {
-        repo: "redia90/redia90.github.io",
-        repoId: "R_kgDOSgrrFQ",
-        category: "Announcements",
-        categoryId: "DIC_kwDOSgrrFc4C9ZQo",
-        mapping: "pathname",
-        lang: "ko",
+        // https://disqus.com/admin/create/ 에서 사이트 생성 후 shortname을 맞추거나 여기 값을 변경하세요.
+        shortname: "redia90-github-io",
+        language: "ko",
       },
     }),
   ],

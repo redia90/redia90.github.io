@@ -1,3 +1,80 @@
+type GiscusElement = Omit<HTMLElement, "dataset"> & {
+  dataset: DOMStringMap & {
+    repo: `${string}/${string}`
+    repoId: string
+    category: string
+    categoryId: string
+    themeUrl: string
+    lightTheme: string
+    darkTheme: string
+    mapping: "url" | "title" | "og:title" | "specific" | "number" | "pathname"
+    strict: string
+    reactionsEnabled: string
+    inputPosition: "top" | "bottom"
+    lang: string
+  }
+}
+
+type DisqusHost = HTMLElement & {
+  dataset: DOMStringMap & {
+    shortname: string
+    pageId: string
+    pageUrl: string
+    pageTitle: string
+    language?: string
+  }
+}
+
+/** Disqus `this` in disqus_config / reset callbacks */
+interface DisqusConfigThis {
+  page: { url: string; identifier: string; title: string }
+  language?: string
+}
+
+function loadDisqus(host: DisqusHost) {
+  const shortname = host.dataset.shortname
+  const identifier = host.dataset.pageId
+  const url = host.dataset.pageUrl
+  const title = host.dataset.pageTitle || document.title
+  const language = host.dataset.language
+
+  if (!shortname || !identifier || !url) {
+    return
+  }
+
+  const w = window as unknown as {
+    DISQUS?: { reset: (opts: { reload: boolean; config: () => void }) => void }
+    disqus_config?: () => void
+  }
+
+  const applyPage = function (this: DisqusConfigThis) {
+    this.page.url = url
+    this.page.identifier = identifier
+    this.page.title = title
+    if (language) {
+      this.language = language
+    }
+  }
+
+  if (w.DISQUS) {
+    w.DISQUS.reset({
+      reload: true,
+      config: function () {
+        applyPage.call(this as unknown as DisqusConfigThis)
+      },
+    })
+  } else {
+    w.disqus_config = function () {
+      applyPage.call(this as unknown as DisqusConfigThis)
+    }
+    const s = document.createElement("script")
+    s.src = `https://${shortname}.disqus.com/embed.js`
+    s.async = true
+    s.setAttribute("data-timestamp", Date.now().toString())
+    document.body.appendChild(s)
+  }
+}
+
 const changeTheme = (e: CustomEventMap["themechange"]) => {
   const theme = e.detail.theme
   const iframe = document.querySelector("iframe.giscus-frame") as HTMLIFrameElement
@@ -42,24 +119,13 @@ const getThemeUrl = (theme: string) => {
   return `${giscusContainer.dataset.themeUrl ?? "https://giscus.app/themes"}/${theme}.css`
 }
 
-type GiscusElement = Omit<HTMLElement, "dataset"> & {
-  dataset: DOMStringMap & {
-    repo: `${string}/${string}`
-    repoId: string
-    category: string
-    categoryId: string
-    themeUrl: string
-    lightTheme: string
-    darkTheme: string
-    mapping: "url" | "title" | "og:title" | "specific" | "number" | "pathname"
-    strict: string
-    reactionsEnabled: string
-    inputPosition: "top" | "bottom"
-    lang: string
-  }
-}
-
 document.addEventListener("nav", () => {
+  const disqusHost = document.querySelector(".quartz-comments-disqus") as DisqusHost | null
+  if (disqusHost) {
+    loadDisqus(disqusHost)
+    return
+  }
+
   const giscusContainer = document.querySelector(".giscus") as GiscusElement
   if (!giscusContainer) {
     return
