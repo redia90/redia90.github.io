@@ -1,14 +1,23 @@
-interface KVListResult {
-  keys: { name: string }[]
-  list_complete: boolean
-  cursor?: string
+interface DurableObjectId {}
+
+interface DurableObjectStub {
+  fetch(request: Request): Promise<Response>
 }
 
-interface KVNamespace {
-  get(key: string): Promise<string | null>
-  put(key: string, value: string): Promise<void>
-  delete(key: string): Promise<void>
-  list(options?: { prefix?: string; cursor?: string }): Promise<KVListResult>
+interface DurableObjectNamespace {
+  idFromName(name: string): DurableObjectId
+  get(id: DurableObjectId): DurableObjectStub
+}
+
+interface DurableObjectStorage {
+  get<T>(key: string): Promise<T | undefined>
+  put<T>(key: string, value: T): Promise<void>
+  delete(key: string): Promise<boolean>
+  list<T>(options?: { prefix?: string }): Promise<Map<string, T>>
+}
+
+interface DurableObjectState {
+  storage: DurableObjectStorage
 }
 
 interface StaticAssetsBinding {
@@ -17,7 +26,7 @@ interface StaticAssetsBinding {
 
 interface Env {
   ASSETS: StaticAssetsBinding
-  PUSH_SUBSCRIPTIONS?: KVNamespace
+  PUSH_SUBSCRIPTIONS: DurableObjectNamespace
   VAPID_PUBLIC_KEY?: string
   VAPID_PRIVATE_JWK?: string
   PUSH_NOTIFY_SECRET?: string
@@ -159,121 +168,121 @@ async function sendPush(env: Env, subscription: PushSubscriptionJSON): Promise<R
   })
 }
 
-async function listSubscriptionKeys(kv: KVNamespace): Promise<string[]> {
-  const keys: string[] = []
-  let cursor: string | undefined
+export class PushSubscriptions {
+  constructor(
+    private readonly state: DurableObjectState,
+    private readonly env: Env,
+  ) {}
 
-  do {
-    const result = await kv.list({ prefix: SUBSCRIPTION_PREFIX, cursor })
-    keys.push(...result.keys.map((key) => key.name))
-    cursor = result.list_complete ? undefined : result.cursor
-  } while (cursor)
+  async fetch(request: Request): Promise<Response> {
+    const url = new URL(request.url)
 
-  return keys
-}
+    if (url.pathname === "/api/push/public-key" && request.method === "GET") {
+      return this.env.VAPID_PUBLIC_KEY
+        ? jsonResponse({ publicKey: this.env.VAPID_PUBLIC_KEY })
+        : jsonResponse({ ok: false, error: "Push key is not configured" }, { status: 503 })
+    }
 
-async function handleSubscribe(request: Request, env: Env): Promise<Response> {
-  if (!env.PUSH_SUBSCRIPTIONS) {
-    return jsonResponse({ ok: false, error: "Push storage is not configured" }, { status: 503 })
+    if (url.pathname === "/api/push/subscribe" && request.method === "POST") {
+      return this.handleSubscribe(request)
+    }
+
+    if (url.pathname === "/api/push/unsubscribe" && request.method === "POST") {
+      return this.handleUnsubscribe(request)
+    }
+
+    if (url.pathname === "/api/push/latest" && request.method === "GET") {
+      return this.handleLatest()
+    }
+
+    if (url.pathname === "/api/push/notify" && request.method === "POST") {
+      return this.handleNotify(request)
+    }
+
+    return jsonResponse({ ok: false, error: "Not found" }, { status: 404 })
   }
 
-  const subscription = await readJson<PushSubscriptionJSON>(request)
-  if (!validateSubscription(subscription)) {
-    return jsonResponse({ ok: false, error: "Invalid push subscription" }, { status: 400 })
+  private async handleSubscribe(request: Request): Promise<Response> {
+    const subscription = await readJson<PushSubscriptionJSON>(request)
+    if (!validateSubscription(subscription)) {
+      return jsonResponse({ ok: false, error: "Invalid push subscription" }, { status: 400 })
+    }
+
+    await this.state.storage.put(
+      await subscriptionStorageKey(subscription.endpoint),
+      JSON.stringify(subscription),
+    )
+    return jsonResponse({ ok: true })
   }
 
-  const key = await subscriptionStorageKey(subscription.endpoint)
-  await env.PUSH_SUBSCRIPTIONS.put(key, JSON.stringify(subscription))
-  return jsonResponse({ ok: true })
-}
+  private async handleUnsubscribe(request: Request): Promise<Response> {
+    const subscription = await readJson<PushSubscriptionJSON>(request)
+    if (typeof subscription?.endpoint !== "string") {
+      return jsonResponse({ ok: false, error: "Invalid push subscription" }, { status: 400 })
+    }
 
-async function handleUnsubscribe(request: Request, env: Env): Promise<Response> {
-  if (!env.PUSH_SUBSCRIPTIONS) {
-    return jsonResponse({ ok: false, error: "Push storage is not configured" }, { status: 503 })
+    await this.state.storage.delete(await subscriptionStorageKey(subscription.endpoint))
+    return jsonResponse({ ok: true })
   }
 
-  const subscription = await readJson<PushSubscriptionJSON>(request)
-  if (typeof subscription?.endpoint !== "string") {
-    return jsonResponse({ ok: false, error: "Invalid push subscription" }, { status: 400 })
+  private async handleLatest(): Promise<Response> {
+    const notification =
+      (await this.state.storage.get<Required<PushNotificationPayload> & { updatedAt?: string }>(
+        LATEST_NOTIFICATION_KEY,
+      )) ?? DEFAULT_NOTIFICATION
+
+    return jsonResponse(notification)
   }
 
-  await env.PUSH_SUBSCRIPTIONS.delete(await subscriptionStorageKey(subscription.endpoint))
-  return jsonResponse({ ok: true })
-}
+  private async handleNotify(request: Request): Promise<Response> {
+    const token = request.headers.get("Authorization")?.replace(/^Bearer\s+/i, "")
+    if (!this.env.PUSH_NOTIFY_SECRET || token !== this.env.PUSH_NOTIFY_SECRET) {
+      return jsonResponse({ ok: false, error: "Unauthorized" }, { status: 401 })
+    }
 
-async function handleNotify(request: Request, env: Env): Promise<Response> {
-  if (!env.PUSH_SUBSCRIPTIONS) {
-    return jsonResponse({ ok: false, error: "Push storage is not configured" }, { status: 503 })
-  }
+    const notification = safeNotificationPayload(
+      (await readJson<PushNotificationPayload>(request)) ?? {},
+    )
+    await this.state.storage.put(LATEST_NOTIFICATION_KEY, {
+      ...notification,
+      updatedAt: new Date().toISOString(),
+    })
 
-  const token = request.headers.get("Authorization")?.replace(/^Bearer\s+/i, "")
-  if (!env.PUSH_NOTIFY_SECRET || token !== env.PUSH_NOTIFY_SECRET) {
-    return jsonResponse({ ok: false, error: "Unauthorized" }, { status: 401 })
-  }
+    let sent = 0
+    let expired = 0
+    let failed = 0
+    const subscriptions = await this.state.storage.list<string>({ prefix: SUBSCRIPTION_PREFIX })
 
-  const notification = safeNotificationPayload(
-    (await readJson<PushNotificationPayload>(request)) ?? {},
-  )
-  await env.PUSH_SUBSCRIPTIONS.put(
-    LATEST_NOTIFICATION_KEY,
-    JSON.stringify({ ...notification, updatedAt: new Date().toISOString() }),
-  )
-
-  let sent = 0
-  let expired = 0
-  let failed = 0
-
-  for (const key of await listSubscriptionKeys(env.PUSH_SUBSCRIPTIONS)) {
-    const rawSubscription = await env.PUSH_SUBSCRIPTIONS.get(key)
-    if (!rawSubscription) continue
-
-    try {
-      const response = await sendPush(env, JSON.parse(rawSubscription) as PushSubscriptionJSON)
-      if (response.status === 404 || response.status === 410) {
-        expired += 1
-        await env.PUSH_SUBSCRIPTIONS.delete(key)
-      } else if (response.ok) {
-        sent += 1
-      } else {
+    for (const [key, rawSubscription] of subscriptions) {
+      try {
+        const response = await sendPush(
+          this.env,
+          JSON.parse(rawSubscription) as PushSubscriptionJSON,
+        )
+        if (response.status === 404 || response.status === 410) {
+          expired += 1
+          await this.state.storage.delete(key)
+        } else if (response.ok) {
+          sent += 1
+        } else {
+          failed += 1
+        }
+      } catch {
         failed += 1
       }
-    } catch {
-      failed += 1
     }
+
+    return jsonResponse({ ok: true, sent, expired, failed })
   }
-
-  return jsonResponse({ ok: true, sent, expired, failed })
-}
-
-async function handleLatest(env: Env): Promise<Response> {
-  const rawNotification = await env.PUSH_SUBSCRIPTIONS?.get(LATEST_NOTIFICATION_KEY)
-  return jsonResponse(rawNotification ? JSON.parse(rawNotification) : DEFAULT_NOTIFICATION)
 }
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url)
 
-    if (url.pathname === "/api/push/public-key" && request.method === "GET") {
-      return env.VAPID_PUBLIC_KEY
-        ? jsonResponse({ publicKey: env.VAPID_PUBLIC_KEY })
-        : jsonResponse({ ok: false, error: "Push key is not configured" }, { status: 503 })
-    }
-
-    if (url.pathname === "/api/push/subscribe" && request.method === "POST") {
-      return handleSubscribe(request, env)
-    }
-
-    if (url.pathname === "/api/push/unsubscribe" && request.method === "POST") {
-      return handleUnsubscribe(request, env)
-    }
-
-    if (url.pathname === "/api/push/latest" && request.method === "GET") {
-      return handleLatest(env)
-    }
-
-    if (url.pathname === "/api/push/notify" && request.method === "POST") {
-      return handleNotify(request, env)
+    if (url.pathname.startsWith("/api/push/")) {
+      const id = env.PUSH_SUBSCRIPTIONS.idFromName("global")
+      return env.PUSH_SUBSCRIPTIONS.get(id).fetch(request)
     }
 
     return env.ASSETS.fetch(request)
