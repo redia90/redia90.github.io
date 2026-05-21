@@ -12,7 +12,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
         <svg
           class="site-logo"
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 56 56"
+          viewBox="0 0 96 32"
           role="img"
           aria-hidden="true"
           focusable="false"
@@ -20,10 +20,10 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
           <defs>
             <linearGradient
               id="siteLogoRibbon"
-              x1="24"
-              y1="8"
-              x2="42"
-              y2="45"
+              x1="28"
+              y1="2"
+              x2="68"
+              y2="31"
               gradientUnits="userSpaceOnUse"
             >
               <stop offset="0" stop-color="#f073a6" />
@@ -32,29 +32,19 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
             </linearGradient>
           </defs>
           <g class="site-logo-symbol">
-            <rect
-              x="1.5"
-              y="1.5"
-              width="53"
-              height="53"
-              rx="15"
-              fill="#fff7fb"
-              stroke="#ead7df"
-              stroke-width="3"
-            />
             <path
-              d="M24 9c8 5 12 12 12 21 0 8-5 16-14 24l-9-10c8-7 12-12 12-17 0-4-3-8-8-11l7-7Z"
+              d="M38 2c10 5 15 12 15 21 0 3-1 6-3 9l-11-4c2-3 3-6 2-9-1-4-5-8-13-12l10-5Z"
               fill="url(#siteLogoRibbon)"
             />
             <path
-              d="M32 9c-8 5-12 12-12 21 0 8 5 16 14 24l9-10c-8-7-12-12-12-17 0-4 3-8 8-11l-7-7Z"
+              d="M58 2c-10 5-15 12-15 21 0 3 1 6 3 9l11-4c-2-3-3-6-2-9 1-4 5-8 13-12l-10-5Z"
               fill="url(#siteLogoRibbon)"
             />
             <path
-              d="M20 18c4 3 7 7 8 11 1-4 4-8 8-11"
+              d="M35 9c6 3 10 7 13 12 3-5 7-9 13-12"
               fill="none"
               stroke="#fff7fb"
-              stroke-width="5"
+              stroke-width="4"
               stroke-linecap="round"
               opacity="0.78"
             />
@@ -77,10 +67,11 @@ PageTitle.css = `
 
 .page-title .site-logo-link {
   display: inline-flex;
-  width: 3.5rem;
+  width: 5rem;
   color: var(--dark);
   background-color: transparent;
   border-radius: 8px;
+  line-height: 0;
 }
 
 .page-title .site-logo-link:hover {
@@ -95,7 +86,7 @@ PageTitle.css = `
 
 @media all and (max-width: 800px) {
   .page-title .site-logo-link {
-    width: 3rem;
+    width: 4.25rem;
   }
 }
 `
