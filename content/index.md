@@ -1,5 +1,6 @@
 ---
 title: 유방암 위키
+socialImage: og-image.png
 ---
 
 공개하는 유방암 관련 학습·치료 정보 노트입니다.
