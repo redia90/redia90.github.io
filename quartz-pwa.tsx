@@ -3,7 +3,8 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v2"
+const CACHE_VERSION = "v3"
+const APP_ORIGIN = "https://wiki.breast-cancer.workers.dev"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
 
@@ -65,14 +66,16 @@ export const PWA: QuartzEmitterPlugin = () => ({
     const { pageTitle, theme } = ctx.cfg.configuration
     const manifest = {
       name: pageTitle,
-      short_name: pageTitle,
+      short_name: "유방암위키",
       description: "유방암 관련 학습·치료 정보 노트",
-      start_url: "/",
-      scope: "/",
+      id: `${APP_ORIGIN}/`,
+      start_url: `${APP_ORIGIN}/?source=pwa`,
+      scope: `${APP_ORIGIN}/`,
       display: "standalone",
       background_color: theme.colors.lightMode.light,
       theme_color: theme.colors.lightMode.secondary,
       lang: "ko-KR",
+      categories: ["health", "medical", "education"],
       icons: [
         {
           src: "/static/icon.png",
