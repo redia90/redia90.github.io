@@ -120,6 +120,88 @@ self.addEventListener("notificationclick", (event) => {
 const pushRegistrationScript = `
   (function () {
     const buttonId = "pwa-push-subscribe-button";
+    const styleId = "pwa-push-subscribe-style";
+
+    function bellIcon() {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 21a2 2 0 0 0 3.4 0"/><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>';
+    }
+
+    function renderButton(button, label, state) {
+      button.dataset.state = state || "idle";
+      button.innerHTML = '<span class="pwa-push-icon">' + bellIcon() + '</span><span>' + label + '</span>';
+    }
+
+    function ensureButtonStyle() {
+      if (document.getElementById(styleId)) return;
+
+      const style = document.createElement("style");
+      style.id = styleId;
+      style.textContent = \`
+        #pwa-push-subscribe-button {
+          position: fixed;
+          right: 1.25rem;
+          bottom: calc(3.25rem + env(safe-area-inset-bottom, 0px));
+          z-index: 999;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.55rem;
+          min-height: 2.75rem;
+          border: 1px solid rgba(216, 72, 118, 0.2);
+          border-radius: 999px;
+          padding: 0.68rem 0.95rem 0.68rem 0.72rem;
+          background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(250, 248, 248, 0.88)),
+            var(--light);
+          color: var(--secondary);
+          box-shadow: 0 12px 34px rgba(40, 75, 99, 0.18), 0 2px 8px rgba(216, 72, 118, 0.1);
+          font: inherit;
+          font-size: 0.95rem;
+          font-weight: 700;
+          line-height: 1;
+          cursor: pointer;
+          backdrop-filter: blur(12px);
+          transition:
+            transform 160ms ease,
+            box-shadow 160ms ease,
+            border-color 160ms ease;
+        }
+
+        #pwa-push-subscribe-button:hover {
+          transform: translateY(-2px);
+          border-color: rgba(216, 72, 118, 0.36);
+          box-shadow: 0 16px 42px rgba(40, 75, 99, 0.22), 0 3px 12px rgba(216, 72, 118, 0.14);
+        }
+
+        #pwa-push-subscribe-button:disabled {
+          cursor: wait;
+          opacity: 0.78;
+        }
+
+        #pwa-push-subscribe-button .pwa-push-icon {
+          display: inline-grid;
+          width: 1.95rem;
+          height: 1.95rem;
+          place-items: center;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #e8799d, #84a59d);
+          color: white;
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+        }
+
+        #pwa-push-subscribe-button[data-state="success"] .pwa-push-icon {
+          background: linear-gradient(135deg, #84a59d, #4b8f8c);
+        }
+
+        @media (max-width: 700px) {
+          #pwa-push-subscribe-button {
+            right: 1rem;
+            bottom: calc(4.25rem + env(safe-area-inset-bottom, 0px));
+            font-size: 0.9rem;
+          }
+        }
+      \`;
+      document.head.appendChild(style);
+    }
 
     function base64UrlToUint8Array(value) {
       const padding = "=".repeat((4 - (value.length % 4)) % 4);
@@ -181,36 +263,29 @@ const pushRegistrationScript = `
         return;
       }
 
+      ensureButtonStyle();
+
       const button = document.createElement("button");
       button.id = buttonId;
       button.type = "button";
-      button.textContent = "새 글 알림";
       button.setAttribute("aria-label", "새 글 알림 받기");
-      button.style.position = "fixed";
-      button.style.right = "1rem";
-      button.style.bottom = "1rem";
-      button.style.zIndex = "999";
-      button.style.border = "1px solid rgba(40, 75, 99, 0.18)";
-      button.style.borderRadius = "999px";
-      button.style.padding = "0.65rem 0.9rem";
-      button.style.background = "var(--light)";
-      button.style.color = "var(--secondary)";
-      button.style.boxShadow = "0 6px 24px rgba(0, 0, 0, 0.12)";
-      button.style.font = "inherit";
-      button.style.fontWeight = "600";
-      button.style.cursor = "pointer";
+      renderButton(button, "새 글 알림", "idle");
 
       button.addEventListener("click", async () => {
         button.disabled = true;
-        button.textContent = "설정 중";
+        renderButton(button, "설정 중", "pending");
 
         try {
           await subscribeToPush();
-          button.textContent = Notification.permission === "granted" ? "알림 켜짐" : "알림 차단됨";
+          renderButton(
+            button,
+            Notification.permission === "granted" ? "알림 켜짐" : "알림 차단됨",
+            Notification.permission === "granted" ? "success" : "idle",
+          );
           window.setTimeout(() => button.remove(), 1400);
         } catch {
           button.disabled = false;
-          button.textContent = "새 글 알림";
+          renderButton(button, "새 글 알림", "idle");
         }
       });
 
