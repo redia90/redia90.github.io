@@ -140,3 +140,4 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 - 2026-04-26: threads @junetapa 포스트 + DESTINY-Breast04 논문 기반 신규 생성
 - 2026-04-27: 2025 신보조요법 확장 결과, [[유방암치료트렌드2026]] 링크 추가
 - 2026-05-20: 엔허투 국내 건강보험 적용(#747502, 카페 기사 TOP50) 반영, [[유방암신약파이프라인2026]] 연결
+- 2026-05-21: DESTINY-Breast08 phase Ib (T-DXd + capecitabine/capivasertib/anastrozole/fulvestrant 병합, ORR 40~71%·grade 3+ AE 47~67%) 인용; [[2026임상연구업데이트]] 링크

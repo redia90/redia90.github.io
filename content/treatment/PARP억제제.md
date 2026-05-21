@@ -3,9 +3,15 @@ title: PARP 억제제
 category: treatment
 tags: [PARP억제제, 올라파립, 탈라조파립, 니라파립, BRCA, 상동재조합, 합성치사, 린파자, 탈젠나]
 created: 2026-04-27
-last_updated: 2026-04-27
+last_updated: 2026-05-21
 sources:
   - "장하균, 임명철. 난소암 재발을 막아주는 먹는 치료제 - PARP 억제제. 의학채널 비온뒤. 2021-11-22. https://www.youtube.com/watch?v=eY4J7686UI8"
+  - "Robson M et al. OlympiAD. NEJM. 2017;377:523-533."
+  - "Litton JK et al. EMBRACA. NEJM. 2018;379:753-763."
+  - "Tutt ANJ et al. OlympiA (조기 보조요법). NEJM. 2021;384:2394-2405."
+  - "Geyer CE Jr et al. OlympiA long-term follow-up. Annals of Oncology. 2022."
+  - "Tung NM et al. TBCRC 048 — sBRCA·PALB2. JCO. 2020;38:4274-4282."
+  - "Coleman RL et al. ARIEL3 — Rucaparib in ovarian cancer. Lancet. 2017."
 confidence: high
 ---
 
@@ -57,27 +63,73 @@ PARP 억제제가 효과 있는 세포:
 | **올라파립** | 린파자(Lynparza) | OlympiAD 연구 | gBRCA1/2 변이, HER2- 전이성 유방암 |
 | **탈라조파립** | 탈젠나(Talzenna) | EMBRACA 연구 | gBRCA1/2 변이, 전이성 유방암 |
 
-**OlympiAD 연구 (올라파립)**:
-- gBRCA 변이 HER2- 전이성 유방암에서 화학요법 대비 PFS 개선
-- ER+/HER2-, TNBC 모두 포함
+### 핵심 임상시험 데이터
 
-**EMBRACA 연구 (탈라조파립)**:
-- gBRCA 변이 전이성 유방암에서 화학요법 대비 PFS 7.8개월 vs 5.7개월
+#### OlympiAD (NEJM 2017) — 올라파립 전이성
+- **대상**: gBRCA 변이, HER2- 전이성 유방암 (ER+ 또는 TNBC), 이전 항암 ≤2회
+- **결과**:
+  - **PFS**: 올라파립 **7.0개월** vs 화학요법 4.2개월 (HR 0.58)
+  - **ORR**: 60% vs 29%
+  - **삶의 질**: 올라파립 유의 우위
+- **임상적 함의**: 전이성 BRCA 변이 환자에서 화학요법 대안
 
-**사용 시점**:
-- 전이성 유방암에서 화학요법 전 또는 후 (이전 치료 횟수에 따라)
-- ER+ 유방암에서는 호르몬 치료 실패 후 화학요법과의 경쟁 고려
-- 조기 유방암(보조요법)에서의 역할 연구 중 (OlympiA 연구: 올라파립 보조요법)
+#### EMBRACA (NEJM 2018) — 탈라조파립 전이성
+- **대상**: gBRCA 변이 전이성 유방암 (ER+, TNBC, HER2 음성)
+- **결과**:
+  - **PFS**: 탈라조파립 **8.6개월** vs 화학요법 5.6개월 (HR 0.54)
+  - **ORR**: 62.6% vs 27.2%
+  - 부작용은 혈액 독성이 더 흔함
+
+#### OlympiA (NEJM 2021) — 올라파립 조기 보조요법 ⭐
+- **대상**: gBRCA + HER2- **고위험 조기 유방암** (선항암 후 잔존병변 또는 수술 후 고위험)
+- **요법**: 올라파립 1년 보조 vs 위약
+- **3년 결과 (NEJM 2021)**:
+  - **3년 iDFS**: 85.9% vs 위약 **77.1%** (HR 0.58)
+  - **원격 무재발 생존율**: 87.5% vs 80.4%
+- **4년 결과 (Annals of Oncology 2022)**:
+  - **4년 OS**: 89.8% vs **86.4%** — 사망 위험 32% 감소
+- **국내 보험 적용**: 2023~ (조건 충족 시)
+- **임상적 함의**: BRCA 변이 환자의 조기 단계 표준치료 변화
+
+#### TBCRC 048 (JCO 2020) — sBRCA·PALB2 확장
+- **대상**: 종양 BRCA 변이(sBRCA), PALB2 생식세포 변이 등
+- **결과**:
+  - **PALB2 germline**: ORR 82%
+  - **sBRCA**: ORR 33%
+- **임상적 함의**: gBRCA 외 확장 적응증 가능성 시사
+
+### 사용 시점
+
+- **조기 (보조)**: BRCA + HER2- 고위험 → OlympiA 적응증 (올라파립 1년)
+- **전이성 1차~2차**: BRCA + HER2- → OlympiAD/EMBRACA (올라파립·탈라조파립)
+- ER+ 유방암: 호르몬 치료·[[호르몬치료|CDK4/6 억제제]] 후 검토
+- 화학요법과 PARP 억제제 순서는 환자별 결정 (이전 치료·골수 상태·삶의 질)
 
 ---
 
-### 한국 승인 PARP 억제제 (2021년 기준)
+### 한국 승인 PARP 억제제 (2026 기준)
 
-| 상품명 | 성분명 | 주요 적응증 (한국) | 월 약가(참고) |
-|--------|--------|-----------------|------------|
-| **린파자(Lynparza)** | 올라파립(Olaparib) | BRCA 변이 난소암·유방암·췌장암·전립선암 | 약 580만원 (급여 시 5% 부담) |
-| **탈젠나(Talzenna)** | 탈라조파립(Talazoparib) | BRCA 변이 전이성 유방암 | 별도 확인 필요 |
-| **제줄라(Zejula)** | 니라파립(Niraparib) | BRCA 변이 난소암 1차 유지요법 | 약 420만원 (급여 시 5% 부담) |
+| 상품명 | 성분명 | 주요 적응증 (한국) | 보험 |
+|--------|--------|---------------------|------|
+| **린파자 (Lynparza)** | 올라파립 (Olaparib) | BRCA 변이 난소암·유방암·췌장암·전립선암 / **유방암 조기 보조 (OlympiA 적응증)** | 적용 (산정특례) |
+| **탈젠나 (Talzenna)** | 탈라조파립 (Talazoparib) | BRCA 변이 HER2- 전이성 유방암 | 적용 |
+| **제줄라 (Zejula)** | 니라파립 (Niraparib) | BRCA 변이 난소암 1차 유지요법 | 적용 |
+| **루브라카 (Rubraca)** | 루카파립 (Rucaparib) | 난소암 (유방암 적응증 없음) | 일부 적용 |
+
+### 약제 간 비교
+
+| 약제 | 강점 | 약점 |
+|------|------|------|
+| 올라파립 | 가장 많은 임상 데이터, 조기·전이성 모두 적응증 | 2회/일 복용 |
+| 탈라조파립 | 1회/일 복용 편의성, 강한 PARP trapping | 혈액독성 더 강함 |
+| 니라파립 | 유방암 적응증은 아직 없음 (난소암) | — |
+
+### 한국 보험 적용 - OlympiA 조기 보조요법 (2023~)
+
+- 적응증: BRCA1/2 생식세포 변이 + HER2- + 고위험 조기 유방암
+- 고위험 기준: 선항암 후 잔존병변 (Non-pCR) 또는 수술 후 림프절·종양 크기 고위험
+- 1년 복용
+- 산정특례 적용
 
 ---
 
@@ -122,19 +174,38 @@ PARP 억제제가 효과 있는 세포:
 - 조기 유방암 보조요법(OlympiA 연구: 올라파립 1년 복용, EFS 개선) 적용 확대 중
 
 ## 관련 개념
-- [[BRCA유전자]] — PARP 억제제 적응증의 핵심 바이오마커
+- [[BRCA유전자]] — PARP 억제제 적응증의 핵심 바이오마커, 검사 적응증·관리 전략
 - [[TNBC치료]] — TNBC + BRCA 변이 시 PARP 억제제 알고리즘
 - [[HER2-low치료]] — HER2- 전이성에서의 치료 옵션 비교
 - [[항암화학요법]] — PARP 억제제와 화학요법 비교 및 순서
+- [[유전자검사]] — gBRCA·sBRCA·PALB2 검사 종류
+- [[신보조화학요법]] — 선항암 후 잔존병변(non-pCR) → OlympiA 적응증
+- [[호르몬치료]] — ER+ BRCA 환자에서 호르몬 치료 후 PARP 위치
+- [[휴면암세포_재발메커니즘]] — 합성치사 작용으로 잔존 미세 잔류병변 제거
+- [[유방암보험청구쟁점]] — BRCA 검사·예방절제 보험 청구 (대법원 판례)
+- [[2026임상연구업데이트]] — PARP 외 신약 학술 데이터
+- [[유방암신약파이프라인2026]] — 약제 단계별 파이프라인
+- [[임상시험]] — PARP + 면역항암 임상시험 등록 가이드
+- [[가임력보존]] — BRCA + 가임 계획 환자의 의사결정
+- [[장기생존_4기경험담]] — BRCA1 4기 PARP+면역 임상 반응 사례 (#310014)
 
 ## 미해결 질문 / 연구 방향
-> 💡 HRD 양성이지만 BRCA 변이 없는 환자에서 PARP 억제제 효과 — 임상 연구 진행 중
-> 💡 조기 유방암 보조요법에서의 최적 대상군 및 기간 정립 (OlympiA 연구 이후)
-> 💡 PARP 억제제 + 면역관문억제제 병용 효과 — 시너지 여부 연구 중
-> 💡 PARP 억제제 내성 메커니즘과 내성 발생 후 후속 치료 전략
+> 💡 **HRD 양성이지만 BRCA 변이 없는** 환자에서 PARP 억제제 효과 — myChoice HRD score·GIS 등 검사 도구 적용
+> 💡 조기 유방암 보조요법에서의 최적 대상군 및 기간 정립 — OlympiA 5년·10년 추적 결과 대기
+> 💡 **PARP 억제제 + 면역관문억제제 병용** — TOPACIO·MEDIOLA 임상시험 진행, 일부 시너지 보고
+> 💡 PARP 억제제 + ATR/WEE1 억제제 병용 — 내성 극복 전략 연구
+> 💡 PARP 억제제 내성 메커니즘 — BRCA reversion mutation 검출 시 후속 치료 전략
+> 💡 **PALB2·RAD51C/D·ATM** 변이 환자 적응증 확대 — TBCRC 048 후속 연구
+> 💡 BRCA + dMMR/MSI-H 동반 환자에서 면역항암 + PARP 시너지
 
 ## 출처
 - 장하균, 임명철. 난소암 재발을 막아주는 먹는 치료제 - PARP 억제제. 의학채널 비온뒤. 2021-11-22. https://www.youtube.com/watch?v=eY4J7686UI8
+- Robson M et al. Olaparib for Metastatic Breast Cancer in Patients with a Germline BRCA Mutation (OlympiAD). NEJM. 2017;377:523-533.
+- Litton JK et al. Talazoparib in Patients with Advanced Breast Cancer and a Germline BRCA Mutation (EMBRACA). NEJM. 2018;379:753-763.
+- Tutt ANJ et al. Adjuvant Olaparib for Patients with BRCA1- or BRCA2-Mutated Breast Cancer (OlympiA). NEJM. 2021;384:2394-2405.
+- Geyer CE Jr et al. Overall survival in the OlympiA phase III trial of adjuvant olaparib in patients with germline BRCA-mutated breast cancer. Annals of Oncology. 2022.
+- Tung NM et al. TBCRC 048: Phase II Study of Olaparib for Metastatic Breast Cancer and Mutations in Homologous Recombination–Related Genes. JCO. 2020;38:4274-4282.
 
 ## 업데이트 히스토리
 - 2026-04-27: 비온뒤 장하균·임명철 교수 강의(난소암) 기반 신규 생성. 기전(합성치사/HRD), 한국 승인 약제, 부작용 프로파일 정리. 유방암 적용 섹션(OlympiAD, EMBRACA) 추가.
+- 2026-05-21: 대폭 보강 — 임상시험 핵심 데이터 4건 (OlympiAD PFS 7.0 vs 4.2, EMBRACA 8.6 vs 5.6, OlympiA 3년 iDFS 85.9% vs 77.1% + 4년 OS 우위, TBCRC 048 PALB2 ORR 82%·sBRCA 33%), 약제 간 비교표, 한국 보험 OlympiA 적용(2023~), 미해결 질문 확장 (PARP+면역항암 병용·내성·PALB2 확장); 관련 개념 9개 추가 (유전자검사·신보조·보험청구·휴면암세포·임상시험·가임력보존·장기생존 등) (daily-brief Top 3 보강)

@@ -42,6 +42,18 @@ HER2(Human Epidermal Growth Factor Receptor 2) 과발현 유방암은 전체의 
 - **전이성**: 허셉틴+탁산 실패 후 2차 치료
 - **국내 허가**: ✅
 
+### 2026 핵심 임상 데이터 (NEJM/FDA)
+
+| 연구 | 대상 | 핵심 결과 |
+|------|------|-----------|
+| **DESTINY-Breast05** (NEJM 2026, FDA 2026 승인) | HER2+ 조기 잔존병변 | 3년 iDFS: T-DXd **92.4%** vs T-DM1 **83.7%** |
+| **DESTINY-Breast09** (NEJM 2026) | HER2+ 전이성 1차 | 중앙 PFS: T-DXd+pertuzumab **40.7개월** vs THP **26.9개월**, ORR 85% vs 79% |
+| **DESTINY-Breast11** (FDA 2026.05.15 승인) | HER2+ IHC 3+ Stage II/III 조기 | T-DXd 4주기 → THP 4주기 pCR **67.3%** vs ddAC-THP 56.3% |
+| **PHERGain-2** (Annals of Oncology 2026) | HER2+ node-, 5~30mm | 선행 trastuzumab+pertuzumab 후 chemotherapy-free 반응 적응, 약 59.6% pCR |
+| **JNCI 2026 후향** | T-DXd 진행성 524명 | HER2 IHC 불일치 ~20%, ERBB2 증폭 양호·PTEN 변이 불량 |
+
+→ 학술 출처와 임상 데이터 상세는 [[2026임상연구업데이트]]
+
 ### T-DXd (엔허투, Enhertu) ⭐ 최신
 - **기전**: 트라스투주맙 + 토포이소머라제1 억제제(DXd). 방관자 효과(bystander effect) 강점
 - **적응증**: 전이성 HER2+ 유방암 2차 치료 (DESTINY-Breast03)
@@ -140,3 +152,4 @@ HER2(Human Epidermal Growth Factor Receptor 2) 과발현 유방암은 전체의 
 - 2026-04-26: HER2-low/ultralow DESTINY-Breast04 수치, ILD 발생률, 판독 일치도, 재검사 필요성, 생존율 개선 추가 (Threads @junetapa)
 - 2026-04-27: 엔허투 신보조요법 2025 결과 추가 (비온뒤 2026 신년특집)
 - 2026-05-20: Notion 관련 기사 TOP50 — 투카티닙 국내 시판 허가(#722405), 엔허투 건강보험 적용(#747502), 유방암 백신 임상(메이요·워싱턴대) 반영; [[유방암신약파이프라인2026]]·[[전이경고신호]]·[[장기생존_4기경험담]] 링크
+- 2026-05-21: Notion 2026 연구 업데이트 — DESTINY-Breast05·09·11(T-DXd 잔존병변·전이성 1차·선행요법), PHERGain-2(치료 축소), JNCI 2026(HER2 IHC 불일치 20%·PTEN) 추가; [[2026임상연구업데이트]] 링크
