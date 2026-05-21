@@ -3,7 +3,7 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v4"
+const CACHE_VERSION = "v5"
 const APP_ORIGIN = "https://wiki.breast-cancer.workers.dev"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
@@ -46,16 +46,15 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.open(CACHE).then(async (cache) => {
       const cached = await cache.match(event.request);
-      const network = fetch(event.request)
-        .then((response) => {
-          if (response.ok) {
-            cache.put(event.request, response.clone());
-          }
-          return response;
-        })
-        .catch(() => cached);
-
-      return cached || network;
+      try {
+        const response = await fetch(event.request);
+        if (response.ok) {
+          await cache.put(event.request, response.clone());
+        }
+        return response;
+      } catch {
+        return cached || Response.error();
+      }
     }),
   );
 });
