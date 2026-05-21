@@ -524,15 +524,21 @@ p {
 
 .table-container {
   overflow-x: auto;
+  max-width: 100%;
 
   & > table {
-    margin: 1rem;
+    width: 100%;
+    margin: 1rem 0;
     padding: 1.5rem;
     border-collapse: collapse;
+    table-layout: fixed;
 
     th,
     td {
-      min-width: 75px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: keep-all;
+      vertical-align: top;
     }
 
     & > * {
