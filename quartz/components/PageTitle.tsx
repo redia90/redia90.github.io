@@ -18,6 +18,9 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
   font-family: var(--titleFont);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: keep-all;
 }
 `
 
