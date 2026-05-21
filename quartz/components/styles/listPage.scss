@@ -11,9 +11,16 @@ li.section-li {
 
   & > .section {
     display: grid;
-    grid-template-columns: fit-content(8em) 3fr 1fr;
+    grid-template-columns: fit-content(8em) minmax(0, 3fr) minmax(0, 1fr);
+    min-width: 0;
 
     @media all and ($mobile) {
+      grid-template-columns: minmax(0, 1fr);
+
+      & > .meta {
+        margin-bottom: 0.25rem;
+      }
+
       & > .tags {
         display: none;
       }

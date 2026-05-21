@@ -23,6 +23,7 @@ interface RenderComponents {
 }
 
 const headerRegex = new RegExp(/h[1-6]/)
+const assetVersion = "20260522-layout"
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
@@ -33,7 +34,7 @@ export function pageResources(
   const resources: StaticResources = {
     css: [
       {
-        content: joinSegments(baseDir, "index.css"),
+        content: `${joinSegments(baseDir, "index.css")}?v=${assetVersion}`,
       },
       ...staticResources.css,
     ],
