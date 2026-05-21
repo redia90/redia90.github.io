@@ -3,7 +3,7 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v1"
+const CACHE_VERSION = "v2"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
 
@@ -12,6 +12,8 @@ const PRECACHE_URLS = [
   "/index.html",
   "/manifest.webmanifest",
   "/static/icon.png",
+  "/static/icon-192.png",
+  "/static/apple-touch-icon.png",
   "/index.css",
   "/prescript.js",
   "/postscript.js",
@@ -76,13 +78,13 @@ export const PWA: QuartzEmitterPlugin = () => ({
           src: "/static/icon.png",
           sizes: "512x512",
           type: "image/png",
-          purpose: "any",
+          purpose: "any maskable",
         },
         {
-          src: "/static/icon.png",
+          src: "/static/icon-192.png",
           sizes: "192x192",
           type: "image/png",
-          purpose: "maskable",
+          purpose: "any maskable",
         },
       ],
     }
@@ -108,7 +110,7 @@ export const PWA: QuartzEmitterPlugin = () => ({
       h("meta", { name: "theme-color", content: "#284b63" }),
       h("meta", { name: "apple-mobile-web-app-capable", content: "yes" }),
       h("meta", { name: "apple-mobile-web-app-title", content: "유방암 위키" }),
-      h("link", { rel: "apple-touch-icon", href: "/static/icon.png" }),
+      h("link", { rel: "apple-touch-icon", href: "/static/apple-touch-icon.png" }),
     ],
     js: [
       {
