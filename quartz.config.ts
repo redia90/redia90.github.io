@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "ko-KR",
-    baseUrl: "redia90.github.io",
+    baseUrl: process.env.QUARTZ_BASE_URL ?? "wiki.breast-cancer.workers.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
