@@ -3,6 +3,7 @@
 node_modules
 public
 prof
+wrangler.generated.jsonc
 tsconfig.tsbuildinfo
 .obsidian
 .quartz-cache

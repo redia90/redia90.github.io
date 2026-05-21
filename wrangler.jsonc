@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "wiki",
+  "main": "./cloudflare-worker.ts",
   "compatibility_date": "2026-05-21",
   "assets": {
     "directory": "./public",
