@@ -121,6 +121,7 @@ const pushRegistrationScript = `
   (function () {
     const buttonId = "pwa-push-subscribe-button";
     const styleId = "pwa-push-subscribe-style";
+    const subscriptionStateKey = "breastCancerWikiPushState";
 
     function bellIcon() {
       return '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 21a2 2 0 0 0 3.4 0"/><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>';
@@ -224,6 +225,24 @@ const pushRegistrationScript = `
       });
     }
 
+    function markPushEnabled() {
+      try {
+        localStorage.setItem(subscriptionStateKey, "enabled");
+      } catch {}
+    }
+
+    function wasPushEnabled() {
+      try {
+        return localStorage.getItem(subscriptionStateKey) === "enabled";
+      } catch {
+        return false;
+      }
+    }
+
+    function wait(ms) {
+      return new Promise((resolve) => window.setTimeout(resolve, ms));
+    }
+
     async function subscribeToPush() {
       const keyResponse = await fetch("/api/push/public-key", { cache: "no-store" });
       if (!keyResponse.ok) throw new Error("Push public key is not configured");
@@ -234,21 +253,36 @@ const pushRegistrationScript = `
 
       if (existingSubscription) {
         await sendSubscription(existingSubscription);
-        return;
+        markPushEnabled();
+        return "enabled";
       }
 
       if (Notification.permission === "default") {
         const permission = await Notification.requestPermission();
-        if (permission !== "granted") return;
+        if (permission !== "granted") return "denied";
       }
 
-      if (Notification.permission !== "granted") return;
+      if (Notification.permission !== "granted") return "denied";
 
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: base64UrlToUint8Array(publicKey),
-      });
+      let subscription;
+      try {
+        subscription = await registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: base64UrlToUint8Array(publicKey),
+        });
+      } catch (error) {
+        await wait(350);
+        subscription =
+          (await registration.pushManager.getSubscription()) ||
+          (await registration.pushManager.subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: base64UrlToUint8Array(publicKey),
+          }));
+      }
+
       await sendSubscription(subscription);
+      markPushEnabled();
+      return "enabled";
     }
 
     async function mountPushButton() {
@@ -256,10 +290,16 @@ const pushRegistrationScript = `
       if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return;
       if (Notification.permission === "denied") return;
 
+      if (wasPushEnabled() || Notification.permission === "granted") {
+        subscribeToPush().catch(() => {});
+        return;
+      }
+
       const registration = await navigator.serviceWorker.ready;
       const existingSubscription = await registration.pushManager.getSubscription();
       if (existingSubscription) {
         await sendSubscription(existingSubscription).catch(() => {});
+        markPushEnabled();
         return;
       }
 
@@ -276,14 +316,17 @@ const pushRegistrationScript = `
         renderButton(button, "설정 중", "pending");
 
         try {
-          await subscribeToPush();
-          renderButton(
-            button,
-            Notification.permission === "granted" ? "알림 켜짐" : "알림 차단됨",
-            Notification.permission === "granted" ? "success" : "idle",
-          );
-          window.setTimeout(() => button.remove(), 1400);
+          const result = await subscribeToPush();
+          renderButton(button, result === "enabled" ? "알림 켜짐" : "알림 차단됨", result === "enabled" ? "success" : "idle");
+          window.setTimeout(() => button.remove(), result === "enabled" ? 900 : 1400);
         } catch {
+          if (Notification.permission === "granted") {
+            markPushEnabled();
+            renderButton(button, "알림 켜짐", "success");
+            window.setTimeout(() => button.remove(), 900);
+            return;
+          }
+
           button.disabled = false;
           renderButton(button, "새 글 알림", "idle");
         }
