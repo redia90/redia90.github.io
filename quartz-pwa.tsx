@@ -122,6 +122,7 @@ const pushRegistrationScript = `
     const buttonId = "pwa-push-subscribe-button";
     const styleId = "pwa-push-subscribe-style";
     const subscriptionStateKey = "breastCancerWikiPushState";
+    const buttonSuppressedKey = "breastCancerWikiPushButtonSuppressed";
 
     function bellIcon() {
       return '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 21a2 2 0 0 0 3.4 0"/><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>';
@@ -239,6 +240,20 @@ const pushRegistrationScript = `
       }
     }
 
+    function suppressButtonForSession() {
+      try {
+        sessionStorage.setItem(buttonSuppressedKey, "true");
+      } catch {}
+    }
+
+    function isButtonSuppressed() {
+      try {
+        return sessionStorage.getItem(buttonSuppressedKey) === "true";
+      } catch {
+        return false;
+      }
+    }
+
     function wait(ms) {
       return new Promise((resolve) => window.setTimeout(resolve, ms));
     }
@@ -289,6 +304,7 @@ const pushRegistrationScript = `
       if (document.getElementById(buttonId)) return;
       if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return;
       if (Notification.permission === "denied") return;
+      if (isButtonSuppressed()) return;
 
       if (wasPushEnabled() || Notification.permission === "granted") {
         subscribeToPush().catch(() => {});
@@ -312,23 +328,15 @@ const pushRegistrationScript = `
       renderButton(button, "새 글 알림", "idle");
 
       button.addEventListener("click", async () => {
-        button.disabled = true;
-        renderButton(button, "설정 중", "pending");
+        suppressButtonForSession();
+        button.remove();
 
         try {
-          const result = await subscribeToPush();
-          renderButton(button, result === "enabled" ? "알림 켜짐" : "알림 차단됨", result === "enabled" ? "success" : "idle");
-          window.setTimeout(() => button.remove(), result === "enabled" ? 900 : 1400);
+          await subscribeToPush();
         } catch {
           if (Notification.permission === "granted") {
             markPushEnabled();
-            renderButton(button, "알림 켜짐", "success");
-            window.setTimeout(() => button.remove(), 900);
-            return;
           }
-
-          button.disabled = false;
-          renderButton(button, "새 글 알림", "idle");
         }
       });
 
