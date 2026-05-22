@@ -113,6 +113,16 @@ button.desktop-explorer {
   overflow-y: auto;
   margin-top: 0.5rem;
 
+  @media all and not ($mobile) {
+    max-height: none;
+    overflow: visible;
+
+    & > .explorer-ul {
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
   & ul {
     list-style: none;
     margin: 0;

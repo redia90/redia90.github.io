@@ -277,6 +277,11 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+      @media all and not ($mobile) {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+      }
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
@@ -672,6 +677,14 @@ ol.overflow {
 
   &.gradient-active {
     mask-image: linear-gradient(to bottom, black calc(100% - 50px), transparent 100%);
+  }
+}
+
+@media all and not ($mobile) {
+  .page > #quartz-body .sidebar.left .explorer-content:has(> .explorer-ul),
+  .page > #quartz-body .sidebar.left .explorer-content > .explorer-ul {
+    max-height: none;
+    overflow: visible;
   }
 }
 
