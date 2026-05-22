@@ -271,6 +271,9 @@ a {
       display: flex;
       height: 100vh;
       position: sticky;
+      @media all and ($desktop) {
+        padding-top: 1.75rem;
+      }
     }
 
     & .sidebar.left {
@@ -336,6 +339,9 @@ a {
       grid-area: grid-header;
       margin: $topSpacing 0 0 0;
       min-width: 0;
+      @media all and ($desktop) {
+        margin-top: 1.75rem;
+      }
       @media all and ($mobile) {
         margin-top: 0;
         padding: 0;

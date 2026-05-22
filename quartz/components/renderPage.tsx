@@ -23,7 +23,7 @@ interface RenderComponents {
 }
 
 const headerRegex = new RegExp(/h[1-6]/)
-const assetVersion = "20260522-desktop-menu-flow"
+const assetVersion = "20260522-desktop-top-spacing"
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
