@@ -238,9 +238,9 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 
     .explorer-content {
       box-sizing: border-box;
-      z-index: 100;
-      position: absolute;
-      top: 0;
+      z-index: 900;
+      position: fixed;
+      top: 4.75rem;
       left: 0;
       margin-top: 0;
       background-color: var(--light);
@@ -252,9 +252,9 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
         visibility 200ms ease;
       overflow-x: hidden;
       overflow-y: auto;
-      padding: 4.75rem 1.25rem 2rem;
-      height: 100dvh;
-      max-height: 100dvh;
+      padding: 1.25rem 1.25rem 2rem;
+      height: calc(100dvh - 4.75rem);
+      max-height: calc(100dvh - 4.75rem);
       visibility: hidden;
     }
 
