@@ -47,6 +47,27 @@ export default ((opts: CommentsOptions) => {
   }
 
   Comments.afterDOMLoaded = script
+  Comments.css = `
+.quartz-comments-disqus {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--darkgray);
+  color-scheme: light;
+}
+
+:root[saved-theme="dark"] .quartz-comments-disqus {
+  color-scheme: dark;
+  background: var(--light);
+  color: var(--darkgray);
+}
+
+.quartz-comments-disqus #disqus_thread {
+  background: var(--light);
+  color: inherit;
+}
+`
 
   return Comments
 }) satisfies QuartzComponentConstructor<CommentsOptions>
