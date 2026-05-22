@@ -22,6 +22,11 @@ html {
 }
 
 body {
+  --titleFont: "Pretendard", system-ui, "Segoe UI", sans-serif;
+  --headerFont: "Pretendard", system-ui, "Segoe UI", sans-serif;
+  --bodyFont: "Pretendard", system-ui, "Segoe UI", sans-serif;
+  --codeFont: "Pretendard", system-ui, "Segoe UI", sans-serif;
+
   margin: 0;
   min-width: 0;
   overflow-x: hidden;
