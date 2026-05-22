@@ -250,11 +250,48 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       transition:
         transform 200ms ease,
         visibility 200ms ease;
-      overflow: hidden;
-      padding: 4rem 0 2rem 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 4.75rem 1.25rem 2rem;
       height: 100dvh;
       max-height: 100dvh;
       visibility: hidden;
+    }
+
+    .explorer-content ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .explorer-content li {
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    .explorer-content ul li > a,
+    .folder-container {
+      border-radius: 8px;
+      min-height: 2.25rem;
+      padding: 0.35rem 0.5rem;
+    }
+
+    .explorer-content ul li > a {
+      display: block;
+      overflow-wrap: anywhere;
+      width: 100%;
+    }
+
+    .folder-container {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+
+    .folder-outer > ul {
+      margin-left: 0.35rem;
+      padding-left: 1rem;
     }
 
     .mobile-explorer {
