@@ -291,7 +291,7 @@ a {
         flex-direction: row;
         margin: 0;
         padding: 0.75rem 1rem;
-        background: color-mix(in srgb, var(--light) 92%, transparent);
+        background: var(--light);
         border-bottom: 1px solid var(--lightgray);
         box-shadow: 0 8px 24px rgb(0 0 0 / 0.06);
         backdrop-filter: blur(12px);

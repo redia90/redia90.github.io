@@ -3,7 +3,7 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v6"
+const CACHE_VERSION = "v7"
 const APP_ORIGIN = "https://wiki.breast-cancer.workers.dev"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
