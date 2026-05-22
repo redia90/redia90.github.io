@@ -7,12 +7,21 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const title = cfg?.pageTitle ?? i18n(cfg.locale).propertyDefaults.title
   const baseDir = pathToRoot(fileData.slug!)
   const logoSrc = joinSegments(baseDir, "static/header-logo.png")
+  const darkLogoSrc = joinSegments(baseDir, "static/header-logo-dark.png")
   return (
     <h2 class={classNames(displayClass, "page-title")}>
       <a href={baseDir} class="site-logo-link" aria-label={`${title} 홈으로 이동`}>
         <img
-          class="site-logo"
+          class="site-logo site-logo-light"
           src={logoSrc}
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          loading="eager"
+        />
+        <img
+          class="site-logo site-logo-dark"
+          src={darkLogoSrc}
           alt=""
           aria-hidden="true"
           decoding="async"
@@ -54,6 +63,18 @@ PageTitle.css = `
   margin: 0;
   border-radius: 0;
   content-visibility: visible;
+}
+
+.page-title .site-logo-dark {
+  display: none;
+}
+
+:root[saved-theme="dark"] .page-title .site-logo-light {
+  display: none;
+}
+
+:root[saved-theme="dark"] .page-title .site-logo-dark {
+  display: block;
 }
 
 @media all and (max-width: 800px) {
