@@ -11,7 +11,7 @@ sources:
   - "Robson M et al. OlympiAD. NEJM. 2017;377:523-533."
   - "Litton JK et al. EMBRACA. NEJM. 2018;379:753-763."
   - "Partridge AH et al. POSITIVE trial. NEJM. 2023;388:1645-1656."
-  - "한국유방암학회. 제10차 유방암 진료권고안. 2023."
+  - "한국유방암학회 (KBCS). 제10차 유방암 진료권고안. 2023. https://www.kbcs.or.kr"
 confidence: high
 ---
 

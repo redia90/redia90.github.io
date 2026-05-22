@@ -33,11 +33,13 @@ socialImage: og-image.png
 ### 치료
 
 - [[treatment/가임력보존|가임력 보존 — 항암 시작 전 난자·배아 동결]]
+- [[treatment/림프부종|림프부종 — 예방·진단·치료·어깨/팔 재활]]
 - [[treatment/방사선장기부작용|방사선 치료의 장기 부작용 — 심장·폐·이차암 추적]]
 - [[treatment/신보조화학요법|신보조화학요법 (수술 전 항암)]]
 - [[treatment/유방재건수술|유방 재건수술]]
 - [[treatment/방사선치료|유방암 방사선 치료]]
 - [[treatment/유방암수술|유방암 수술]]
+- [[treatment/이차암|유방암 치료 후 이차암 (Second Primary Malignancy)]]
 - [[treatment/항암화학요법|유방암 항암화학요법]]
 - [[treatment/호르몬치료|유방암 호르몬 치료]]
 - [[treatment/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]]
@@ -83,4 +85,4 @@ socialImage: og-image.png
 - [[cases/임신중유방암_PABC|임신 관련 유방암 (PABC) — 임신 중·산후 진단]]
 - [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]]
 
-<!-- 총 53개 문서 -->
+<!-- 총 55개 문서 -->
