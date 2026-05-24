@@ -19,7 +19,7 @@ socialImage: og-image.png
 - [[biology/유방암분자서브타입|유방암 분자 서브타입]]
 - [[biology/유방암면역_미생물군|유방암과 면역·장내 미생물군]]
 - [[biology/휴면암세포_재발메커니즘|휴면 암세포와 유방암 재발 메커니즘]]
-- [[biology/BRCA유전자|BRCA1 / BRCA2 유전자]]
+- <a href="./biology/BRCA유전자" class="internal">BRCA1 <span>/</span> BRCA2 유전자</a>
 
 ### 진단
 
@@ -48,7 +48,7 @@ socialImage: og-image.png
 - [[treatment/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]]
 - [[treatment/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
 - [[treatment/호르몬치료약제비교|호르몬 치료 약제 비교]]
-- [[treatment/CDK46억제제|CDK4/6 억제제 — 입랜스·키스칼리·버제니오]]
+- <a href="./treatment/CDK46억제제" class="internal">CDK4<span>/</span>6 억제제 — 입랜스·키스칼리·버제니오</a>
 - [[treatment/HER2표적치료|HER2 표적치료]]
 - [[treatment/HER2-low치료|HER2-low 유방암 치료 — ADC 혁명]]
 - [[treatment/PARP억제제|PARP 억제제]]
