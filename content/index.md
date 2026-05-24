@@ -17,6 +17,7 @@ socialImage: og-image.png
 
 - [[biology/남성유방암|남성 유방암 (Male Breast Cancer)]]
 - [[biology/유방암분자서브타입|유방암 분자 서브타입]]
+- [[biology/유방암면역_미생물군|유방암과 면역·장내 미생물군]]
 - [[biology/휴면암세포_재발메커니즘|휴면 암세포와 유방암 재발 메커니즘]]
 - [[biology/BRCA유전자|BRCA1 / BRCA2 유전자]]
 
@@ -36,14 +37,17 @@ socialImage: og-image.png
 - [[treatment/림프부종|림프부종 — 예방·진단·치료·재활]]
 - [[treatment/방사선장기부작용|방사선 치료의 장기 부작용 — 심장·폐·이차암 추적]]
 - [[treatment/신보조화학요법|신보조화학요법 (Neoadjuvant Chemotherapy, NAC)]]
+- [[treatment/약사협진_약물상호작용|약사 협진 — 약물 상호작용·다약제 검토]]
 - [[treatment/유방재건수술|유방 재건수술]]
 - [[treatment/방사선치료|유방암 방사선 치료]]
 - [[treatment/유방암수술|유방암 수술]]
 - [[treatment/이차암|유방암 치료 후 이차암 (Second Primary Malignancy)]]
+- [[treatment/통증관리|유방암 통증 관리 — 수술·항암·골전이·말기 단계별]]
 - [[treatment/항암화학요법|유방암 항암화학요법]]
 - [[treatment/호르몬치료|유방암 호르몬 치료 (내분비 치료)]]
 - [[treatment/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]]
 - [[treatment/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
+- [[treatment/호르몬치료약제비교|호르몬 치료 약제 비교]]
 - [[treatment/CDK46억제제|CDK4/6 억제제 — 입랜스·키스칼리·버제니오]]
 - [[treatment/HER2표적치료|HER2 표적치료]]
 - [[treatment/HER2-low치료|HER2-low 유방암 치료 — ADC 혁명]]
@@ -65,6 +69,8 @@ socialImage: og-image.png
 - [[lifestyle/환자지원프로그램|유방암 환자 지원 프로그램 (한국)]]
 - [[lifestyle/설탕탄수화물관리|유방암 환자의 설탕·탄수화물 관리]]
 - [[lifestyle/치료준비물|입원·항암·방사선 준비물 종합]]
+- [[lifestyle/직장복귀_법적권리|직장 복귀·법적 권리 — 한국 근로기준·차별 금지]]
+- [[lifestyle/한국유방암영양가이드|한국 유방암 환자 영양 가이드]]
 - [[lifestyle/항암중식이주의|항암 중 식이 주의사항 — 회복 우선 원칙]]
 - [[lifestyle/호르몬양성식이|호르몬 양성 유방암 식이 가이드]]
 - [[lifestyle/호스피스완화의료|호스피스·완화의료 가이드 — 시한부·말기 돌봄]]
@@ -76,7 +82,9 @@ socialImage: og-image.png
 - [[research/유방암신약파이프라인2026|유방암 신약 파이프라인 (2026)]]
 - [[research/임상시험|유방암 임상시험 — 등록·참여·환자 권리 가이드]]
 - [[research/전이메커니즘_Prrx1|유방암 전이 분자 기전]]
+- [[research/정밀의학도구|유방암 정밀의학 도구]]
 - [[research/유방암치료트렌드2026|유방암 치료 트렌드 2026]]
+- [[research/한국유방암통계|한국 유방암 통계·역학]]
 
 ### 사례
 
@@ -85,4 +93,4 @@ socialImage: og-image.png
 - [[cases/임신중유방암_PABC|임신 관련 유방암 (PABC) — 임신 중·산후 진단]]
 - [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]]
 
-<!-- 총 55개 문서 -->
+<!-- 총 63개 문서 -->
