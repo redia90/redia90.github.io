@@ -64,11 +64,8 @@ const DoctorCheck: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
       <div class="doctor-check-header">
         <span class="doctor-check-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" focusable="false">
-            <path d="M9 6.75h6" />
-            <path d="M9 11h6" />
-            <path d="M9 15.25h3.4" />
-            <path d="M8.25 3.5h7.5" />
-            <path d="M8.5 3.5a3.5 3.5 0 0 0-3.5 3.5v10.5A3.5 3.5 0 0 0 8.5 21h7a3.5 3.5 0 0 0 3.5-3.5V7a3.5 3.5 0 0 0-3.5-3.5" />
+            <path d="M9.25 9.35a2.85 2.85 0 1 1 4.86 2.02c-.92.88-2.06 1.42-2.06 2.88" />
+            <circle class="doctor-check-icon-dot" cx="12.05" cy="17" r="0.55" />
           </svg>
         </span>
         <div>
@@ -88,50 +85,55 @@ const DoctorCheck: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
 DoctorCheck.css = `
 .doctor-check {
   margin: 1rem 0 1.25rem;
-  padding: 1rem 1.05rem;
-  border: 1px solid color-mix(in srgb, var(--secondary) 28%, var(--lightgray));
-  border-radius: 10px;
+  padding: 1.05rem 1.1rem;
+  border: 1px solid color-mix(in srgb, #f08aad 52%, var(--lightgray));
+  border-radius: 12px;
   background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--secondary) 16%, transparent), transparent 36%),
-    color-mix(in srgb, var(--light) 92%, var(--highlight));
-  box-shadow: 0 12px 30px rgb(0 0 0 / 0.055);
+    linear-gradient(135deg, rgba(255, 244, 248, 0.98), rgba(255, 255, 255, 0.72)),
+    radial-gradient(circle at 1rem 1rem, rgba(240, 68, 127, 0.14), transparent 42%),
+    var(--light);
+  box-shadow: 0 12px 28px rgb(194 67 109 / 0.12);
 }
 
 .doctor-check-header {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  align-items: start;
   gap: 0.78rem;
   margin-bottom: 0.72rem;
 }
 
 .doctor-check-icon {
-  display: inline-flex;
-  flex: 0 0 2.15rem;
-  align-items: center;
-  justify-content: center;
-  width: 2.15rem;
-  height: 2.15rem;
-  margin-top: 0.02rem;
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-top: 0;
   border-radius: 999px;
-  background: var(--secondary);
-  color: var(--light);
-  box-shadow: 0 8px 18px color-mix(in srgb, var(--secondary) 24%, transparent);
+  background: linear-gradient(135deg, #f0447f, #ff7ab1);
+  color: #fff;
+  box-shadow: 0 10px 20px rgb(240 68 127 / 0.24);
 }
 
 .doctor-check-icon svg {
   display: block;
-  width: 1.22rem;
-  height: 1.22rem;
+  width: 1.2rem;
+  height: 1.2rem;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2.15;
+  stroke-width: 2.25;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
+.doctor-check-icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
 .doctor-check p {
   margin: 0;
-  color: var(--dark);
+  color: #80344e;
   font-size: 1rem;
   font-weight: 850;
   line-height: 1.35;
@@ -140,7 +142,7 @@ DoctorCheck.css = `
 .doctor-check span {
   display: block;
   margin-top: 0.12rem;
-  color: var(--gray);
+  color: color-mix(in srgb, #80344e 76%, var(--gray));
   font-size: 0.88rem;
   line-height: 1.4;
 }
@@ -158,7 +160,24 @@ DoctorCheck.css = `
 }
 
 .doctor-check li::marker {
-  color: var(--secondary);
+  color: #f0447f;
+}
+
+:root[saved-theme="dark"] .doctor-check {
+  border-color: rgba(255, 122, 177, 0.38);
+  background:
+    linear-gradient(135deg, rgba(63, 30, 43, 0.78), rgba(28, 24, 27, 0.9)),
+    radial-gradient(circle at 1rem 1rem, rgba(255, 122, 177, 0.16), transparent 42%),
+    var(--light);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.22);
+}
+
+:root[saved-theme="dark"] .doctor-check p {
+  color: #ffd6e5;
+}
+
+:root[saved-theme="dark"] .doctor-check span {
+  color: color-mix(in srgb, #ffd6e5 70%, var(--gray));
 }
 
 @media all and (max-width: 800px) {
