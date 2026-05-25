@@ -23,6 +23,9 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import DocumentDifficulty from "./DocumentDifficulty"
+import DoctorCheck from "./DoctorCheck"
+import GlossaryPopup from "./GlossaryPopup"
 
 export {
   ArticleTitle,
@@ -50,4 +53,7 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  DocumentDifficulty,
+  DoctorCheck,
+  GlossaryPopup,
 }

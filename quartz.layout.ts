@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.GlossaryPopup(),
     Component.Comments({
       provider: "disqus",
       options: {
@@ -31,7 +32,9 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
+    Component.DocumentDifficulty(),
     Component.TagList(),
+    Component.DoctorCheck(),
   ],
   left: [
     Component.PageTitle(),
