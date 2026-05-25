@@ -3,7 +3,7 @@ title: 임신 관련 유방암 (PABC) — 임신 중·산후 진단
 category: cases
 tags: [임신중유방암, PABC, PrABC, PpBC, 임신, 산후, 모유수유, 항암, 방사선, 가임력]
 created: 2026-05-21
-last_updated: 2026-05-21
+last_updated: 2026-05-25
 sources:
   - "Loibl S et al. Breast cancer diagnosed during pregnancy: adapting recent advances in breast cancer care. JAMA Oncology. 2015."
   - "Amant F et al. Pediatric outcome after maternal cancer diagnosed during pregnancy. NEJM. 2015;373:1824-1834."
@@ -174,6 +174,7 @@ confidence: high
 - [[남성유방암]] — 환자 특수 그룹 공통 주제 (진단 지연·데이터 부족·다학제)
 - [[노인유방암]] — 환자 특수 그룹 공통 주제
 - [[환자지원프로그램]] — 자녀 지원·다학제 협진 자원
+- [[glossary/용어사전]] — 삼분기·태아 위험·수유·기형 위험 등 임신 관련 용어 풀이
 
 ## 미해결 질문 / 연구 방향
 > 💡 BRCA 변이 PABC 환자에서 PARP 억제제 적용 — 산후 시작 시점·수유 영향
@@ -194,3 +195,4 @@ confidence: high
 
 ## 업데이트 히스토리
 - 2026-05-21: daily-brief 질문 제안 #4 — 신규 생성. PrABC/PpBC 구분, 진단 지연 5~15개월, 임신 단계별 검사 안전성·치료 옵션, Amant NEJM 2015 태아 추적 결과(인지·심장 정상), 안전·회피 약제 목록, 카페 #262622·#265798 사례
+- 2026-05-25: library-check cross-link 보강 — [[glossary/용어사전]] 연결

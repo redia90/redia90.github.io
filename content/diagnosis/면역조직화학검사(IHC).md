@@ -3,7 +3,7 @@ title: 면역조직화학검사 (IHC) — ER·PR·HER2·Ki67 결과 해석
 category: diagnosis
 tags: [IHC, 면역조직화학, ER, PR, HER2, Ki67, ASCO, CAP, 판독, 재검사, HER2low]
 created: 2026-05-21
-last_updated: 2026-05-21
+last_updated: 2026-05-25
 sources:
   - "ASCO/CAP HER2 Testing in Breast Cancer Guideline. 2018·2023 update."
   - "한원식. 유방암 진단을 받았다면 꼭 알아야 할 것들. 의학채널 비온뒤. 2024-01-30. https://youtu.be/e6xr1NpsXXU"
@@ -132,6 +132,8 @@ confidence: high
 - [[온코타입DX_RS점수]] — Ki67·IHC 외 21유전자 검사로 항암 결정
 - [[유방암진단체계]] — 진단 전체 흐름에서 IHC 위치
 - [[2026임상연구업데이트]] — HER2 IHC 불일치 20%·전이 병소 재검사
+- [[검사결과지읽기도우미]] — ER·PR·HER2·Ki-67 결과지 항목 빠른 해석
+- [[glossary/용어사전]] — ER·PR·HER2·Ki-67·HER2-low 등 수용체 용어 풀이
 
 ## 미해결 질문 / 연구 방향
 > 💡 AI 보조 판독으로 판독자 간 일치도 향상 가능성 — 일부 병원 도입 중
@@ -151,3 +153,4 @@ confidence: high
 
 ## 업데이트 히스토리
 - 2026-05-21: library-check broken link 해소 — ER·PR·HER2·Ki67·E-cadherin IHC 결과 해석, HER2-low/ultralow 등장, 판독 일치도 70~80%, 재발·전이 시 재검사 통합 신규 생성
+- 2026-05-25: library-check cross-link 보강 — [[검사결과지읽기도우미]]·[[glossary/용어사전]] 연결
