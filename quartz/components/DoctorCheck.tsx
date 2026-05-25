@@ -63,7 +63,13 @@ const DoctorCheck: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
     <aside class="doctor-check" aria-labelledby="doctor-check-title">
       <div class="doctor-check-header">
         <span class="doctor-check-icon" aria-hidden="true">
-          !
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M9 6.75h6" />
+            <path d="M9 11h6" />
+            <path d="M9 15.25h3.4" />
+            <path d="M8.25 3.5h7.5" />
+            <path d="M8.5 3.5a3.5 3.5 0 0 0-3.5 3.5v10.5A3.5 3.5 0 0 0 8.5 21h7a3.5 3.5 0 0 0 3.5-3.5V7a3.5 3.5 0 0 0-3.5-3.5" />
+          </svg>
         </span>
         <div>
           <p id="doctor-check-title">의사에게 꼭 확인하세요</p>
@@ -93,22 +99,34 @@ DoctorCheck.css = `
 
 .doctor-check-header {
   display: flex;
-  align-items: center;
-  gap: 0.72rem;
+  align-items: flex-start;
+  gap: 0.78rem;
   margin-bottom: 0.72rem;
 }
 
 .doctor-check-icon {
-  display: inline-grid;
-  flex: 0 0 auto;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
+  display: inline-flex;
+  flex: 0 0 2.15rem;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-top: 0.02rem;
   border-radius: 999px;
   background: var(--secondary);
   color: var(--light);
-  font-weight: 900;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--secondary) 24%, transparent);
+}
+
+.doctor-check-icon svg {
+  display: block;
+  width: 1.22rem;
+  height: 1.22rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .doctor-check p {
