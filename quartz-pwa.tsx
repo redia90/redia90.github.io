@@ -132,6 +132,11 @@ const pushRegistrationScript = `
       button.innerHTML = '<span class="pwa-push-icon">' + bellIcon() + '</span><span>' + label + '</span>';
     }
 
+    function removePushButton() {
+      const button = document.getElementById(buttonId);
+      if (button) button.remove();
+    }
+
     function ensureButtonStyle() {
       if (document.getElementById(styleId)) return;
 
@@ -229,6 +234,8 @@ const pushRegistrationScript = `
       try {
         localStorage.setItem(subscriptionStateKey, "enabled");
       } catch {}
+      suppressButtonForSession();
+      removePushButton();
     }
 
     function wasPushEnabled() {
@@ -274,6 +281,8 @@ const pushRegistrationScript = `
       if (Notification.permission === "default") {
         const permission = await Notification.requestPermission();
         if (permission !== "granted") return "denied";
+        suppressButtonForSession();
+        removePushButton();
       }
 
       if (Notification.permission !== "granted") return "denied";
@@ -300,15 +309,27 @@ const pushRegistrationScript = `
     }
 
     async function mountPushButton() {
-      if (document.getElementById(buttonId)) return;
       if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return;
-      if (Notification.permission === "denied") return;
-      if (isButtonSuppressed()) return;
+      const existingButton = document.getElementById(buttonId);
+
+      if (Notification.permission === "denied") {
+        removePushButton();
+        return;
+      }
+
+      if (isButtonSuppressed()) {
+        removePushButton();
+        return;
+      }
 
       if (wasPushEnabled() || Notification.permission === "granted") {
+        suppressButtonForSession();
+        removePushButton();
         subscribeToPush().catch(() => {});
         return;
       }
+
+      if (existingButton) return;
 
       const registration = await navigator.serviceWorker.ready;
       const existingSubscription = await registration.pushManager.getSubscription();
@@ -344,6 +365,10 @@ const pushRegistrationScript = `
 
     mountPushButton().catch(() => {});
     document.addEventListener("nav", () => mountPushButton().catch(() => {}));
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) mountPushButton().catch(() => {});
+    });
+    window.addEventListener("focus", () => mountPushButton().catch(() => {}));
   })();
 `
 

@@ -5,7 +5,7 @@ socialImage: og-image.png
 
 ![유방암 관련 학습·치료 정보 노트](/static/og-image.png)
 
-공개하는 유방암 관련 학습·치료 정보 노트입니다.
+유방암 관련 학습·치료 정보 공개 노트
 
 ## 문서 목록
 
