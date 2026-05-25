@@ -506,59 +506,87 @@ const installGuideScript = `
           display: grid;
           place-items: center;
           padding: 1rem;
-          background: rgba(24, 33, 43, 0.42);
-          backdrop-filter: blur(8px);
+          background:
+            linear-gradient(180deg, rgba(24, 33, 43, 0.38), rgba(24, 33, 43, 0.54));
+          backdrop-filter: blur(10px);
         }
 
         #pwa-install-guide .pwa-install-card {
           box-sizing: border-box;
-          width: min(34rem, 100%);
-          max-height: min(82dvh, 42rem);
+          width: min(38rem, 100%);
+          max-height: min(84dvh, 44rem);
           overflow: auto;
-          border: 1px solid color-mix(in srgb, var(--lightgray) 72%, transparent);
+          border: 1px solid color-mix(in srgb, var(--lightgray) 58%, transparent);
           border-radius: 8px;
-          background: var(--light);
+          background:
+            linear-gradient(180deg, color-mix(in srgb, var(--light) 94%, white), var(--light) 42%),
+            var(--light);
           color: var(--dark);
-          box-shadow: 0 22px 70px rgba(20, 28, 38, 0.28);
+          box-shadow: 0 24px 76px rgba(20, 28, 38, 0.34), 0 2px 0 rgba(255, 255, 255, 0.55) inset;
+          position: relative;
+        }
+
+        #pwa-install-guide .pwa-install-card::before {
+          content: "";
+          position: absolute;
+          inset: 0 0 auto;
+          height: 4px;
+          background: linear-gradient(90deg, #e8799d, #84a59d, #f2cc8f);
         }
 
         #pwa-install-guide .pwa-install-head {
           display: grid;
           grid-template-columns: auto 1fr auto;
-          gap: 0.85rem;
+          gap: 0.95rem;
           align-items: center;
-          padding: 1.1rem 1.15rem 0.8rem;
+          padding: 1.25rem 1.25rem 1rem;
           border-bottom: 1px solid var(--lightgray);
         }
 
         #pwa-install-guide .pwa-install-mark {
           display: grid;
-          width: 2.35rem;
-          height: 2.35rem;
+          width: 2.75rem;
+          height: 2.75rem;
           place-items: center;
-          border-radius: 999px;
+          border-radius: 8px;
           background: linear-gradient(135deg, #e8799d, #84a59d);
           color: white;
+          box-shadow: 0 10px 24px rgba(216, 72, 118, 0.26);
         }
 
         #pwa-install-guide h2 {
           margin: 0;
-          font-size: 1.05rem;
-          line-height: 1.35;
+          font-size: 1.18rem;
+          line-height: 1.3;
           letter-spacing: 0;
         }
 
-        #pwa-install-guide .pwa-install-platform {
-          margin: 0.18rem 0 0;
+        #pwa-install-guide .pwa-install-subtitle {
+          margin: 0.28rem 0 0;
           color: var(--darkgray);
-          font-size: 0.86rem;
-          line-height: 1.35;
+          font-size: 0.9rem;
+          line-height: 1.45;
+        }
+
+        #pwa-install-guide .pwa-install-platform {
+          display: inline-flex;
+          align-items: center;
+          width: fit-content;
+          margin: 0 0 0.42rem;
+          border: 1px solid color-mix(in srgb, var(--secondary) 24%, transparent);
+          border-radius: 999px;
+          padding: 0.18rem 0.56rem;
+          background: color-mix(in srgb, var(--secondary) 10%, transparent);
+          color: var(--secondary);
+          font-size: 0.78rem;
+          font-weight: 800;
+          line-height: 1.3;
         }
 
         #pwa-install-guide .pwa-install-close {
           display: grid;
-          width: 2rem;
-          height: 2rem;
+          width: 2.15rem;
+          height: 2.15rem;
           place-items: center;
           border: 0;
           border-radius: 999px;
@@ -574,52 +602,94 @@ const installGuideScript = `
 
         #pwa-install-guide .pwa-install-body {
           display: grid;
-          gap: 1rem;
-          padding: 1rem 1.15rem 1.1rem;
+          gap: 0.85rem;
+          padding: 1rem 1.25rem 1.25rem;
         }
 
         #pwa-install-guide .pwa-install-section {
           display: grid;
-          gap: 0.65rem;
+          grid-template-columns: auto 1fr;
+          gap: 0.75rem;
+          border: 1px solid color-mix(in srgb, var(--lightgray) 82%, transparent);
+          border-radius: 8px;
+          padding: 0.95rem;
+          background: color-mix(in srgb, var(--light) 86%, white);
+          box-shadow: 0 8px 22px rgba(20, 28, 38, 0.06);
+        }
+
+        #pwa-install-guide .pwa-install-section-icon {
+          display: grid;
+          width: 2.25rem;
+          height: 2.25rem;
+          place-items: center;
+          border-radius: 8px;
+          background: color-mix(in srgb, var(--secondary) 12%, transparent);
+          color: var(--secondary);
+        }
+
+        #pwa-install-guide .pwa-install-section-content {
+          min-width: 0;
         }
 
         #pwa-install-guide .pwa-install-section-title {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.45rem;
           margin: 0;
           color: var(--secondary);
-          font-size: 0.92rem;
+          font-size: 0.96rem;
           font-weight: 800;
           line-height: 1.3;
         }
 
         #pwa-install-guide ol {
           display: grid;
-          gap: 0.45rem;
-          margin: 0;
-          padding-left: 1.25rem;
+          gap: 0.5rem;
+          margin: 0.65rem 0 0;
+          padding: 0;
+          list-style: none;
+          counter-reset: pwa-step;
         }
 
         #pwa-install-guide li {
+          counter-increment: pwa-step;
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 0.5rem;
+          align-items: start;
           margin: 0;
           color: var(--dark);
           font-size: 0.9rem;
-          line-height: 1.55;
+          line-height: 1.5;
+        }
+
+        #pwa-install-guide li::before {
+          content: counter(pwa-step);
+          display: grid;
+          width: 1.35rem;
+          height: 1.35rem;
+          place-items: center;
+          border-radius: 999px;
+          background: color-mix(in srgb, var(--tertiary) 14%, transparent);
+          color: var(--tertiary);
+          font-size: 0.72rem;
+          font-weight: 900;
+          line-height: 1;
         }
 
         #pwa-install-guide .pwa-install-actions {
           display: flex;
           flex-wrap: wrap;
           gap: 0.55rem;
-          padding-top: 0.2rem;
+          align-items: center;
+          justify-content: space-between;
+          border-top: 1px solid var(--lightgray);
+          margin-top: 0.1rem;
+          padding-top: 0.9rem;
         }
 
         #pwa-install-guide .pwa-install-primary,
         #pwa-install-guide .pwa-install-secondary {
-          min-height: 2.45rem;
+          min-height: 2.55rem;
           border-radius: 999px;
-          padding: 0 0.95rem;
+          padding: 0 1rem;
           font: inherit;
           font-size: 0.9rem;
           font-weight: 800;
@@ -628,14 +698,20 @@ const installGuideScript = `
 
         #pwa-install-guide .pwa-install-primary {
           border: 1px solid var(--secondary);
-          background: var(--secondary);
-          color: var(--light);
+          background: linear-gradient(135deg, var(--secondary), color-mix(in srgb, var(--secondary) 72%, #e8799d));
+          color: white;
+          box-shadow: 0 10px 24px rgba(40, 75, 99, 0.2);
         }
 
         #pwa-install-guide .pwa-install-secondary {
           border: 1px solid var(--lightgray);
-          background: transparent;
+          background: color-mix(in srgb, var(--light) 88%, white);
           color: var(--darkgray);
+        }
+
+        #pwa-install-guide .pwa-install-primary:hover,
+        #pwa-install-guide .pwa-install-secondary:hover {
+          transform: translateY(-1px);
         }
 
         #pwa-install-guide .pwa-install-primary[hidden] {
@@ -654,11 +730,26 @@ const installGuideScript = `
           }
 
           #pwa-install-guide .pwa-install-head {
-            padding: 1rem 1rem 0.75rem;
+            grid-template-columns: auto 1fr auto;
+            padding: 1.05rem 1rem 0.85rem;
           }
 
           #pwa-install-guide .pwa-install-body {
-            padding: 0.9rem 1rem 1rem;
+            padding: 0.85rem 1rem 1rem;
+          }
+
+          #pwa-install-guide .pwa-install-section {
+            grid-template-columns: 1fr;
+            gap: 0.65rem;
+          }
+
+          #pwa-install-guide .pwa-install-actions {
+            justify-content: stretch;
+          }
+
+          #pwa-install-guide .pwa-install-primary,
+          #pwa-install-guide .pwa-install-secondary {
+            flex: 1 1 100%;
           }
         }
       \`;
@@ -686,24 +777,32 @@ const installGuideScript = `
       guide.setAttribute("role", "dialog");
       guide.setAttribute("aria-modal", "true");
       guide.setAttribute("aria-labelledby", "pwa-install-guide-title");
+      guide.setAttribute("aria-describedby", "pwa-install-guide-subtitle");
       guide.innerHTML = \`
         <section class="pwa-install-card">
           <div class="pwa-install-head">
             <span class="pwa-install-mark">\${appIcon()}</span>
             <div>
+              <p class="pwa-install-platform">\${data.label} 안내</p>
               <h2 id="pwa-install-guide-title">앱으로 설치하면 더 편하게 볼 수 있습니다</h2>
-              <p class="pwa-install-platform">\${data.label} 기준 안내입니다.</p>
+              <p id="pwa-install-guide-subtitle" class="pwa-install-subtitle">홈 화면에서 바로 열고, 새 글과 업데이트 알림을 받을 수 있습니다.</p>
             </div>
             <button class="pwa-install-close" type="button" aria-label="설치 안내 닫기">\${closeIcon()}</button>
           </div>
           <div class="pwa-install-body">
             <div class="pwa-install-section">
-              <p class="pwa-install-section-title">\${appIcon()} 설치 방법</p>
-              <ol>\${listItems(data.install)}</ol>
+              <span class="pwa-install-section-icon">\${appIcon()}</span>
+              <div class="pwa-install-section-content">
+                <p class="pwa-install-section-title">설치 방법</p>
+                <ol>\${listItems(data.install)}</ol>
+              </div>
             </div>
             <div class="pwa-install-section">
-              <p class="pwa-install-section-title">\${bellIcon()} 알림 설정</p>
-              <ol>\${listItems(data.notification)}</ol>
+              <span class="pwa-install-section-icon">\${bellIcon()}</span>
+              <div class="pwa-install-section-content">
+                <p class="pwa-install-section-title">알림 설정</p>
+                <ol>\${listItems(data.notification)}</ol>
+              </div>
             </div>
             <div class="pwa-install-actions">
               <button class="pwa-install-primary" type="button" hidden>앱 설치하기</button>
