@@ -41,9 +41,17 @@ const defaultOptions: Options = {
 
 function generateSiteMap(cfg: GlobalConfiguration, idx: ContentIndexMap): string {
   const base = cfg.baseUrl ?? ""
+  const getPriority = (slug: SimpleSlug): string => {
+    if (slug === "index") return "1.0"
+    if (slug.startsWith("glossary")) return "0.9"
+    if (slug.split("/").length === 1) return "0.8"
+    return "0.7"
+  }
   const createURLEntry = (slug: SimpleSlug, content: ContentDetails): string => `<url>
     <loc>https://${joinSegments(base, encodeURI(slug))}</loc>
     ${content.date && `<lastmod>${content.date.toISOString()}</lastmod>`}
+    <changefreq>weekly</changefreq>
+    <priority>${getPriority(slug)}</priority>
   </url>`
   const urls = Array.from(idx)
     .map(([slug, content]) => createURLEntry(simplifySlug(slug), content))
