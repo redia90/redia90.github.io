@@ -3,7 +3,7 @@ title: CDK4/6 억제제 — 입랜스·키스칼리·버제니오
 category: treatment
 tags: [CDK46억제제, 입랜스, 키스칼리, 버제니오, 팔보시클립, 리보시클립, 아베마시클립, ER양성, PALOMA, MONALEESA, MONARCH, NATALEE]
 created: 2026-05-21
-last_updated: 2026-05-21
+last_updated: 2026-05-25
 sources:
   - "Finn RS et al. PALOMA-3. NEJM. 2015;373:209-219."
   - "Hortobagyi GN et al. MONALEESA-2. NEJM. 2016;375:1738-1748."
@@ -201,6 +201,18 @@ CDK4/6 억제제 복용 환자의 자몽·약물 상호작용:
 > 💡 NATALEE 적응증 한국 보험 적용 시점
 > 💡 폐경 전 환자의 OFS + CDK4/6 + AI 조합의 최적 기간
 
+## 분기 추적 — 2026 예상 발표
+
+| 데이터 | 발표 예상 | 의미 |
+|--------|------------|------|
+| **monarchE 5년 iDFS** | ASCO 2026 (6월) | 버제니오 ER+ 고위험 5년 추적 |
+| **NATALEE 5년 iDFS** | ASCO 2026 (6월) | 키스칼리 ER+ 조기 5년 |
+| **MONARCH-3 OS** | ASCO 2026 | 버제니오 전이성 1차 OS |
+| **PALMIRA** | ESMO Breast 2026 | 입랜스 → 키스칼리 교체 효과 |
+| **postMONARCH** | SABCS 2026 | 버제니오 → 다음 약제 시퀀싱 |
+
+> 💡 ER+/HER2- 진행성 1차 표준 변경 가능성 — ASCO 2026 monarchE 5년 데이터 후 NCCN 권고 재검토 예상.
+
 ## 주의사항
 > ⚠️ 자몽·자몽주스 회피 — CYP3A4 억제로 약제 농도 변동. 특히 [[호르몬양성식이|버제니오(아베마시클립)]]에서 자주 강조.
 > ⚠️ 약제별 부작용 프로파일이 다르므로 환자에게 맞는 약제 선택은 종양내과 판단. 임의 약제 변경 금지.
@@ -216,3 +228,4 @@ CDK4/6 억제제 복용 환자의 자몽·약물 상호작용:
 
 ## 업데이트 히스토리
 - 2026-05-21: daily-brief 질문 제안 #8 — 신규 생성. 약제 3종 비교표(호중구·간·QT·설사 차이), 핵심 임상(PALOMA·MONALEESA·MONARCH·NATALEE·monarchE), 한국 보험 적용 현황(조기 보조는 monarchE만 적용), 자몽 상호작용, 진료실 질문 8개
+- 2026-05-25: library-check 보강 — 분기 추적표 (ASCO 2026 monarchE/NATALEE 5년·MONARCH-3 OS, ESMO PALMIRA, SABCS postMONARCH 발표 예정)

@@ -3,7 +3,7 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v7"
+const CACHE_VERSION = "v8"
 const APP_ORIGIN = "https://wiki.breast-cancer.workers.dev"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
@@ -347,6 +347,394 @@ const pushRegistrationScript = `
   })();
 `
 
+const installGuideScript = `
+  (function () {
+    const guideId = "pwa-install-guide";
+    const styleId = "pwa-install-guide-style";
+    const dismissedKey = "breastCancerWikiInstallGuideDismissed";
+    let deferredInstallPrompt = null;
+
+    function isInstalled() {
+      return (
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.matchMedia("(display-mode: fullscreen)").matches ||
+        window.navigator.standalone === true
+      );
+    }
+
+    function isDismissedForSession() {
+      try {
+        return sessionStorage.getItem(dismissedKey) === "true";
+      } catch {
+        return false;
+      }
+    }
+
+    function dismissForSession() {
+      try {
+        sessionStorage.setItem(dismissedKey, "true");
+      } catch {}
+    }
+
+    function detectPlatform() {
+      const ua = navigator.userAgent || "";
+      const platform = navigator.platform || "";
+      const touchMac = platform === "MacIntel" && navigator.maxTouchPoints > 1;
+
+      if (/Android/i.test(ua)) return "android";
+      if (/iPhone|iPad|iPod/i.test(ua) || touchMac) return "ios";
+      if (/Win/i.test(platform)) return "windows";
+      if (/Mac/i.test(platform)) return "mac";
+      return "desktop";
+    }
+
+    function appIcon() {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>';
+    }
+
+    function bellIcon() {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 21a2 2 0 0 0 3.4 0"/><path d="M18 8A6 6 0 0 0 6 8c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>';
+    }
+
+    function closeIcon() {
+      return '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+    }
+
+    const copy = {
+      ios: {
+        label: "iPhone / iPad",
+        install: [
+          "Safari에서 하단 공유 버튼을 누릅니다.",
+          "목록에서 홈 화면에 추가를 선택합니다.",
+          "추가를 누르면 홈 화면에서 바로 열 수 있습니다.",
+        ],
+        notification: [
+          "홈 화면에 추가한 앱으로 사이트를 엽니다.",
+          "오른쪽 아래 새 글 알림 버튼을 누르고 허용을 선택합니다.",
+          "알림이 보이지 않으면 iOS 설정 > 알림에서 유방암 위키 알림을 허용합니다.",
+        ],
+      },
+      android: {
+        label: "Android",
+        install: [
+          "Chrome 또는 Samsung Internet에서 오른쪽 위 메뉴를 엽니다.",
+          "앱 설치 또는 홈 화면에 추가를 선택합니다.",
+          "설치를 누르면 앱 목록과 홈 화면에서 실행할 수 있습니다.",
+        ],
+        notification: [
+          "설치한 앱 또는 브라우저에서 사이트를 엽니다.",
+          "새 글 알림 버튼을 누르고 브라우저 권한 창에서 허용을 선택합니다.",
+          "차단했다면 사이트 설정 > 알림에서 허용으로 바꿉니다.",
+        ],
+      },
+      windows: {
+        label: "Windows",
+        install: [
+          "Chrome 또는 Edge 주소창 오른쪽의 설치 아이콘을 누릅니다.",
+          "아이콘이 없으면 브라우저 메뉴 > 앱 > 이 사이트를 앱으로 설치를 선택합니다.",
+          "설치 후 시작 메뉴나 작업 표시줄에서 실행할 수 있습니다.",
+        ],
+        notification: [
+          "설치한 앱에서 새 글 알림 버튼을 누릅니다.",
+          "권한 창에서 허용을 선택합니다.",
+          "차단했다면 주소창 자물쇠 아이콘 > 사이트 설정 > 알림을 허용으로 바꿉니다.",
+        ],
+      },
+      mac: {
+        label: "Mac",
+        install: [
+          "Chrome 또는 Edge에서는 주소창 오른쪽 설치 아이콘을 누릅니다.",
+          "Safari에서는 공유 버튼 또는 파일 메뉴에서 Dock에 추가를 선택합니다.",
+          "설치 후 Dock, Launchpad, Spotlight에서 실행할 수 있습니다.",
+        ],
+        notification: [
+          "설치한 앱에서 새 글 알림 버튼을 누르고 허용을 선택합니다.",
+          "Safari를 사용한다면 Safari 설정 > 웹사이트 > 알림에서 허용 상태를 확인합니다.",
+          "Chrome 또는 Edge는 주소창 자물쇠 아이콘 > 사이트 설정에서 알림을 허용합니다.",
+        ],
+      },
+      desktop: {
+        label: "데스크탑",
+        install: [
+          "Chrome 또는 Edge 주소창 오른쪽의 설치 아이콘을 누릅니다.",
+          "아이콘이 없으면 브라우저 메뉴에서 앱 설치 또는 홈 화면에 추가를 찾습니다.",
+          "설치 후 일반 앱처럼 실행할 수 있습니다.",
+        ],
+        notification: [
+          "설치한 앱에서 새 글 알림 버튼을 누릅니다.",
+          "권한 창에서 허용을 선택합니다.",
+          "차단했다면 브라우저 사이트 설정에서 알림을 허용으로 변경합니다.",
+        ],
+      },
+    };
+
+    function ensureStyle() {
+      if (document.getElementById(styleId)) return;
+
+      const style = document.createElement("style");
+      style.id = styleId;
+      style.textContent = \`
+        #pwa-install-guide {
+          position: fixed;
+          inset: 0;
+          z-index: 1200;
+          display: grid;
+          place-items: center;
+          padding: 1rem;
+          background: rgba(24, 33, 43, 0.42);
+          backdrop-filter: blur(8px);
+        }
+
+        #pwa-install-guide .pwa-install-card {
+          box-sizing: border-box;
+          width: min(34rem, 100%);
+          max-height: min(82dvh, 42rem);
+          overflow: auto;
+          border: 1px solid color-mix(in srgb, var(--lightgray) 72%, transparent);
+          border-radius: 8px;
+          background: var(--light);
+          color: var(--dark);
+          box-shadow: 0 22px 70px rgba(20, 28, 38, 0.28);
+        }
+
+        #pwa-install-guide .pwa-install-head {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          gap: 0.85rem;
+          align-items: center;
+          padding: 1.1rem 1.15rem 0.8rem;
+          border-bottom: 1px solid var(--lightgray);
+        }
+
+        #pwa-install-guide .pwa-install-mark {
+          display: grid;
+          width: 2.35rem;
+          height: 2.35rem;
+          place-items: center;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #e8799d, #84a59d);
+          color: white;
+        }
+
+        #pwa-install-guide h2 {
+          margin: 0;
+          font-size: 1.05rem;
+          line-height: 1.35;
+          letter-spacing: 0;
+        }
+
+        #pwa-install-guide .pwa-install-platform {
+          margin: 0.18rem 0 0;
+          color: var(--darkgray);
+          font-size: 0.86rem;
+          line-height: 1.35;
+        }
+
+        #pwa-install-guide .pwa-install-close {
+          display: grid;
+          width: 2rem;
+          height: 2rem;
+          place-items: center;
+          border: 0;
+          border-radius: 999px;
+          background: transparent;
+          color: var(--darkgray);
+          cursor: pointer;
+        }
+
+        #pwa-install-guide .pwa-install-close:hover {
+          background: var(--lightgray);
+          color: var(--dark);
+        }
+
+        #pwa-install-guide .pwa-install-body {
+          display: grid;
+          gap: 1rem;
+          padding: 1rem 1.15rem 1.1rem;
+        }
+
+        #pwa-install-guide .pwa-install-section {
+          display: grid;
+          gap: 0.65rem;
+        }
+
+        #pwa-install-guide .pwa-install-section-title {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          margin: 0;
+          color: var(--secondary);
+          font-size: 0.92rem;
+          font-weight: 800;
+          line-height: 1.3;
+        }
+
+        #pwa-install-guide ol {
+          display: grid;
+          gap: 0.45rem;
+          margin: 0;
+          padding-left: 1.25rem;
+        }
+
+        #pwa-install-guide li {
+          margin: 0;
+          color: var(--dark);
+          font-size: 0.9rem;
+          line-height: 1.55;
+        }
+
+        #pwa-install-guide .pwa-install-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.55rem;
+          padding-top: 0.2rem;
+        }
+
+        #pwa-install-guide .pwa-install-primary,
+        #pwa-install-guide .pwa-install-secondary {
+          min-height: 2.45rem;
+          border-radius: 999px;
+          padding: 0 0.95rem;
+          font: inherit;
+          font-size: 0.9rem;
+          font-weight: 800;
+          cursor: pointer;
+        }
+
+        #pwa-install-guide .pwa-install-primary {
+          border: 1px solid var(--secondary);
+          background: var(--secondary);
+          color: var(--light);
+        }
+
+        #pwa-install-guide .pwa-install-secondary {
+          border: 1px solid var(--lightgray);
+          background: transparent;
+          color: var(--darkgray);
+        }
+
+        #pwa-install-guide .pwa-install-primary[hidden] {
+          display: none;
+        }
+
+        @media (max-width: 700px) {
+          #pwa-install-guide {
+            align-items: end;
+            padding: 0.75rem;
+          }
+
+          #pwa-install-guide .pwa-install-card {
+            width: 100%;
+            max-height: 86dvh;
+          }
+
+          #pwa-install-guide .pwa-install-head {
+            padding: 1rem 1rem 0.75rem;
+          }
+
+          #pwa-install-guide .pwa-install-body {
+            padding: 0.9rem 1rem 1rem;
+          }
+        }
+      \`;
+      document.head.appendChild(style);
+    }
+
+    function listItems(items) {
+      return items.map((item) => "<li>" + item + "</li>").join("");
+    }
+
+    function removeGuide() {
+      const guide = document.getElementById(guideId);
+      if (guide) guide.remove();
+    }
+
+    function mountGuide() {
+      if (isInstalled() || isDismissedForSession() || document.getElementById(guideId)) return;
+
+      const platform = detectPlatform();
+      const data = copy[platform] || copy.desktop;
+      ensureStyle();
+
+      const guide = document.createElement("div");
+      guide.id = guideId;
+      guide.setAttribute("role", "dialog");
+      guide.setAttribute("aria-modal", "true");
+      guide.setAttribute("aria-labelledby", "pwa-install-guide-title");
+      guide.innerHTML = \`
+        <section class="pwa-install-card">
+          <div class="pwa-install-head">
+            <span class="pwa-install-mark">\${appIcon()}</span>
+            <div>
+              <h2 id="pwa-install-guide-title">앱으로 설치하면 더 편하게 볼 수 있습니다</h2>
+              <p class="pwa-install-platform">\${data.label} 기준 안내입니다.</p>
+            </div>
+            <button class="pwa-install-close" type="button" aria-label="설치 안내 닫기">\${closeIcon()}</button>
+          </div>
+          <div class="pwa-install-body">
+            <div class="pwa-install-section">
+              <p class="pwa-install-section-title">\${appIcon()} 설치 방법</p>
+              <ol>\${listItems(data.install)}</ol>
+            </div>
+            <div class="pwa-install-section">
+              <p class="pwa-install-section-title">\${bellIcon()} 알림 설정</p>
+              <ol>\${listItems(data.notification)}</ol>
+            </div>
+            <div class="pwa-install-actions">
+              <button class="pwa-install-primary" type="button" hidden>앱 설치하기</button>
+              <button class="pwa-install-secondary" type="button">나중에 보기</button>
+            </div>
+          </div>
+        </section>
+      \`;
+
+      const close = () => {
+        dismissForSession();
+        removeGuide();
+      };
+
+      guide.querySelector(".pwa-install-close")?.addEventListener("click", close);
+      guide.querySelector(".pwa-install-secondary")?.addEventListener("click", close);
+      guide.addEventListener("click", (event) => {
+        if (event.target === guide) close();
+      });
+      document.addEventListener("keydown", function onKeydown(event) {
+        if (event.key !== "Escape") return;
+        document.removeEventListener("keydown", onKeydown);
+        close();
+      });
+
+      const installButton = guide.querySelector(".pwa-install-primary");
+      if (installButton && deferredInstallPrompt) {
+        installButton.hidden = false;
+        installButton.addEventListener("click", async () => {
+          const promptEvent = deferredInstallPrompt;
+          deferredInstallPrompt = null;
+          promptEvent.prompt();
+          await promptEvent.userChoice.catch(() => undefined);
+          close();
+        });
+      }
+
+      document.body.appendChild(guide);
+    }
+
+    window.addEventListener("beforeinstallprompt", (event) => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+      mountGuide();
+    });
+
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
+      removeGuide();
+    });
+
+    window.setTimeout(() => mountGuide(), 900);
+    document.addEventListener("nav", () => window.setTimeout(() => mountGuide(), 250));
+  })();
+`
+
 export const PWA: QuartzEmitterPlugin = () => ({
   name: "PWA",
   async *emit(ctx) {
@@ -411,6 +799,12 @@ export const PWA: QuartzEmitterPlugin = () => ({
             navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {});
           }
         `,
+        spaPreserve: true,
+      },
+      {
+        loadTime: "afterDOMReady",
+        contentType: "inline",
+        script: installGuideScript,
         spaPreserve: true,
       },
       {
