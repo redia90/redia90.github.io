@@ -18,7 +18,7 @@ function readIndex(path) {
 }
 
 function isNotifiableSlug(slug) {
-  return slug !== "index" && !slug.startsWith("tags/")
+  return !slug.startsWith("tags/")
 }
 
 function contentSignature(content) {
