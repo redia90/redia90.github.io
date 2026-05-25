@@ -4,7 +4,7 @@ description: 유방암 진단, 검사, 치료, 생활관리, 보험·행정 정�
 socialImage: og-image.png
 ---
 
-![유방암 관련 학습·치료 정보 노트](/static/og-image.png)
+<img class="home-hero-image" src="/static/og-image.png" alt="유방암 관련 학습·치료 정보 노트" />
 
 유방암 관련 학습·치료 정보 공개 노트
 

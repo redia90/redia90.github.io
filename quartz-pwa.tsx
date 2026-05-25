@@ -3,7 +3,7 @@ import { QuartzEmitterPlugin } from "./quartz/plugins/types"
 import { write } from "./quartz/plugins/emitters/helpers"
 import { FullSlug } from "./quartz/util/path"
 
-const CACHE_VERSION = "v8"
+const CACHE_VERSION = "v9"
 const APP_ORIGIN = "https://wiki.breast-cancer.workers.dev"
 
 const serviceWorkerSource = `const CACHE = "breast-cancer-wiki-${CACHE_VERSION}";
@@ -223,11 +223,12 @@ const pushRegistrationScript = `
     }
 
     async function sendSubscription(subscription) {
-      await fetch("/api/push/subscribe", {
+      const response = await fetch("/api/push/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(subscription),
       });
+      if (!response.ok) throw new Error("Push subscription could not be saved");
     }
 
     function markPushEnabled() {
@@ -244,6 +245,12 @@ const pushRegistrationScript = `
       } catch {
         return false;
       }
+    }
+
+    function clearPushEnabled() {
+      try {
+        localStorage.removeItem(subscriptionStateKey);
+      } catch {}
     }
 
     function suppressButtonForSession() {
@@ -317,20 +324,6 @@ const pushRegistrationScript = `
         return;
       }
 
-      if (isButtonSuppressed()) {
-        removePushButton();
-        return;
-      }
-
-      if (wasPushEnabled() || Notification.permission === "granted") {
-        suppressButtonForSession();
-        removePushButton();
-        subscribeToPush().catch(() => {});
-        return;
-      }
-
-      if (existingButton) return;
-
       const registration = await navigator.serviceWorker.ready;
       const existingSubscription = await registration.pushManager.getSubscription();
       if (existingSubscription) {
@@ -339,13 +332,33 @@ const pushRegistrationScript = `
         return;
       }
 
+      if (wasPushEnabled()) {
+        clearPushEnabled();
+      }
+
+      if (Notification.permission === "granted") {
+        try {
+          await subscribeToPush();
+          return;
+        } catch {
+          clearPushEnabled();
+        }
+      }
+
+      if (isButtonSuppressed() && Notification.permission !== "granted") {
+        removePushButton();
+        return;
+      }
+
+      if (existingButton) return;
+
       ensureButtonStyle();
 
       const button = document.createElement("button");
       button.id = buttonId;
       button.type = "button";
       button.setAttribute("aria-label", "새 글 알림 받기");
-      renderButton(button, "새 글 알림", "idle");
+      renderButton(button, Notification.permission === "granted" ? "알림 다시 설정" : "새 글 알림", "idle");
 
       button.addEventListener("click", async () => {
         suppressButtonForSession();
