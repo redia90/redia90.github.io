@@ -50,6 +50,7 @@ PageTitle.css = `
   background-color: transparent;
   border-radius: 0;
   line-height: 0;
+  transform: translateY(0.16rem);
 }
 
 .page-title .site-logo-link:hover {
