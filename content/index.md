@@ -6,8 +6,6 @@ socialImage: og-image.png
 
 <img class="home-hero-image" src="/static/home-hero-image.png" alt="유방암 관련 학습·치료 정보 노트" />
 
-# 유방암 위키
-
 유방암 관련 학습·치료 정보 공개 노트
 
 처음 방문했다면 [[lifestyle/처음온사람안내|처음 온 사람 안내]]부터 읽어보세요.
