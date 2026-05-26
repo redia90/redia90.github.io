@@ -16,7 +16,7 @@ GlossaryPopup.css = `
   background: color-mix(in srgb, var(--secondary) 9%, transparent);
   color: var(--dark);
   font: inherit;
-  font-weight: 750;
+  font-weight: 600;
   line-height: inherit;
   cursor: help;
   text-align: inherit;
@@ -61,7 +61,7 @@ GlossaryPopup.css = `
   margin: 0 0 0.32rem;
   color: var(--dark);
   font-size: 0.98rem;
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -75,7 +75,7 @@ GlossaryPopup.css = `
   background: var(--secondary);
   color: var(--light);
   font-size: 0.78rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .glossary-popup-desc {
@@ -90,7 +90,7 @@ GlossaryPopup.css = `
   margin-top: 0.55rem;
   color: var(--secondary);
   font-size: 0.84rem;
-  font-weight: 800;
+  font-weight: 650;
 }
 
 @media all and (max-width: 800px) {

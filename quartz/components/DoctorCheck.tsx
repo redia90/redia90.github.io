@@ -133,7 +133,7 @@ DoctorCheck.css = `
   margin: 0;
   color: var(--dark);
   font-size: 1rem;
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.35;
 }
 

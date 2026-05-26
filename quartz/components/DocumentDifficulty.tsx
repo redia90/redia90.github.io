@@ -132,17 +132,17 @@ DocumentDifficulty.css = `
   background: var(--secondary);
   color: var(--light);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 650;
 }
 
 .doc-difficulty-kicker {
   color: var(--gray);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .doc-difficulty strong {
   color: var(--dark);
-  font-weight: 800;
+  font-weight: 650;
 }
 
 .doc-difficulty-note {
