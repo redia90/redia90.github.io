@@ -14,7 +14,7 @@ socialImage: og-image.png
 
 <!-- 사이드바 Explorer 기준 69개 문서 -->
 
-## biology
+## 생물학·위험인자
 
 - <a href="./biology/BRCA%EC%9C%A0%EC%A0%84%EC%9E%90" class="internal"><span class="no-break">BRCA1 / BRCA2</span> 유전자</a>
 - [[biology/남성유방암|남성 유방암 (Male Breast Cancer)]]
@@ -23,14 +23,14 @@ socialImage: og-image.png
 - [[biology/유방암면역_미생물군|유방암과 면역·장내 미생물군]]
 - [[biology/휴면암세포_재발메커니즘|휴면 암세포와 유방암 재발 메커니즘]]
 
-## cases
+## 사례
 
 - [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]]
 - [[cases/노인유방암|노인 유방암 (70세 이상) — CGA·치료 강도 조정·합병증 관리]]
 - [[cases/장기생존_4기경험담|유방암 4기·전이 장기생존 경험담 모음]]
 - [[cases/임신중유방암_PABC|임신 관련 유방암 (PABC) — 임신 중·산후 진단]]
 
-## diagnosis
+## 진단·검사
 
 - [[diagnosis/FISH검사|FISH 검사 — HER2 유전자 증폭 확인 (ISH)]]
 - [[diagnosis/검사결과지읽기도우미|검사 결과지 읽기 도우미 — 병리·수용체·병기 핵심 항목]]
@@ -44,11 +44,11 @@ socialImage: og-image.png
 - [[diagnosis/유전자검사|유전자검사 — BRCA·NGS·유전상담]]
 - [[diagnosis/유전자발현프로파일링|유전자발현 프로파일링 — Oncotype·MammaPrint·Prosigna·EndoPredict·BCI 통합]]
 
-## glossary
+## 용어사전
 
 - [[glossary/용어사전|유방암 용어사전]]
 
-## lifestyle
+## 생활·준비·지원
 
 - [[lifestyle/손해사정사대응|손해사정사 대응 가이드 — 동의서·면담·부지급]]
 - [[lifestyle/실비보험가이드|실비보험 가이드 — 세대별 구조·면책기간·청구 단계]]
@@ -71,7 +71,7 @@ socialImage: og-image.png
 - [[lifestyle/호르몬양성식이|호르몬 양성 유방암 식이 가이드]]
 - [[lifestyle/호스피스완화의료|호스피스·완화의료 가이드 — 시한부·말기 돌봄]]
 
-## research
+## 연구·통계·최신 동향
 
 - [[research/2026임상연구업데이트|2026 유방암 임상 연구 업데이트 — NEJM·FDA·PubMed 핵심 정리]]
 - [[research/온코타입DX_RS점수|온코타입DX와 RS 점수 — 항암 여부 결정 검사]]
@@ -82,7 +82,7 @@ socialImage: og-image.png
 - [[research/유방암치료트렌드2026|유방암 치료 트렌드 2026]]
 - [[research/한국유방암통계|한국 유방암 통계·역학 — KBCS·국가암등록]]
 
-## treatment
+## 치료
 
 - <a href="./treatment/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a>
 - [[treatment/HER2표적치료|HER2 표적치료]]
