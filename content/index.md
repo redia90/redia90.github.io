@@ -12,8 +12,6 @@ socialImage: og-image.png
 
 > 이 위키는 진료를 대신하지 않습니다. 검사 결과, 치료 선택, 약 복용, 증상 변화는 반드시 담당 의료진과 상의하세요.
 
-## 전체 목차
-
 <!-- 총 69개 문서 기준으로 자동 정리 -->
 
 ## 용어사전
@@ -27,7 +25,7 @@ socialImage: og-image.png
 - [[biology/유방암분자서브타입|유방암 분자 서브타입]]
 - [[biology/유방암위험인자|유방암 위험인자 — 유전·호르몬·생활습관·환경 통합]]
 - [[biology/휴면암세포_재발메커니즘|휴면 암세포와 유방암 재발 메커니즘]]
-- <a href="./biology/BRCA%EC%9C%A0%EC%A0%84%EC%9E%90" class="internal">BRCA1 / BRCA2 유전자</a>
+- <a href="./biology/BRCA%EC%9C%A0%EC%A0%84%EC%9E%90" class="internal"><span class="no-break">BRCA1 / BRCA2</span> 유전자</a>
 
 ## 진단·검사
 
@@ -46,7 +44,7 @@ socialImage: og-image.png
 ## 치료
 
 - [[treatment/가임력보존|가임력 보존 — 항암 시작 전 난자·배아 동결]]
-- <a href="./treatment/%EB%A6%BC%ED%94%84%EB%B6%80%EC%A2%85" class="internal">림프부종 — 예방·진단·치료·어깨/팔 재활</a>
+- <a href="./treatment/%EB%A6%BC%ED%94%84%EB%B6%80%EC%A2%85" class="internal">림프부종 — 예방·진단·치료·<span class="no-break">어깨/팔</span> 재활</a>
 - [[treatment/방사선장기부작용|방사선 치료의 장기 부작용 — 심장·폐·이차암 추적]]
 - [[treatment/방사선치료|유방암 방사선 치료]]
 - [[treatment/신보조화학요법|신보조화학요법 (수술 전 항암)]]
@@ -59,7 +57,7 @@ socialImage: og-image.png
 - [[treatment/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
 - [[treatment/호르몬치료|유방암 호르몬 치료]]
 - [[treatment/호르몬치료약제비교|호르몬 치료 약제 비교 — 타목시펜·AI·SERD·PROTAC]]
-- <a href="./treatment/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal">CDK4/6 억제제 — 입랜스·키스칼리·버제니오</a>
+- <a href="./treatment/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a>
 - [[treatment/HER2-low치료|HER2-low 유방암 치료 — ADC 혁명]]
 - [[treatment/HER2표적치료|HER2 표적치료]]
 - [[treatment/PARP억제제|PARP 억제제]]

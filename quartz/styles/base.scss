@@ -89,6 +89,21 @@ article li,
   word-break: keep-all;
 }
 
+article li {
+  line-height: 1.75;
+}
+
+article li a.internal {
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  line-height: 1.65;
+  word-break: normal;
+}
+
+article .no-break {
+  white-space: nowrap;
+}
+
 path[class~="typst-shape"] {
   stroke: var(--darkgray);
 }
