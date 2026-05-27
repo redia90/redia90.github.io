@@ -388,8 +388,8 @@ const pushRegistrationScript = `
 const installGuideScript = `
   (function () {
     const guideId = "pwa-install-guide";
+    const buttonId = "pwa-install-guide-button";
     const styleId = "pwa-install-guide-style";
-    const dismissedKey = "breastCancerWikiInstallGuideDismissed";
     let deferredInstallPrompt = null;
 
     function isInstalled() {
@@ -398,20 +398,6 @@ const installGuideScript = `
         window.matchMedia("(display-mode: fullscreen)").matches ||
         window.navigator.standalone === true
       );
-    }
-
-    function isDismissedForSession() {
-      try {
-        return sessionStorage.getItem(dismissedKey) === "true";
-      } catch {
-        return false;
-      }
-    }
-
-    function dismissForSession() {
-      try {
-        sessionStorage.setItem(dismissedKey, "true");
-      } catch {}
     }
 
     function detectPlatform() {
@@ -521,6 +507,86 @@ const installGuideScript = `
           padding: 1rem;
           background: linear-gradient(180deg, rgba(19, 27, 36, 0.42), rgba(19, 27, 36, 0.62));
           backdrop-filter: blur(12px);
+        }
+
+        #pwa-install-guide-button {
+          position: fixed;
+          right: 1.25rem;
+          bottom: calc(6.55rem + env(safe-area-inset-bottom, 0px));
+          z-index: 998;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.52rem;
+          min-height: 2.55rem;
+          border: 1px solid color-mix(in srgb, var(--secondary) 26%, transparent);
+          border-radius: 999px;
+          padding: 0.58rem 0.86rem 0.58rem 0.64rem;
+          background:
+            linear-gradient(135deg, color-mix(in srgb, var(--light) 96%, white), color-mix(in srgb, var(--light) 88%, #e8799d)),
+            var(--light);
+          color: var(--secondary);
+          box-shadow: 0 12px 34px rgba(40, 75, 99, 0.16), 0 2px 8px rgba(216, 72, 118, 0.1);
+          font: inherit;
+          font-size: 0.9rem;
+          font-weight: 750;
+          line-height: 1;
+          cursor: pointer;
+          backdrop-filter: blur(12px);
+          transition:
+            transform 160ms ease,
+            box-shadow 160ms ease,
+            border-color 160ms ease;
+        }
+
+        #pwa-install-guide-button:hover,
+        #pwa-install-guide-button:focus-visible {
+          transform: translateY(-2px);
+          border-color: color-mix(in srgb, var(--secondary) 44%, transparent);
+          box-shadow: 0 16px 42px rgba(40, 75, 99, 0.22), 0 3px 12px rgba(216, 72, 118, 0.14);
+          outline: none;
+        }
+
+        #pwa-install-guide-button .pwa-install-button-icon {
+          display: inline-grid;
+          width: 1.75rem;
+          height: 1.75rem;
+          place-items: center;
+          border-radius: 999px;
+          background: linear-gradient(135deg, #e8799d, #84a59d);
+          color: white;
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+        }
+
+        #pwa-install-guide-button .pwa-install-button-tooltip {
+          position: absolute;
+          right: 0;
+          bottom: calc(100% + 0.55rem);
+          width: max-content;
+          max-width: min(17rem, calc(100vw - 2rem));
+          border: 1px solid color-mix(in srgb, var(--secondary) 22%, transparent);
+          border-radius: 8px;
+          padding: 0.55rem 0.7rem;
+          background: var(--light);
+          color: var(--dark);
+          box-shadow: 0 14px 34px rgba(20, 28, 38, 0.18);
+          font-size: 0.82rem;
+          font-weight: 700;
+          line-height: 1.35;
+          white-space: normal;
+          pointer-events: none;
+        }
+
+        #pwa-install-guide-button .pwa-install-button-tooltip::after {
+          content: "";
+          position: absolute;
+          right: 1.1rem;
+          top: 100%;
+          width: 0.65rem;
+          height: 0.65rem;
+          background: var(--light);
+          border-right: 1px solid color-mix(in srgb, var(--secondary) 22%, transparent);
+          border-bottom: 1px solid color-mix(in srgb, var(--secondary) 22%, transparent);
+          transform: translateY(-50%) rotate(45deg);
         }
 
         #pwa-install-guide .pwa-install-card {
@@ -795,6 +861,17 @@ const installGuideScript = `
         }
 
         @media (max-width: 700px) {
+          #pwa-install-guide-button {
+            right: 1rem;
+            bottom: calc(7.45rem + env(safe-area-inset-bottom, 0px));
+            font-size: 0.86rem;
+          }
+
+          #pwa-install-guide-button .pwa-install-button-tooltip {
+            right: 0;
+            max-width: calc(100vw - 2rem);
+          }
+
           #pwa-install-guide {
             align-items: end;
             padding: 0.7rem;
@@ -847,8 +924,33 @@ const installGuideScript = `
       if (guide) guide.remove();
     }
 
+    function removeInstallButton() {
+      const button = document.getElementById(buttonId);
+      if (button) button.remove();
+    }
+
+    function mountInstallButton() {
+      if (isInstalled()) {
+        removeGuide();
+        removeInstallButton();
+        return;
+      }
+
+      if (document.getElementById(buttonId)) return;
+      ensureStyle();
+
+      const button = document.createElement("button");
+      button.id = buttonId;
+      button.type = "button";
+      button.setAttribute("aria-label", "PWA 설치 안내 열기");
+      button.title = "클릭해서 설치 방법과 알림 설정을 확인하세요";
+      button.innerHTML = '<span class="pwa-install-button-icon">' + appIcon() + '</span><span>앱 설치 안내</span><span class="pwa-install-button-tooltip" role="tooltip">클릭해서 설치 방법과 알림 설정을 확인하세요</span>';
+      button.addEventListener("click", () => mountGuide());
+      document.body.appendChild(button);
+    }
+
     function mountGuide() {
-      if (isInstalled() || isDismissedForSession() || document.getElementById(guideId)) return;
+      if (isInstalled() || document.getElementById(guideId)) return;
 
       const platform = detectPlatform();
       const data = copy[platform] || copy.desktop;
@@ -910,7 +1012,6 @@ const installGuideScript = `
       \`;
 
       const close = () => {
-        dismissForSession();
         removeGuide();
       };
 
@@ -943,16 +1044,17 @@ const installGuideScript = `
     window.addEventListener("beforeinstallprompt", (event) => {
       event.preventDefault();
       deferredInstallPrompt = event;
-      mountGuide();
+      mountInstallButton();
     });
 
     window.addEventListener("appinstalled", () => {
       deferredInstallPrompt = null;
       removeGuide();
+      removeInstallButton();
     });
 
-    window.setTimeout(() => mountGuide(), 900);
-    document.addEventListener("nav", () => window.setTimeout(() => mountGuide(), 250));
+    window.setTimeout(() => mountInstallButton(), 900);
+    document.addEventListener("nav", () => window.setTimeout(() => mountInstallButton(), 250));
   })();
 `
 
