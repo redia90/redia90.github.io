@@ -390,6 +390,7 @@ const installGuideScript = `
     const guideId = "pwa-install-guide";
     const buttonId = "pwa-install-guide-button";
     const styleId = "pwa-install-guide-style";
+    const seenKey = "breastCancerWikiInstallGuideSeen";
     let deferredInstallPrompt = null;
 
     function isInstalled() {
@@ -512,7 +513,7 @@ const installGuideScript = `
         #pwa-install-guide-button {
           position: fixed;
           right: 1.25rem;
-          bottom: calc(6.55rem + env(safe-area-inset-bottom, 0px));
+          bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
           z-index: 998;
           display: inline-flex;
           align-items: center;
@@ -863,7 +864,7 @@ const installGuideScript = `
         @media (max-width: 700px) {
           #pwa-install-guide-button {
             right: 1rem;
-            bottom: calc(7.45rem + env(safe-area-inset-bottom, 0px));
+            bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
             font-size: 0.86rem;
           }
 
@@ -929,9 +930,28 @@ const installGuideScript = `
       if (button) button.remove();
     }
 
+    function hasSeenGuideThisSession() {
+      try {
+        return sessionStorage.getItem(seenKey) === "true";
+      } catch {
+        return false;
+      }
+    }
+
+    function markGuideSeenThisSession() {
+      try {
+        sessionStorage.setItem(seenKey, "true");
+      } catch {}
+    }
+
     function mountInstallButton() {
       if (isInstalled()) {
         removeGuide();
+        removeInstallButton();
+        return;
+      }
+
+      if (hasSeenGuideThisSession()) {
         removeInstallButton();
         return;
       }
@@ -945,7 +965,11 @@ const installGuideScript = `
       button.setAttribute("aria-label", "PWA 설치 안내 열기");
       button.title = "클릭해서 설치 방법과 알림 설정을 확인하세요";
       button.innerHTML = '<span class="pwa-install-button-icon">' + appIcon() + '</span><span>앱 설치 안내</span><span class="pwa-install-button-tooltip" role="tooltip">클릭해서 설치 방법과 알림 설정을 확인하세요</span>';
-      button.addEventListener("click", () => mountGuide());
+      button.addEventListener("click", () => {
+        markGuideSeenThisSession();
+        removeInstallButton();
+        mountGuide();
+      });
       document.body.appendChild(button);
     }
 
