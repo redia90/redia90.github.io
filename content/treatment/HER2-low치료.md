@@ -1,12 +1,16 @@
 ---
 title: HER2-low 유방암 치료 — ADC 혁명
 category: treatment
-tags: [HER2low, ADC, 엔허투, DESTINY-Breast04, 항체약물접합체, 전이성유방암, ILD, 간질성폐렴]
+tags: [HER2low, HER2ultralow, ADC, 엔허투, T-DXd, DESTINY-Breast04, DESTINY-Breast06, DESTINY-Breast05, DESTINY-Breast09, DESTINY-Breast11, 항체약물접합체, 전이성유방암, ILD, 간질성폐렴, 보험단계, 환자케이스]
 created: 2026-04-26
-last_updated: 2026-05-20
+last_updated: 2026-05-27
 sources:
   - "Threads @junetapa. #암_유방암_자세히알자. HER2-low와 ADC 혁명. 2026-01-10 (추정). https://www.threads.com/@junetapa/post/DTVE5Xaj5x_"
   - "Modi S et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. NEJM. 2022;387:9-20. (DESTINY-Breast04)"
+  - "Bardia A et al. T-DXd in HER2-Low or HER2-Ultralow Hormone Receptor-Positive Metastatic BC after Endocrine Therapy. NEJM. 2024 (DESTINY-Breast06)."
+  - "Modi S et al. DESTINY-Breast05 — T-DXd vs T-DM1 in HER2+ residual disease. 2026."
+  - "Tolaney SM et al. DESTINY-Breast09 — T-DXd ± pertuzumab as 1L HER2+ MBC. 2026."
+  - "Pusztai L et al. DESTINY-Breast11 — T-DXd 단독·서열 신보조요법. 2025·2026."
   - "한원식. 유방암 치료 트렌드 2026. 의학채널 비온뒤 신년특집. 2026-01-01. https://youtu.be/qjA2HmEGDkM"
   - "네이버 카페 '유방암이야기' — 관련 기사 TOP50 (Notion). 2026-05-20. https://www.notion.so/366bae8c4f598196a25de9f3fd323c7d"
 confidence: medium
@@ -30,18 +34,64 @@ confidence: medium
 
 > 💡 기존 유방암 환자의 80~85%가 "HER2 음성"으로 분류됐으나, 이 중 상당수가 HER2-low에 해당 → ADC 치료 적용 가능
 
-## DESTINY-Breast04 연구 (핵심 근거)
+## DESTINY-Breast 시리즈 — 임상 핵심 데이터 통합
+
+### DESTINY-Breast04 (NEJM 2022) — HER2-low 전이성, 패러다임 전환
 
 - **연구 설계**: HER2-low 전이성 유방암 환자에서 T-DXd(엔허투) vs 화학요법 비교
 - **발표**: 2022년 ASCO / NEJM
+- **대상**: 화학요법 1~2차 이후 진행, HR+ 또는 HR- 모두 포함
 
 | 지표 | T-DXd (엔허투) | 화학요법 |
 |-----|-------------|--------|
-| 중앙 전체 생존 기간 | 23.9개월 | 17.5개월 |
-| 생존 기간 연장 | **+6.4개월** | — |
+| 중앙 PFS (전체) | 9.9개월 | 5.1개월 |
+| 중앙 OS (전체) | 23.4개월 | 16.8개월 |
+| HR+ 군 OS | 23.9개월 | 17.5개월 |
+| 객관적 반응률 (ORR) | 52% | 16% |
 
 - **의미**: 전이성 유방암에서 약 6개월의 생존 기간 연장 — 임상적으로 유의미한 개선
 - **FDA 승인**: 2023년 / **한국 건강보험 적용**: 2023년 말
+
+### DESTINY-Breast06 (NEJM 2024) — 호르몬 치료 직후 적응증 확대 ⭐
+
+- **연구 설계**: HR+ HER2-low/ultralow 전이성, **내분비치료 후 진행** + 화학요법 무경험
+- **핵심**: 화학요법 이전 단계에서 T-DXd 사용 가능성 입증
+
+| 지표 | T-DXd | 화학요법 |
+|-----|--------|----------|
+| 중앙 PFS (HER2-low) | 13.2개월 | 8.1개월 |
+| 중앙 PFS (HER2-ultralow) | 13.2개월 | 8.3개월 |
+| 객관적 반응률 | 57% | 31% |
+
+- **임상적 함의**: **HER2-low/ultralow 환자에서 호르몬 치료 진행 직후 → 화학요법 대신 T-DXd 전환** 가능성
+- **HER2-ultralow 공식 임상 데이터** 첫 강력한 근거
+
+### DESTINY-Breast05 (2026) — HER2+ 조기 잔존병변 보조요법
+
+- **연구 설계**: 선행 항암 후 **non-pCR HER2+** → T-DXd 3년 vs T-DM1 14사이클
+- **3년 iDFS**: T-DXd **92.4%** vs T-DM1 **83.7%**
+- **임상적 함의**: HER2+ 잔존병변에서 T-DM1 → T-DXd 표준 전환 가능성
+
+### DESTINY-Breast09 (2026) — HER2+ 1차 전이성
+
+- **연구 설계**: 전이성 HER2+ 1차 — T-DXd + pertuzumab vs THP (탁산+허셉틴+퍼제타)
+- **PFS**: T-DXd+pertuzumab **40.7개월** vs THP 27.0개월 (HR ~0.56)
+- **임상적 함의**: 1차 전이성 표준 변경 가능성 — 현재 표준 THP 도전
+
+### DESTINY-Breast11 (2025·2026) — 신보조요법 서열
+
+- T-DXd 단독·또는 T-DXd → THP 서열 vs 표준 신보조
+- pCR 향상 신호 — non-pCR 환자에서 추가 약제 옵션 영향
+- 조기 유방암 영역에서 ADC 전진 배치 흐름
+
+### DESTINY-Breast08 (Phase Ib, 진행)
+
+T-DXd 병합 임상:
+- T-DXd + 카페시타빈
+- T-DXd + 카피바세르팁 (AKT 억제)
+- T-DXd + 아나스트로졸·풀베스트란트 (호르몬 병합)
+- ORR 40~71%·grade 3+ AE 47~67%
+- HER2-low + HR+ 신규 표준 후보
 
 ## ADC (항체약물접합체) 기전
 
@@ -77,12 +127,33 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 | 트로델비 (삭시투주맙) | Trop-2 | TNBC |
 | 파트리투맙 데룩스테칸 | HER3 | 임상시험 중 |
 
-## 한국 보험 적용 현황 (엔허투)
+## 한국 보험 적용 — 단계별 동선 (2026-05 기준)
 
-| 구분 | 조건 | 비용 |
-|-----|-----|-----|
-| **HER2-low (급여)** | 전이성(4기) + 선행 항암제 1~2가지 후 | 주사당 20~30만 원 (산정특례 5%) |
-| **HER2-ultralow (비급여)** | 비급여 (현장 처방 가능) | 주사당 400~500만 원 |
+| 적응증 | 한국 보험 | 시점 | 비용 (산정특례 5%) |
+|---------|------------|------|-------------------|
+| **HER2+ 전이성 2차+ (DB03)** | ✅ 적용 (2024-04) | 1년 8천만→400만 원 | 산정특례 적용 |
+| **HER2-low 전이성 (DB04)** | ✅ 적용 (2023년 말) | 화학요법 1~2차 후 | 주사당 20~30만 원 |
+| **HER2-low/ultralow 호르몬 치료 후 (DB06)** | ⚠️ 도입 진행 | 내분비치료 후 (화학 무경험) | 적용 진행 검토 |
+| **HER2+ 조기 잔존병변 (DB05)** | ⚠️ 도입 검토 | T-DM1 대체 가능성 | — |
+| **HER2+ 1차 전이성 (DB09)** | ❌ 미적용 (도입 검토) | THP 대체 가능성 | 자비 부담 |
+| **HER2-ultralow** | ❌ 비급여 | 임상시험 또는 자비 | 주사당 400~500만 원 |
+
+### 환자 동선 — 본인 적응증 확인 단계
+
+1. **본인 IHC 점수 정확히 확인** (0 / 1+ / 2+ / 3+) — [[면역조직화학검사(IHC)]] 결과지에서 직접
+2. **IHC 2+면 FISH 결과 확인** ([[FISH검사]] Group 1~5)
+3. **분류 확정**:
+   - IHC 0 + 극미량 발현 → HER2-ultralow (비급여)
+   - IHC 1+ → HER2-low (전이성 급여)
+   - IHC 2+ / FISH- → HER2-low (전이성 급여)
+   - IHC 2+ / FISH+ 또는 IHC 3+ → HER2+ ([[HER2표적치료]])
+4. **임상 단계 확인**:
+   - 조기 (수술 후) → 잔존병변이면 T-DM1 또는 T-DXd 임상 검토
+   - 전이성 → 위 보험 표 참조
+5. **현재 치료 차수**:
+   - 호르몬 치료 진행 후 → DB06 적용 가능성 (도입 시)
+   - 화학요법 1~2차 후 → DB04 표준 (급여)
+6. **제약사 환자 지원 프로그램** (PSP) 검토 — 다이이찌산쿄·아스트라제네카
 
 > 💡 HER2-ultralow 환자: 제약사 환자 지원 프로그램 활용 가능 (다이이찌산쿄/아스트라제네카)
 
@@ -117,6 +188,45 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 - "제가 HER2-low인데 엔허투 치료 가능한가요?" 적극 질문
 - 재발·전이 시 재생검 요청
 - 소규모 병원에서 최신 개념 미숙 가능 → 적극적 정보 탐색
+
+### IHC 2+ FISH- 케이스 시리즈 — 환자 유형별 패턴
+
+같은 "HER2-low (IHC 2+/FISH-)"라도 환자 상황별로 의사결정이 다르다:
+
+#### 케이스 A: ER+ 폐경 후, 호르몬 치료 5년 후 진행
+- **현재 치료**: AI + CDK4/6 → 풀베스트란트 + CDK4/6 → 화학요법
+- **HER2-low 옵션**: 화학요법 1~2차 후 → **DESTINY-Breast04 표준**
+- **2026 변화 (DB06 도입 시)**: 호르몬 치료 진행 직후 → 화학요법 대신 **T-DXd 직접 전환** 가능성
+- **이득**: 화학요법 부작용 없이 ADC로 전환
+
+#### 케이스 B: ER+ 폐경 전, 진단 시 림프절 양성
+- **현재 치료**: AI + OFS + CDK4/6
+- **HER2-low 옵션**: 진행 시 동일 — 화학요법 1~2차 후 DB04 적용
+- **추가 검사**: ESR1 ctDNA ([[유전자검사]]) → vepdegestrant 옵션 동시 검토
+
+#### 케이스 C: TNBC → HER2-low 전환 사례 (재발·전이)
+- 원발 TNBC → 전이 병소 재생검에서 ER 음성·HER2 1+ 확인
+- **HER2-low 옵션**: 키트루다·트로델비 다음 단계로 **T-DXd 검토** 가능
+- 카페에서 자주 보고되는 "**숨겨진 ADC 적응증**" 케이스
+
+#### 케이스 D: HER2 1+ vs 0 경계 — 호스피스 권유 환자
+- 진행 다발성 전이 + 환자 체력 저하 → 호스피스 권유
+- 보호자가 IHC 결과지 다시 확인 → 1+ 또는 2+/FISH- 확인
+- → DB04 적응증 (현재 한국 급여) 또는 DB06 (도입 시)
+- **체력·간수치·ILD 위험 평가 후 시작 가능성** 검토 (의료진 종합 판단)
+
+> 💡 환자가 직접 확인할 수 있는 가장 큰 분기점: **HER2 IHC 0 → 1+ 또는 2+/FISH-** 판독 일치도 70~80%이므로 **재판독 가치 ↑** ([[FISH검사]]·[[면역조직화학검사(IHC)]] 참조).
+
+### 진료실에서 물어볼 질문 — HER2-low 적응증 단계별
+
+1. 제 IHC 점수와 FISH 결과가 정확히 어떻게 되나요?
+2. 제 현재 단계에서 엔허투 적응증인가요? 한국 보험 적용되나요?
+3. DESTINY-Breast06 (호르몬 치료 후 직접 전환)이 한국에서 가능한가요?
+4. 화학요법 vs T-DXd 어느 게 더 적절한가요? 부작용 차이는?
+5. ILD 위험 평가 (폐 기저질환·이전 폐 방사선) 어떻게 하나요?
+6. 비급여 옵션·PSP 가능성은?
+7. 재발·전이 진단 시 재생검·재검사 가능한가요?
+8. ESR1 ctDNA 검사도 동시에 가능한가요? (ER+ HER2-low 환자)
 
 ### 카페 실제 사례 — HER2-low가 호스피스를 막은 케이스 (TOP50 #41)
 
@@ -171,3 +281,4 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 - 2026-05-20: 엔허투 국내 건강보험 적용(#747502, 카페 기사 TOP50) 반영, [[유방암신약파이프라인2026]] 연결
 - 2026-05-21: DESTINY-Breast08 phase Ib (T-DXd + capecitabine/capivasertib/anastrozole/fulvestrant 병합, ORR 40~71%·grade 3+ AE 47~67%) 인용; [[2026임상연구업데이트]] 링크
 - 2026-05-26: Notion 항암제·약제 TOP50(2026-05-26) — HER2-low가 호스피스를 막은 환자 사례(#41), 엔허투 중증 적용 확대 국민청원 (8회차 5천만원, #48) 추가
+- 2026-05-27: 대폭 보강 (daily-brief Top 1) — DESTINY-Breast 시리즈 6건 통합 (DB04·DB05·DB06·DB08·DB09·DB11) 임상 데이터, 한국 보험 적용 단계별 동선 6단계 + 환자 동선 6단계, IHC 2+ FISH- 환자 케이스 시리즈 4종 (ER+ 폐경 후·폐경 전·TNBC 전환·호스피스 권유), 진료실 질문 8개

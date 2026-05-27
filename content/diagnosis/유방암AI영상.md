@@ -1,15 +1,19 @@
 ---
 title: 유방암 AI 영상·디지털 진단 — DBT·AI 판독·CAD·디지털 병리
 category: diagnosis
-tags: [AI영상, AI진단, 디지털병리, DBT, 토모신세시스, CAD, 영상의학AI, 디지털병리AI, NCCN AI, 트라스파라]
+tags: [AI영상, AI진단, 디지털병리, DBT, 토모신세시스, CAD, 영상의학AI, 디지털병리AI, NCCN AI, 트라스파라, MASAI, ScreenPoint, Mirai, Volpara]
 created: 2026-05-25
-last_updated: 2026-05-25
+last_updated: 2026-05-27
 sources:
   - "FDA AI/ML-Based Medical Devices Approved List. 2024."
   - "NCCN Breast Cancer Screening v1.2026 (AI Risk Models)."
   - "Lehman CD et al. AI for Mammography Screening. Radiology. 2024."
   - "McKinney SM et al. International evaluation of AI for breast cancer screening. Nature. 2020;577:89-94."
+  - "Lång K et al. MASAI trial — AI-supported mammography screening. Lancet Oncol. 2023·2024 update."
+  - "Yala A et al. Mirai — Robust breast cancer risk prediction. Sci Transl Med. 2021."
+  - "Conant EF et al. Five-consecutive-year experience of DBT in mammography screening. Radiology. 2020."
   - "한국 식약처. 의료기기 AI 허가 데이터베이스."
+  - "Lunit. INSIGHT MMG Clinical Validation Studies. 2023~2025."
 confidence: medium
 ---
 
@@ -51,22 +55,76 @@ confidence: medium
 - McKinney Nature 2020: AI 단독 vs 영상의학과 → 비슷한 정확도
 - 일부 연구: AI 보조 시 **위양성 5~10% 감소, 위음성 1~2% 감소**
 
+#### MASAI 임상시험 (Lancet Oncol 2023·2024) ⭐
+
+**스웨덴 80,033명 무작위 대조시험** — AI 보조 판독의 가장 강력한 근거:
+
+| 그룹 | 판독 방식 |
+|------|------------|
+| **AI-supported (개입군)** | AI 보조 + 1명 영상의학과 (or 2명, AI가 점수에 따라 결정) |
+| **표준 (대조군)** | 영상의학과 2명 독립 판독 |
+
+**결과**:
+- **암 검출률**: AI군 **6.1/1000** vs 대조군 **5.1/1000** (20% 상대 ↑)
+- **위양성률**: 동등 (1.5% vs 1.5%)
+- **간격암 (Interval Cancer)**: AI군이 약간 ↓ (추적 진행)
+- **판독자 작업량**: **44% 감소** — 인력 부족 해결책 가능성
+
+**임상적 함의**: AI 보조 판독은 **암 더 잘 찾으면서 위양성 안 늘리고 판독 부담 절반** — 영국 NHS·노르웨이·덴마크 표준 도입 진행
+
+#### CSAW-CC (Sweden Cancer Screening AI), DBTex, RSNA Challenge
+- 다수의 코호트에서 AI 단독 검출률이 평균 영상의학과 의사보다 약간 높음 (개별 환자 변동성은 존재)
+- **고정확도 모델** 활용으로 ML 표준화 가능성
+
+#### 단점·실패 모드
+| 실패 패턴 | 영향 |
+|-----------|------|
+| **데이터 편향** | 학습 코호트 ≠ 실제 환자 인구 (예: 백인 위주 학습 → 동아시아 정확도 ↓) |
+| **DBT 검증 부족** | 대부분 2D 만모그래피 기반 학습 → DBT 도입 시 재검증 필요 |
+| **양성 종괴 위양성** | 섬유선종·낭종에서 일부 도구 위양성 |
+| **간격암 감지 한계** | AI도 빠른 doubling 종양 일부 놓침 |
+| **알고리즘 표류 (drift)** | 시간 지나며 정확도 변동 — 주기적 모니터링 필요 |
+| **블랙박스 결정** | 의사가 AI의 판단 근거 확인 어려움 (saliency map 한계) |
+
 **한국 도입**:
 - 루닛 INSIGHT MMG — 100개 이상 한국 병원
 - 일부 검진센터 표준 도입
 - 보험 적용 미비 — 자비 추가 가능
 
+### 한국 환자 코호트에서의 AI 영상 검증
+
+| 연구 | 결과 |
+|------|------|
+| **Lunit INSIGHT MMG (한국 다기관 2023)** | 영상의학과 단독 AUC 0.81 → AI 보조 0.88 |
+| **삼성서울·서울대 DBT + Lunit 통합 (2024)** | 치밀유방 환자에서 민감도 ↑ |
+| **NCCN AI 위험 모델 한국 검증 (진행 중)** | 35세 이상 고위험군 5년 위험 검증 |
+
+> 💡 **한국 여성 70% 치밀유방** — AI 도구 학습 데이터에 한국·동아시아 영상이 포함되었는지 확인 가치. 루닛 INSIGHT MMG는 **한국 데이터로 학습** → 한국 환자 검증 ↑.
+
 ### 2. DBT (디지털 토모신세시스, 3D 유방촬영술)
 
-- 유방을 여러 각도에서 촬영 → 3D 재구성
+- 유방을 여러 각도에서 촬영 → **1mm 슬라이스 단층** 재구성
 - 치밀유방 환자에서 **민감도 30~40% 향상**
 - 위양성 감소 → 불필요한 추가 검사 ↓
 - AI 분석과 결합 시 효과 ↑
 
+#### DBT 임상 데이터
+
+| 연구 | 결과 |
+|------|------|
+| **Conant Radiology 2020 (5년 추적)** | DBT + 2D vs 2D 단독 → **간격암 24% 감소, 위양성 17% 감소** |
+| **STORM trial (이탈리아)** | DBT 추가 시 검출률 27% ↑ |
+| **TMIST (미국 진행 중)** | DBT vs 2D 대규모 RCT — 결과 대기 |
+
+#### 한국 환자에서 DBT 가치
+- 치밀유방 70% — 2D 만모그래피의 **white-out** 문제
+- DBT는 단층 재구성으로 **하얀 배경 속 미세 외곡** 검출 향상
+- 일부 검진센터·종합병원 표준 도입 (서울대·삼성·아산 등)
+
 **한국 도입**:
 - 대형 종합병원 일부 도입
 - 자비 약 10~15만원 추가
-- 국가검진 미적용
+- 국가검진 미적용 — 환자 본인 부담
 
 ### 3. 유방초음파 AI
 
@@ -97,23 +155,40 @@ confidence: medium
 - **Paige Breast** (FDA 승인)
 - **Ibex Galen Breast**
 - **PathAI**
+- **Visiopharm** (HER2·Ki-67 정량 특화)
+- **Roche uPath** (Roche 자체 IHC + AI)
+- **Lunit SCOPE** (한국 루닛 — IHC·HER2-low 판독, 일부 임상시험 협력)
 
 **기능**:
 - IHC 슬라이드 자동 판독 (ER·PR·HER2·Ki-67)
 - HER2 0/1+/2+/3+ 자동 분류 (HER2-low 정확도 ↑)
 - Ki-67 자동 정량
 - 종양 면적·침습 자동 측정
+- 림프절 전이 자동 검출 (감시림프절 동결 절편)
 
 **임상 활용**:
 - 병리 판독 일치도 향상 (의사 간 70~80% → AI 90%+)
 - HER2-low 판정 표준화 (→ [[HER2-low치료]])
 - 한국 일부 대형 병원 도입 진행
 
+#### HER2-low 시대 디지털 병리 AI의 가치
+
+DESTINY-Breast04 이후 HER2 0 vs 1+ 판독 일치도가 **치료 결정 분기점**:
+
+| 도구 | 임상 데이터 |
+|------|------------|
+| **Paige HER2 Complete** | HER2 0/1+ 판독 일치도 의사 0.65 → AI 보조 0.85 |
+| **Roche uPath HER2** | 자동 정량 + Lipper/Asher 양성률 일치 ↑ |
+| **Visiopharm HER2** | HER2-low 정량 — 보조 분석 |
+
+→ [[면역조직화학검사(IHC)]] 판독자 간 일치도 (Kappa) / [[HER2-low치료]] 적응증 정확도 ↑
+
 ### 6. AI 위험 예측 모델
 
 **Mirai (MIT 2021)**:
 - 유방촬영술 영상에서 5년 위험 예측
 - 가족력·BRCA 정보 없이도 예측 가능
+- 외부 검증 (스웨덴·대만·이스라엘): AUC 0.71~0.76
 - 한국 데이터 검증 부족
 
 **NCCN AI Risk Model (v1.2026)**:
@@ -122,9 +197,24 @@ confidence: medium
 - 35세부터 선별 가능
 - → [[유방암위험인자]]·[[유방암검진2026]]
 
+**Volpara · Visage** (유방 밀도 + 위험 통합):
+- 자동 유방 밀도 분류 (BI-RADS A~D)
+- 일부 위험 모델 통합
+- 미국·유럽 일부 도입
+
 **Tyrer-Cuzick·BOADICEA**:
 - AI는 아니지만 다요인 위험 평가 표준
 - 임상에서 가장 많이 사용
+
+#### AI 위험 모델 비교
+
+| 모델 | 입력 | 출력 | 강점 |
+|------|------|------|------|
+| **Gail** | 임상 | 5년·평생 | 가장 흔히 사용 |
+| **Tyrer-Cuzick (IBIS)** | 임상 + 가족력 + BMI + 치밀도 | 10년·평생 | 다요인 통합 |
+| **BOADICEA** | + 다중 유전자 | 평생 | 유전 위험 정밀 |
+| **Mirai** | 유방촬영술 영상 | 5년 | **영상 단독** — 임상 정보 불필요 |
+| **NCCN AI Risk** | 영상 + 임상 | 5년 | 가이드라인 통합 |
 
 ---
 
@@ -167,6 +257,27 @@ confidence: medium
 5. 병리 검사에 AI 판독이 적용되나요? (HER2-low 정확도)
 6. NCCN AI 위험 모델로 본 제 5년 위험은?
 7. AI 결과 신뢰도와 의사 판독의 차이는?
+8. AI 학습 데이터에 한국·동아시아 환자가 포함되었나요?
+9. AI 판독 결과 사본을 받을 수 있나요? (다른 병원 의뢰 시)
+10. AI가 놓친 가능성에 대한 안전망은? (영상의학과 재판독·정기 추적)
+
+### 환자가 AI 영상을 활용하는 실전 동선
+
+1. **검진센터 선택** 시 AI 판독 도구 확인 — 홈페이지·전화 문의
+2. **치밀유방이라면** DBT + AI 보조 옵션 우선
+3. **고위험 (가족력·BRCA)** 환자는 **MRI + AI** 결합 검토
+4. **수술 후 병리** 판독 시 디지털 병리 AI 적용 여부 문의 (HER2-low 정확도)
+5. **재발·전이 시** 재생검 + AI 보조 IHC 판독 가치 ↑
+6. **5년 위험 평가** — NCCN AI Risk 또는 Tyrer-Cuzick 결과 확인
+
+### AI 도입의 윤리·안전 고려
+
+- **의료기기 허가** — FDA·CE·식약처 승인 도구만 사용
+- **환자 동의** — AI 분석에 환자 데이터 사용 여부
+- **데이터 보호** — 영상 데이터의 익명화·저장 기간
+- **알고리즘 책임** — AI 오류 시 의료진·제조사 책임 소재
+- **건강 격차** — AI 학습 데이터의 인종·연령 편향 문제
+- **임의 단독 사용 금지** — 의사 보조 도구로만
 
 ## 임상적 의의
 
@@ -210,3 +321,4 @@ confidence: medium
 
 ## 업데이트 히스토리
 - 2026-05-25: 신규 생성 (library-check 보강 추천) — AI 영상 6개 영역 (유방촬영술·DBT·초음파·MRI·병리·위험 예측), 한국 식약처 AI 허가 현황 5개 제품, 한국 임상 적용 단계, 진료실 질문 7개
+- 2026-05-27: 대폭 보강 (library-check Top 1) — MASAI 임상시험 (스웨덴 80,033명 RCT, 검출 20%↑·판독 44%↓), CSAW-CC·DBTex 추가 데이터, AI 실패 모드 6종 (편향·DBT 미검증·간격암·표류·블랙박스), 한국 환자 코호트 검증 3건, DBT Conant Radiology 2020 데이터, HER2-low 시대 디지털 병리 AI 가치 (Paige·Roche uPath·Visiopharm·Lunit SCOPE), 위험 모델 5종 비교표, 환자 실전 동선 6단계, AI 윤리·안전 고려 추가
