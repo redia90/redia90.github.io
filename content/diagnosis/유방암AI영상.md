@@ -292,7 +292,8 @@ DESTINY-Breast04 이후 HER2 0 vs 1+ 판독 일치도가 **치료 결정 분기�
 - [[유방암검진2026]] — AI 검진·치밀유방 검사
 - [[유방암진단체계]] — 진단 검사 흐름 (영상 + 조직)
 - [[유방암위험인자]] — AI 위험 평가 도구
-- [[정밀의학도구]] — AI subtype·NCCN AI 통합
+- [[정밀의학도구]] — AI subtype·NCCN AI 통합·MASAI·Mirai·디지털 병리 AI entry 동선
+- [[유방암면역_미생물군]] — sTIL 자동 판독 AI·PD-L1 CPS 디지털 병리
 - [[유방암분자서브타입]] — AI subtype (LINUXtrial SNF)
 - [[HER2-low치료]] — 병리 AI HER2 판정
 - [[면역조직화학검사(IHC)]] — IHC 판독 AI

@@ -243,9 +243,11 @@ ER·PR 결과를 정량화하는 가장 흔한 점수 (한국 병리과 표준):
 - [[유방암분자서브타입]] — IHC 4-항목 조합으로 서브타입 결정
 - [[FISH검사]] — HER2 IHC 2+ 보조 검사, ISH 방법
 - [[HER2표적치료]] — HER2 3+ 양성 치료
-- [[HER2-low치료]] — IHC 1+/2+ HER2-low 환자 ADC 옵션
+- [[HER2-low치료]] — IHC 1+/2+ HER2-low 환자 ADC 옵션, DESTINY-Breast 시리즈 6건 임상 데이터
 - [[호르몬치료]] — ER+/PR+ 치료
 - [[TNBC치료]] — ER-/PR-/HER2- 치료
+- [[유방암면역_미생물군]] — sTILs·PD-L1 CPS·22C3 항체 — IHC 결과의 면역항암제 적응증 의미
+- [[유방암AI영상]] — 디지털 병리 AI (Paige·Roche uPath·Lunit SCOPE)가 HER2-low 판독 정확도 결정
 - [[온코타입DX_RS점수]] — Ki67·IHC 외 21유전자 검사로 항암 결정
 - [[유방암진단체계]] — 진단 전체 흐름에서 IHC 위치
 - [[2026임상연구업데이트]] — HER2 IHC 불일치 20%·전이 병소 재검사

@@ -269,6 +269,8 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 > 💡 엔허투 신보조요법 — 어느 서브타입에서 가장 효과적인가?
 > 💡 ILD 예측 바이오마커 개발로 고위험 환자 사전 선별 가능성
 > 💡 ADC 내성 발생 메커니즘 및 내성 극복 전략
+> 💡 **DESTINY-Breast06** (HER2-low/ultralow 호르몬 치료 후 직접 전환) 한국 보험 적용 시점·도입 동선 추적
+> 💡 ASCO 2026 (6월) 발표 예정 — DB05/06/09 후속 데이터 즉시 ingest 준비
 
 ## 출처
 - Modi S et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. *NEJM*. 2022;387:9-20.
