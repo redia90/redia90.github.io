@@ -205,12 +205,19 @@ PARP 억제제 적응증 외 또는 내성 후 임상시험 가능성:
 
 ## 미해결 질문 / 연구 방향
 > 💡 **HRD 양성이지만 BRCA 변이 없는** 환자에서 PARP 억제제 효과 — myChoice HRD score·GIS 등 검사 도구 적용
+>    → **답변 (2026-05)**: 난소암에서는 myChoice HRD (Myriad)·GIS·SOPHiA HRD 검사 기반 PARP 적응증 확립 (PRIMA·PAOLA-1). **유방암 HRD 양성·BRCA 음성 환자에서 효과 제한적** (RIO·TBCRC 048 사후 분석) — 표준 적응증 미확립. 한국 HRD 검사 비급여 (약 100만원).
 > 💡 조기 유방암 보조요법에서의 최적 대상군 및 기간 정립 — OlympiA 5년·10년 추적 결과 대기
+>    → **답변 (2026-05)**: OlympiA 6년 추적 (SABCS 2024) — **6년 OS 87.5% vs 83.2% (HR 0.72)**, iDFS 격차 유지. **올라파립 1년이 최적 기간**으로 확정 (2년 연장 시험 PETREMAC 결과 대기). 한국은 2023년 보험 적용 (선항암 후 잔존병변 또는 수술 후 고위험 BRCA+).
 > 💡 **PARP 억제제 + 면역관문억제제 병용** — TOPACIO·MEDIOLA 임상시험 진행, 일부 시너지 보고
+>    → **답변 (2026-05)**: TOPACIO/KEYNOTE-162 TNBC ORR 47% (BRCA mut). **MEDIOLA Phase 2** (올라파립 + duruvalumab) HER2- gBRCA ORR 63%. KEYLYNK-009 Phase 3 (TNBC 1차) PFS 시너지 미미 — **단독 면역치료 vs 병합 차이 작음**. 임상 진입 보류 상태.
 > 💡 PARP 억제제 + ATR/WEE1 억제제 병용 — 내성 극복 전략 연구
+>    → **답변 (2026-05)**: ATR 억제제 (ceralasertib·camonsertib)·WEE1 억제제 (adavosertib)와 PARP 병합 Phase 1/2 진행 — VIOLETTE·CAPRI 임상. **혈액독성·점막염 부담 큼**. 적정 용량 탐색 중, **표준 진입은 2027년 이후 예상**.
 > 💡 PARP 억제제 내성 메커니즘 — BRCA reversion mutation 검출 시 후속 치료 전략
+>    → **답변 (2026-05)**: BRCA reversion (이차 변이 → 기능 회복)이 가장 흔한 내성 기전 (40~60%). 검출은 **ctDNA 시퀀싱** — Guardant360·FoundationOne Liquid. Reversion 검출 시 PARP 효과 소실 — 화학요법·면역항암 전환 권고. 일부는 ATR/POLθ 표적 임상시험 등록 가능.
 > 💡 **PALB2·RAD51C/D·ATM** 변이 환자 적응증 확대 — TBCRC 048 후속 연구
+>    → **답변 (2026-05)**: TBCRC 048 (JCO 2020) **PALB2 ORR 82%** — NCCN 2024 가이드라인 PALB2 PARP 권고 (Category 2B). RAD51C/D 데이터 부족. ATM 변이 환자는 PARP 효과 약함 (synthetic lethality 약함). **한국 보험은 BRCA1/2 한정** — PALB2 보험 확대 미정.
 > 💡 BRCA + dMMR/MSI-H 동반 환자에서 면역항암 + PARP 시너지
+>    → **답변 (2026-05)**: 유방암 dMMR/MSI-H 매우 드묾 (<2%). 면역치료·PARP 모두 적응증 충족 — **순차 vs 병합 결정 데이터 부재**. ASCO 권고: dMMR이면 면역치료 우선, BRCA 변이도 있으면 진행 후 PARP. 병합 임상시험 진행 중.
 
 ## 출처
 - 장하균, 임명철. 난소암 재발을 막아주는 먹는 치료제 - PARP 억제제. 의학채널 비온뒤. 2021-11-22. https://www.youtube.com/watch?v=eY4J7686UI8

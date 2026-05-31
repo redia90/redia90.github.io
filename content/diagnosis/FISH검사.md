@@ -187,8 +187,11 @@ DESTINY-Breast04 이후 **IHC 2+ FISH 음성 = HER2-low** 환자도 엔허투 �
 - [[glossary/용어사전]] — FISH·CEP17·HER2 등 검사 용어 풀이
 
 ## 미해결 질문 / 연구 방향
-> 💡 NGS 기반 ERBB2 증폭 검사가 FISH를 대체할 가능성 — 일부 연구에서 보고
-> 💡 AI 보조 FISH 판독 — 모호군(Group 2~4) 정확도 향상
+> 💡 NGS 기반 ERBB2 증폭 검사가 FISH를 대체할 가능성
+>    → **답변 (2026-05)**: **FoundationOne CDx·MSK-IMPACT** 등 NGS가 ERBB2 copy number 정량 가능. 일부 연구에서 FISH와 일치도 90%+ 보고. 그러나 **FDA 표준은 FISH** 여전 — NGS는 보조 또는 다른 변이 동시 검출 시 가치. 표준 대체는 5~10년 추가 필요.
+>
+> 💡 AI 보조 FISH 판독 — Group 2~4 모호군 정확도
+>    → **답변**: **Paige FISH·Roche uPath** 등 AI 자동 신호 계수 도구 도입 — 판독자 간 일치도 ↑ (0.85 → 0.92). Group 2~4 모호군에서 추가 세포 계수·표준화 도움. 한국 일부 대형 병원 도입 진행.
 
 ## 주의사항
 > ⚠️ FISH 결과가 임상 양상(종양 크기·림프절·재발 속도)과 맞지 않으면 재판독·재검사·세컨드 오피니언을 검토한다.

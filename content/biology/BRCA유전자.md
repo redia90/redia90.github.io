@@ -185,10 +185,15 @@ BRCA 변이 + 가임 계획 환자는 **예방적 절제·가임력 보존·임�
 
 ## 미해결 질문 / 연구 방향
 > 💡 **VUS (Variant of Uncertain Significance)** 해석 — 기능적 분류 연구 진행 중. 임상 결정 단독 근거 금지
+>    → **답변 (2026-05)**: ENIGMA·ClinVar 기반 VUS 재분류가 매년 5~10% 진행. **고기능 분석 (saturation genome editing, Findlay Nature 2018)** 으로 BRCA1 모든 변이의 기능 영향 분류 완료. **VUS도 5년마다 재해석 권장** — 일부는 시간 지나며 양성/병원성으로 재분류.
 > 💡 BRCA 외 다른 HR 유전자(**PALB2·CHEK2·ATM·RAD51C/D**)의 임상 역할 정립 — 일부 약제 적응증 확대 가능성
+>    → **답변 (2026-05)**: PALB2는 BRCA에 준한 위험 (lifetime ~50%) — NCCN MRI 검진 강화 권고, **TBCRC 048 PARP ORR 82%** — Category 2B PARP 적응증. CHEK2·ATM은 중간 침투율 (RR 2~4) — 검진 강화만 권고. RAD51C/D는 난소암 위주 — 유방암 데이터 부족.
 > 💡 한국인 BRCA founder 변이의 명확한 식별 — 검사 패널 최적화
+>    → **답변 (2026-05)**: KOHBRA 연구 3,000+ 가족 분석 — BRCA1 c.5530delC·BRCA2 c.7480C>T·c.755_758delACAG 등 일부 빈발. **그러나 Ashkenazi식 단일 founder는 없음** — 전체 NGS 패널 검사가 표준.
 > 💡 면역항암제 + PARP 병용의 BRCA 변이 환자 효과 — 임상시험 단계
+>    → **답변 (2026-05)**: TOPACIO/KEYNOTE-162 TNBC BRCA mut ORR 47%, MEDIOLA HER2- gBRCA ORR 63%. **KEYLYNK-009 Phase 3는 PFS 시너지 미미** — 단독 면역치료 대비 큰 우위 없음. 임상 표준 진입 보류 상태.
 > 💡 ctDNA 기반 BRCA 변이 모니터링과 잔존 미세 잔류병변(MRD)
+>    → **답변 (2026-05)**: ctDNA로 BRCA reversion (내성 기전) 검출 가능 — Guardant360·FoundationOne Liquid. **c-TRAK TN (Lancet Oncol 2023)** TNBC MRD 양성 시 면역항암 선제 적용 연구. MRD 모니터링 임상 진입 진행 중 — Signatera·NeXT Personal 한국 도입 초기.
 
 ## 주의사항
 > ⚠️ BRCA 검사 결과는 **본인뿐 아니라 가족에게도 영향**을 미친다. 양성 결과 시 가족 검사 권유는 가족 동의 전제다.
