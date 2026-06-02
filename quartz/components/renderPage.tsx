@@ -23,7 +23,7 @@ interface RenderComponents {
 }
 
 const headerRegex = new RegExp(/h[1-6]/)
-const assetVersion = "20260602-page-share"
+const assetVersion = "20260602-page-share-placement"
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,

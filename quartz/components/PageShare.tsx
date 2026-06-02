@@ -109,7 +109,7 @@ PageShare.css = `
 .page-share {
   display: flex;
   align-items: center;
-  margin: 0.35rem 0 0.75rem;
+  margin: 0.15rem 0 0.85rem;
 }
 
 .page-share-button {
@@ -157,6 +157,48 @@ PageShare.css = `
 @media all and (max-width: 800px) {
   .page-share {
     margin-top: 0.5rem;
+  }
+}
+
+.page-header > .popover-hint {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1rem;
+  align-items: start;
+}
+
+.page-header > .popover-hint > .breadcrumb-container,
+.page-header > .popover-hint > .doc-difficulty,
+.page-header > .popover-hint > .tags,
+.page-header > .popover-hint > .doctor-check {
+  grid-column: 1 / -1;
+}
+
+.page-header > .popover-hint > .article-title {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.page-header > .popover-hint > .content-meta {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.page-header > .popover-hint > .page-share {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  justify-self: end;
+  align-self: center;
+  margin: 2rem 0 0;
+}
+
+@media all and (max-width: 800px) {
+  .page-header > .popover-hint {
+    display: block;
+  }
+
+  .page-header > .popover-hint > .page-share {
+    margin: 0.35rem 0 0.85rem;
   }
 }
 `
