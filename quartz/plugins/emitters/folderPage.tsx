@@ -20,6 +20,7 @@ import { write } from "./helpers"
 import { i18n, TRANSLATIONS } from "../../i18n"
 import { BuildCtx } from "../../util/ctx"
 import { StaticResources } from "../../util/resources"
+import { getKoreanCategoryLabel } from "../../util/categoryLabels"
 interface FolderPageOptions extends FullPageLayout {
   sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
 }
@@ -66,16 +67,21 @@ function computeFolderInfo(
 ): Record<SimpleSlug, ProcessedContent> {
   // Create default folder descriptions
   const folderInfo: Record<SimpleSlug, ProcessedContent> = Object.fromEntries(
-    [...folders].map((folder) => [
-      folder,
-      defaultProcessedContent({
-        slug: joinSegments(folder, "index") as FullSlug,
-        frontmatter: {
-          title: `${i18n(locale).pages.folderContent.folder}: ${folder}`,
-          tags: [],
-        },
-      }),
-    ]),
+    [...folders].map((folder) => {
+      const categoryLabel = getKoreanCategoryLabel(folder)
+      return [
+        folder,
+        defaultProcessedContent({
+          slug: joinSegments(folder, "index") as FullSlug,
+          frontmatter: {
+            title: categoryLabel
+              ? `카테고리: ${categoryLabel}`
+              : `${i18n(locale).pages.folderContent.folder}: ${folder}`,
+            tags: [],
+          },
+        }),
+      ]
+    }),
   )
 
   // Update with actual content if available
