@@ -23,7 +23,7 @@ interface RenderComponents {
 }
 
 const headerRegex = new RegExp(/h[1-6]/)
-const assetVersion = "20260602-home-share-title-action"
+const assetVersion = "20260602-mobile-menu-overlay"
 export function pageResources(
   baseDir: FullSlug | RelativeURL,
   staticResources: StaticResources,
