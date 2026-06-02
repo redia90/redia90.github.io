@@ -16,7 +16,7 @@ const shareScript = `
       button.dataset.shareReady = "true";
 
       const label = button.querySelector(".page-share-label");
-      const defaultLabel = label?.textContent || "페이지 공유";
+      const defaultLabel = label?.textContent || "공유";
       const setLabel = (text) => {
         if (!label) return;
         label.textContent = text;
@@ -97,7 +97,7 @@ const PageShare: QuartzComponent = ({ cfg, fileData, displayClass }: QuartzCompo
             <path d="m7 9 5-5 5 5" />
           </svg>
         </span>
-        <span class="page-share-label">페이지 공유</span>
+        <span class="page-share-label">공유</span>
       </button>
     </div>
   )
@@ -119,7 +119,7 @@ PageShare.css = `
   min-height: 2.28rem;
   border: 1px solid color-mix(in srgb, var(--secondary) 22%, var(--lightgray));
   border-radius: 999px;
-  padding: 0.42rem 0.68rem 0.42rem 0.48rem;
+  padding: 0.42rem 0.62rem 0.42rem 0.48rem;
   background: color-mix(in srgb, var(--light) 92%, white);
   color: var(--secondary);
   font: inherit;
@@ -180,25 +180,32 @@ PageShare.css = `
 }
 
 .page-header > .popover-hint > .content-meta {
-  grid-column: 1;
+  grid-column: 1 / -1;
   min-width: 0;
 }
 
 .page-header > .popover-hint > .page-share {
   grid-column: 2;
-  grid-row: 2 / span 2;
+  grid-row: 2;
   justify-self: end;
   align-self: center;
   margin: 2rem 0 0;
 }
 
 @media all and (max-width: 800px) {
-  .page-header > .popover-hint {
-    display: block;
+  .page-header > .popover-hint > .page-share {
+    margin: 2rem 0 0;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .page-share-button {
+    padding-right: 0.52rem;
   }
 
-  .page-header > .popover-hint > .page-share {
-    margin: 0.35rem 0 0.85rem;
+  .page-share-icon {
+    width: 1.45rem;
+    height: 1.45rem;
   }
 }
 `
