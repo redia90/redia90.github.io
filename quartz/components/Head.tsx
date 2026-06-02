@@ -5,6 +5,7 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+import { getKoreanCategoryLabel } from "../util/categoryLabels"
 
 const SITE_DESCRIPTION =
   "유방암 진단, 검사, 치료, 생활관리, 보험 행정 정보를 환자와 보호자가 이해하기 쉽게 정리한 공개 지식 노트입니다."
@@ -18,16 +19,6 @@ const SITE_KEYWORDS = [
   "유방암 정보",
   "breast cancer",
 ]
-const SECTION_LABELS: Record<string, string> = {
-  biology: "생물학",
-  diagnosis: "진단",
-  treatment: "치료",
-  lifestyle: "생활·지원",
-  research: "연구",
-  cases: "사례",
-  glossary: "용어사전",
-}
-
 function absoluteUrl(baseUrl: string | undefined, slug?: string): string {
   const base = `https://${baseUrl ?? "example.com"}`
   return slug && slug !== "404" && slug !== "index" ? joinSegments(base, slug) : base
@@ -121,7 +112,7 @@ function buildStructuredData({
       ...breadcrumbParts.map((part, idx) => ({
         "@type": "ListItem",
         position: idx + 2,
-        name: idx === breadcrumbParts.length - 1 ? title : (SECTION_LABELS[part] ?? part),
+        name: idx === breadcrumbParts.length - 1 ? title : (getKoreanCategoryLabel(part) ?? part),
         item: absoluteUrl(cfg.baseUrl, breadcrumbParts.slice(0, idx + 1).join("/")),
       })),
     ],
