@@ -1094,6 +1094,9 @@ export const PWA: QuartzEmitterPlugin = () => ({
       start_url: `${APP_ORIGIN}/?source=pwa`,
       scope: `${APP_ORIGIN}/`,
       display: "standalone",
+      launch_handler: {
+        client_mode: "navigate-existing",
+      },
       background_color: theme.colors.lightMode.light,
       theme_color: theme.colors.lightMode.secondary,
       lang: "ko-KR",

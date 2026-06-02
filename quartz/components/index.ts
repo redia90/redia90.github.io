@@ -26,6 +26,7 @@ import ConditionalRender from "./ConditionalRender"
 import DocumentDifficulty from "./DocumentDifficulty"
 import DoctorCheck from "./DoctorCheck"
 import GlossaryPopup from "./GlossaryPopup"
+import PageShare from "./PageShare"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   DocumentDifficulty,
   DoctorCheck,
   GlossaryPopup,
+  PageShare,
 }
