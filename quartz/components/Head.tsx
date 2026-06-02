@@ -7,7 +7,7 @@ import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
 
 const SITE_DESCRIPTION =
-  "유방암 진단, 검사, 치료, 생활관리, 보험·행정 정보를 환자와 보호자가 이해하기 쉽게 정리한 공개 지식 노트입니다."
+  "유방암 진단, 검사, 치료, 생활관리, 보험 행정 정보를 환자와 보호자가 이해하기 쉽게 정리한 공개 지식 노트입니다."
 const SITE_KEYWORDS = [
   "유방암",
   "유방암 위키",
@@ -31,6 +31,16 @@ const SECTION_LABELS: Record<string, string> = {
 function absoluteUrl(baseUrl: string | undefined, slug?: string): string {
   const base = `https://${baseUrl ?? "example.com"}`
   return slug && slug !== "404" && slug !== "index" ? joinSegments(base, slug) : base
+}
+
+function cleanSocialText(text: unknown): string {
+  return String(text ?? "")
+    .replace(/[·•]/g, " ")
+    .replace(/[–—]/g, "-")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim()
 }
 
 function buildStructuredData({
@@ -131,12 +141,14 @@ export default (() => {
     ctx,
   }: QuartzComponentProps) => {
     const titleSuffix = cfg.pageTitleSuffix ?? ""
-    const title =
+    const rawTitle =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
-    const description =
+    const rawDescription =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
       unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
+    const title = cleanSocialText(rawTitle)
+    const description = cleanSocialText(rawDescription)
 
     const { css, js, additionalHead } = externalResources
 
