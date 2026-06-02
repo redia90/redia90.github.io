@@ -14,7 +14,7 @@ socialImage: og-image.png
 
 <!-- 사이드바 Explorer 기준 73개 문서 · 15개 카테고리 -->
 
-## 생물학·위험인자 (biology)
+## 생물학·위험인자
 
 - <a href="./biology/BRCA%EC%9C%A0%EC%A0%84%EC%9E%90" class="internal"><span class="no-break">BRCA1 / BRCA2</span> 유전자</a>
 - [[biology/남성유방암|남성 유방암 (Male Breast Cancer)]]
@@ -23,7 +23,7 @@ socialImage: og-image.png
 - [[biology/유방암면역_미생물군|유방암과 면역·장내 미생물군]]
 - [[biology/휴면암세포_재발메커니즘|휴면 암세포와 유방암 재발 메커니즘]]
 
-## 진단 — 검사·바이오마커 (diagnosis-tests)
+## 진단 — 검사·바이오마커
 
 - [[diagnosis-tests/FISH검사|FISH 검사 — HER2 유전자 증폭 확인 (ISH)]]
 - [[diagnosis-tests/면역조직화학검사(IHC)|면역조직화학검사 (IHC) — ER·PR·HER2·Ki67 결과 해석]]
@@ -31,12 +31,12 @@ socialImage: og-image.png
 - [[diagnosis-tests/유전자발현프로파일링|유전자발현 프로파일링 — 5종 검사 통합]]
 - [[diagnosis-tests/조직검사결과해석|유방 조직검사 결과 해석]]
 
-## 진단 — 영상·AI (diagnosis-imaging)
+## 진단 — 영상·AI
 
 - [[diagnosis-imaging/유방암AI영상|유방암 AI 영상·디지털 진단]]
 - [[diagnosis-imaging/유방영상검사가이드|유방 영상검사 가이드 — 맘모·초음파·MRI·DBT]]
 
-## 진단 — 흐름·검진·상담 (diagnosis-workflow)
+## 진단 — 흐름·검진·상담
 
 - [[diagnosis-workflow/검사결과지읽기도우미|검사 결과지 읽기 도우미 — 병리·수용체·병기 핵심 항목]]
 - [[diagnosis-workflow/유방암검진2026|유방암 검진 — 한국 국가검진·NCCN·고위험 가이드 2026]]
@@ -44,12 +44,12 @@ socialImage: og-image.png
 - [[diagnosis-workflow/유방암진단체계|유방암 진단 체계]]
 - [[diagnosis-workflow/전이경고신호|유방암 전이 경고 신호 — 부위별 증상과 검사 선택]]
 
-## 치료 — 수술·재건 (treatment-surgery)
+## 치료 — 수술·재건
 
 - [[treatment-surgery/유방암수술|유방암 수술]]
 - [[treatment-surgery/유방재건수술|유방 재건수술]]
 
-## 치료 — 전신 약물 (treatment-systemic)
+## 치료 — 전신 약물
 
 - <a href="./treatment-systemic/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a>
 - [[treatment-systemic/HER2-low치료|HER2-low 유방암 치료 — ADC 혁명]]
@@ -61,12 +61,12 @@ socialImage: og-image.png
 - [[treatment-systemic/호르몬치료|유방암 호르몬 치료 (내분비 치료)]]
 - [[treatment-systemic/호르몬치료약제비교|호르몬 치료 약제 비교]]
 
-## 치료 — 방사선 (treatment-radiation)
+## 치료 — 방사선
 
 - [[treatment-radiation/방사선치료|유방암 방사선 치료]]
 - [[treatment-radiation/방사선장기부작용|방사선 치료의 장기 부작용 — 심장·폐·이차암 추적]]
 
-## 치료 — 보조 케어·합병증 (treatment-supportive)
+## 치료 — 보조 케어·합병증
 
 - [[treatment-supportive/가임력보존|가임력 보존 — 항암 시작 전 난자·배아 동결]]
 - [[treatment-supportive/림프부종|림프부종 — 예방·진단·치료·재활]]
@@ -75,7 +75,7 @@ socialImage: og-image.png
 - [[treatment-supportive/통증관리|유방암 통증 관리 — 수술·항암·골전이·말기 단계별]]
 - [[treatment-supportive/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
 
-## 연구·통계·최신 동향 (research)
+## 연구·통계·최신 동향
 
 - [[research/2026임상연구업데이트|2026 유방암 임상 연구 업데이트]]
 - [[research/온코타입DX_RS점수|온코타입DX와 RS 점수 — 항암 여부 결정 검사]]
@@ -86,7 +86,7 @@ socialImage: og-image.png
 - [[research/정밀의학도구|유방암 정밀의학 도구]]
 - [[research/한국유방암통계|한국 유방암 통계·역학]]
 
-## 생활 — 식이·운동 (nutrition-exercise)
+## 생활 — 식이·운동
 
 - [[nutrition-exercise/설탕탄수화물관리|유방암 환자의 설탕·탄수화물 관리]]
 - [[nutrition-exercise/식이영양관리|유방암 치료 중 식이·영양·수분 관리]]
@@ -96,7 +96,7 @@ socialImage: og-image.png
 - [[nutrition-exercise/호르몬양성식이|호르몬 양성 유방암 식이 가이드]]
 - [[nutrition-exercise/회복기영양가이드|회복기 영양 가이드 — 항암·방사선 종료 후 식이·근육 재건]]
 
-## 생활 — 정신·환자 경험 (mental-experience)
+## 생활 — 정신·환자 경험
 
 - [[mental-experience/보조요법주의|유방암 보조요법·민간요법 주의사항]]
 - [[mental-experience/보호자심리지지|암 환자 보호자 — 심리지지와 소통]]
@@ -105,7 +105,7 @@ socialImage: og-image.png
 - [[mental-experience/치료후삶|유방암 치료 후 삶 — 장기 생존자 케어]]
 - [[mental-experience/환자의사결정도구|환자 의사결정 도구 — 항암·수술·재건·호르몬 결정 가이드]]
 
-## 생활 — 보험·행정·권리 (insurance-admin)
+## 생활 — 보험·행정·권리
 
 - [[insurance-admin/보험행정|유방암 환자 보험·행정·제도 가이드]]
 - [[insurance-admin/산정특례갱신가이드|산정특례 갱신 가이드 — 5년 시점·재발·전이 재등록]]
@@ -115,19 +115,19 @@ socialImage: og-image.png
 - [[insurance-admin/직장복귀_법적권리|직장 복귀·법적 권리 — 한국 근로기준·차별 금지]]
 - [[insurance-admin/환자지원프로그램|유방암 환자 지원 프로그램 (한국)]]
 
-## 생활 — 준비물·기관 선택 (preparation-facilities)
+## 생활 — 준비물·기관 선택
 
 - [[preparation-facilities/요양병원선택|요양병원 선택 가이드 — 4가지 유형과 상담 체크리스트]]
 - [[preparation-facilities/치료준비물|입원·항암·방사선 준비물 종합]]
 - [[preparation-facilities/호스피스완화의료|호스피스·완화의료 가이드 — 시한부·말기 돌봄]]
 
-## 사례 (cases)
+## 사례
 
 - [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]]
 - [[cases/노인유방암|노인 유방암 (70세 이상)]]
 - [[cases/임신중유방암_PABC|임신 관련 유방암 (PABC) — 임신 중·산후 진단]]
 - [[cases/장기생존_4기경험담|유방암 4기·전이 장기생존 경험담 모음]]
 
-## 용어사전 (glossary)
+## 용어사전
 
 - [[glossary/용어사전|유방암 용어사전]]
