@@ -69,7 +69,7 @@ const PageShare: QuartzComponent = ({ cfg, fileData, displayClass }: QuartzCompo
   const isHome = slug === "index"
 
   return (
-    <div class={classNames(displayClass, "page-share")}>
+    <div class={classNames(displayClass, isHome ? "page-share page-share-home" : "page-share")}>
       <button
         class="page-share-button"
         type="button"
@@ -190,6 +190,10 @@ PageShare.css = `
   justify-self: end;
   align-self: center;
   margin: 2rem 0 0;
+}
+
+.page-header > .popover-hint > .page-share-home {
+  grid-row: 1;
 }
 
 @media all and (max-width: 800px) {
