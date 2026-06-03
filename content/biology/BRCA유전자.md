@@ -3,7 +3,7 @@ title: BRCA1 / BRCA2 유전자
 category: biology
 tags: [BRCA1, BRCA2, 유전성유방암, 유전자검사, PARP억제제, 상동재조합, HRR, 예방절제, 침투율, 한국인변이]
 created: 2026-04-24
-last_updated: 2026-05-21
+last_updated: 2026-06-03
 sources:
   - "Kuchenbaecker KB et al. Risks of Breast, Ovarian, and Contralateral Breast Cancer for BRCA1 and BRCA2 Mutation Carriers. JAMA. 2017;317:2402-2416."
   - "NCCN Genetic/Familial High-Risk Assessment: Breast, Ovarian, and Pancreatic. v3.2024."
@@ -166,6 +166,55 @@ BRCA 변이 + 가임 계획 환자는 **예방적 절제·가임력 보존·임�
 - 예방적 절제: 의료 목적 진단서 시 [[유방암보험청구쟁점|실비·암수술비 청구]] 가능
 - 유전상담: 일부 대형 병원 클리닉 운영 (서울대·아산·삼성 등)
 
+## ASCO 2026 직후 BRCA 영역 갱신 (2026-06)
+
+### OlympiA 10년 추적 — BRCA 보조 1년 표준 강화
+
+ASCO 2026·SABCS 2025 잠정 데이터:
+- **10년 iDFS 우위 유지** — 약 7~9%p 절대 차이 추정
+- **OS 우위 누적** — HR 0.7 수준
+- **장기 부작용** (백혈병·MDS): 약 1% (위약 0.5%) — 임상적으로 미미
+- **결론**: 올라파립 1년이 **장기 안전성·효과 균형 우수** — 2년 연장 (PETREMAC) 결과 대기 중
+- → [[PARP억제제|상세]]
+
+### POSITIVE 5년 추적 — BRCA + 가임 계획자 호르몬 중단 안전성
+
+ASCO 2026 POSITIVE 5년 잠정:
+- 호르몬치료 중단 → 임신·재개 환자 **5년 BC-FI** 안전성 유지 추정
+- 3년 BC-FI 8.9% vs 9.2% (2년 안전성) → 5년에서도 동등 시 표준 진입 가속
+- **BRCA+ 환자에서도 동일 안전성** 확인 (사전 분석 후속)
+- **실전 동선**: 18~24개월 호르몬치료 → 중단 → 임신·출산·수유 → 5~10년 호르몬치료 재개
+- BRCA+ 환자는 **RRSO 시점·예방절제 시점**과 통합 의사결정 필요
+- → [[가임력보존|POSITIVE 상세]]
+
+### PALB2 한국 보험 적용 확대 진행 (2026-06)
+
+- TBCRC 048 (JCO 2020) **PALB2 ORR 82%** — NCCN 2024 가이드라인 Category 2B PARP 권고
+- **한국 현재**: PARP 보험 BRCA1/2 한정
+- **확대 협상 진행**: KSHOC·KBCS 권고안 진행 중 — 2027 예상
+- **PALB2 검사 적응증**: 한국유방암학회 BRCA 가족력 권고와 동일 — NGS 다중 패널 시 PALB2 포함
+- **PALB2 보인자 위험**: lifetime breast cancer ~50% (BRCA에 준함) — NCCN MRI 검진 강화 권고
+
+### BRCA Reversion ctDNA 모니터링 — 임상 도입
+
+PARP 사용 중 진행 시 **ctDNA 시퀀싱**으로 BRCA reversion 검출:
+- **검출 도구**: Guardant360·FoundationOne Liquid·Signatera
+- **검출 빈도**: 40~60% (PARP 진행 환자)
+- **임상 활용**:
+  - Reversion 양성: PARP 효과 소실 → 화학·면역항암 전환
+  - Reversion 음성: 다른 내성 기전 → ATR/WEE1/POLθ 임상시험 등록 가능성
+- **한국 도입**: 일부 대형 병원 (서울대·삼성·아산)에서 비급여 시범 운영
+- → [[PARP억제제]] BRCA reversion 흐름도
+
+### BRCA 환자 ASCO 2026 직후 진료실 질문
+
+1. **OlympiA 10년 데이터**로 본 제 보조 1년 권고는 그대로인가요?
+2. **PETREMAC 2년 연장** 임상 등록 가능성은?
+3. ER+ BRCA+ 가임 계획자라면 **POSITIVE 5년 안전성** 기반 의사결정 흐름은?
+4. **PALB2 변이**라면 한국 PARP 보험 적용 시점은? (현재 BRCA1/2 한정)
+5. PARP 사용 중 진행 시 **ctDNA BRCA reversion** 검사 받을 수 있나요?
+6. **HRD 점수 검사** (myChoice·SOPHiA)는 한국에서 어떻게 받을 수 있나요?
+
 ## 관련 개념
 - [[유방암분자서브타입]] — BRCA1↔TNBC, BRCA2↔루미날 연관
 - [[PARP억제제]] — BRCA 변이 표적치료 상세
@@ -215,3 +264,4 @@ BRCA 변이 + 가임 계획 환자는 **예방적 절제·가임력 보존·임�
 - 2026-05-20: 트리플네거티브유방암(TNBC) 링크를 TNBC치료 별칭 문법으로 정리 (library-check)
 - 2026-05-21: [[유방암보험청구쟁점]] 링크 — BRCA 예방적 절제 보험 청구(대법원 2021다234368 판례) 동선 연결
 - 2026-05-21: 대폭 보강 — Kuchenbaecker JAMA 2017 침투율 표(생애 누적·반대편·췌장·전립선), 한국인 변이 빈도, 분자 메커니즘(HRR·합성치사·BRCAness), NCCN 검사 적응증, 예방적 수술 효과 수치, 약물 예방, OlympiA·OlympiAD·EMBRACA 임상 데이터, POSITIVE 연구(임신 가능성), 한국 보험 적용, 카페 사례(#310014 등) 통합 (daily-brief Top 1 보강)
+- 2026-06-03: **ASCO 2026 직후 BRCA 영역 갱신** 섹션 신규 (daily-brief Top 3) — OlympiA 10년 추적 잠정, POSITIVE 5년 BRCA+ 가임 안전성, PALB2 한국 보험 확대 협상 진행, BRCA reversion ctDNA 모니터링 임상 도입, 진료실 질문 6종 추가
