@@ -263,6 +263,10 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 - [[정밀의학도구]] — HER2 정밀 판독·ctDNA
 - [[유방암면역_미생물군]] — TIL·면역 바이오마커와 ADC 반응
 - [[유방암보험청구쟁점]] — HER2-ultralow 비급여 환자 지원
+- [[diagnosis-imaging/유방영상검사가이드]] — **DESTINY-Breast06 도입 압력 ↔ 영상검사 + 디지털 병리 AI HER2 IHC 0/1+ 경계 정확도 통합 동선**
+- [[treatment-supportive/통증관리]] — **엔허투·ADC 부작용 (오심·말초신경병증·결막염) 통증 관리·약물 단계별 권고**
+- [[treatment-supportive/혈관접근장치]] — **엔허투·ADC 1년+ 정맥 투여 — 케모포트 선택·ILD 부작용 모니터링 동선**
+- [[treatment-supportive/이차암]] — **ADC + 호르몬치료 장기 노출 후 이차암 추적**
 
 ## 미해결 질문 / 연구 방향
 > 💡 HER2-ultralow 공식 보험 급여화 시기

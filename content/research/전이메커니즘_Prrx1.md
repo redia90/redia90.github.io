@@ -3,7 +3,7 @@ title: 유방암 전이 분자 기전 — EMT·CTC·Niche·Prrx1
 category: research
 tags: [전이메커니즘, EMT, MET, CTC, 순환종양세포, premetastatic_niche, organotropism, Prrx1, dormancy, 공간전사체학]
 created: 2026-04-26
-last_updated: 2026-05-22
+last_updated: 2026-06-03
 sources:
   - "Jiménez Castaño R, Nieto MA et al. A hormetic transcriptional program coregulates invasion, proliferation and dormancy to define metastatic potential. Nature Communications. 2026;17:3425."
   - "Lambert AW, Pattabiraman DR, Weinberg RA. Emerging Biological Principles of Metastasis. Cell. 2017;168:670-691."
@@ -185,6 +185,63 @@ confidence: high
 - CTC + ctDNA 통합 패널
 - 휴면 표적 약제 임상 진입 (HCQ·NR2F1·TGF-β)
 
+## ASCO 2026·SABCS 2025 후속 — dormancy·MRD 임상 진입 (2026-06)
+
+### Dormancy 표적 임상 (Phase 2 진행 중)
+
+분자 전이 기전을 임상에 적용하는 첫 세대 임상:
+
+| 임상 | 약제·전략 | 적응증 | 단계 | 한국 등록 |
+|------|------------|--------|------|-------------|
+| **CLEVER trial** | HCQ + 에베로리무스·러파마이신 → **휴면 세포 제거** | ER+ 조기 보조 후 MRD | Phase 2 | 일부 임상 사이트 검토 |
+| **NR2F1 작용제** (시판 약제 없음) | NR2F1 활성 → 휴면 유지 | 전이 위험 ↑ 환자 | 전임상~Phase 1 | 미진입 |
+| **TGF-β 억제제** | 휴면 ↔ 증식 전환 차단 | 잔존 미세 잔류병변 (MRD) | Phase 1/2 | 일부 |
+| **OspA·SLFN11 표적** | 휴면 세포 선택적 제거 | 잔존 MRD | 전임상 | 미진입 |
+
+> 💡 **CLEVER**: ER+ 조기 환자에서 호르몬치료 종료 후 dormancy 세포 표적으로 후기 재발 차단 시도. 표준 진입은 **2027~2028 데이터 누적 후 예상**.
+
+### MRD 검출 임상 진입 — Signatera·NeXT Personal·RaDaR
+
+ctDNA 기반 MRD 모니터링이 임상에 본격 도입:
+
+| 도구 | 적응증 | 한국 도입 |
+|------|--------|-------------|
+| **Signatera** (Natera) | 모든 서브타입 — 종양 특이 패널 | 일부 대형 병원 비급여 시범 |
+| **NeXT Personal** (Personalis) | 동일 — 더 민감 검출 | 미도입 |
+| **RaDaR** (NeoGenomics) | 동일 | 미도입 |
+| **Guardant Reveal** | 동일 | 일부 |
+
+**핵심 임상**:
+- **c-TRAK TN** (Lancet Oncol 2023) — TNBC ctDNA MRD 양성 시 면역항암 선제 적용
+- **ZEST** (NCT04915755) — ctDNA MRD 양성 → 니라파립·올라파립 선제 적용
+- **CHiRP·INTERCEPT** — MRD 모니터링 + 조기 개입 전략
+
+> 💡 **MRD 표준 진입은 2027~2028** 예상 — c-TRAK TN 후속 + ZEST 결과 후. 한국 KBCS 권고안 후속 작업 진행.
+
+### CTC + ctDNA 통합 패널 — 임상 도구 진화
+
+| 도구 | 측정 | 임상 활용 |
+|------|------|-------------|
+| **CellSearch** (Veridex) | CTC count | 전이성 유방암 예후 평가 — FDA 승인 |
+| **CTC EpCAM·CK 발현** | CTC 표현형 | EMT 평가, 약제 반응 예측 |
+| **ctDNA** (Guardant360 등) | DNA 변이 | ESR1·PIK3CA·BRCA reversion 등 |
+| **통합 (Liquid Biopsy 2.0)** | CTC + ctDNA + 외존체 + 단백질 | 전이 위험·잔존병변·치료 반응 동시 평가 |
+
+**한국 진입 단계**:
+- ctDNA (Guardant360·FoundationOne Liquid) — 일부 대형 병원 비급여
+- CTC (CellSearch) — 매우 제한적
+- 통합 패널 — 임상시험 단계
+
+### 환자 진료실 활용 — 분자 전이 모니터링 (2026-06)
+
+ASCO 2026 직후 진료실 질문:
+
+1. 제 조기 보조 치료 종료 후 **MRD 모니터링** 받을 수 있나요? (Signatera 등)
+2. ER+ 환자라면 **CLEVER trial 등 dormancy 표적 임상** 한국 등록 가능성은?
+3. TNBC라면 **c-TRAK TN 후속** 임상 등록 가능한가요?
+4. ctDNA 검사 비용·보험 적용 진행 상태는?
+5. **BRCA reversion** 검출 임상 도입 시점은?
+
 ## 임상적 의의
 
 - 전이 메커니즘 이해가 **표적 약제 개발의 출발점** — ADC·면역항암 외 다음 세대 약제 후보
@@ -233,3 +290,4 @@ confidence: high
 ## 업데이트 히스토리
 - 2026-04-26: Nature Communications 2026 Prrx1 논문 기반 신규 생성
 - 2026-05-22: 전이 분자 기전 **상위 페이지로 확장** — 전이 6단계 (침습→혈관침입→CTC→외혈관화→정착→재활성화), EMT 핵심 전사인자, 부분 EMT, MET, CTC 임상 활용(CellSearch), Premetastatic Niche, Organotropism (서브타입별 전이 부위 표), 분자 기전 → 임상 응용 매트릭스 추가; Prrx1 연구를 그 안의 핵심 사례로 위치시킴 (library-check 보강)
+- 2026-06-03: **ASCO 2026·SABCS 2025 후속 — dormancy·MRD 임상 진입** 섹션 신규 (daily-brief Top 1) — Dormancy 표적 임상 4종 (CLEVER·NR2F1·TGF-β·OspA), MRD 검출 임상 진입 (Signatera·NeXT Personal·c-TRAK TN·ZEST·CHiRP·INTERCEPT), CTC + ctDNA 통합 패널 진화, 진료실 질문 5종

@@ -191,6 +191,7 @@ CDK4/6 억제제는 세포 주기를 진행시키는 **CDK4·CDK6 인산화효�
 - [[유방암보험청구쟁점]] — 비급여 약제 지원 채널
 - [[호르몬치료약제비교]] — 호르몬 + CDK4/6 병합 위치
 - [[정밀의학도구]] — CDKPredX (PREDIX LumB) CDK4/6 반응 예측
+- [[mental-experience/환자의사결정도구]] — **CDK4/6 약제 선택·monarchE/NATALEE 적응 결정·부작용 vs 효과 균형 — PREDICT·DA 도구 활용**
 
 ## CDK4/6 저항성 후 — ESR1 + ctDNA + Vepdegestrant 동선
 
