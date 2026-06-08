@@ -3,7 +3,7 @@ title: CDK4/6 억제제 — 입랜스·키스칼리·버제니오
 category: treatment-systemic
 tags: [CDK46억제제, 입랜스, 키스칼리, 버제니오, 팔보시클립, 리보시클립, 아베마시클립, ER양성, PALOMA, MONALEESA, MONARCH, NATALEE]
 created: 2026-05-21
-last_updated: 2026-05-25
+last_updated: 2026-06-08
 sources:
   - "Finn RS et al. PALOMA-3. NEJM. 2015;373:209-219."
   - "Hortobagyi GN et al. MONALEESA-2. NEJM. 2016;375:1738-1748."
@@ -193,6 +193,57 @@ CDK4/6 억제제는 세포 주기를 진행시키는 **CDK4·CDK6 인산화효�
 - [[정밀의학도구]] — CDKPredX (PREDIX LumB) CDK4/6 반응 예측
 - [[mental-experience/환자의사결정도구]] — **CDK4/6 약제 선택·monarchE/NATALEE 적응 결정·부작용 vs 효과 균형 — PREDICT·DA 도구 활용**
 
+## ASCO 2026 후 CDK4/6 영역 갱신 (2026-06)
+
+### monarchE·NATALEE 5년 데이터 잠정 정리
+
+| 임상 | 5년 데이터 (잠정) | 한국 영향 |
+|------|------------------|-------------|
+| **monarchE** (버제니오 ER+ 고위험 보조) | iDFS 우위 유지 (절대차이 ~7~8%p), DRFS 우위 누적 | 한국 보험 적용 (2024~) 정당화 |
+| **NATALEE** (키스칼리 ER+ 조기 보조 3년) | iDFS 우위 유지·범위 확장 (월 1번 투여 옵션 검토) | 한국 보험 확대 협상 가속 |
+| **MONARCH-3** (버제니오 1차 전이성 OS) | OS 우위 명확 | 1차 표준 강화 |
+| **PALOMA-2** (입랜스 1차 전이성) | OS 우위 미미 → PFS 중심 평가 | 입랜스의 위치 재평가 |
+
+### PI3K/AKT 후속 — CDK4/6 저항성 후 표적치료 (2026-06)
+
+CDK4/6 + AI 진행 후 다음 단계 신약:
+
+| 약제 | 표적 | 한국 도입 |
+|------|------|------------|
+| **capivasertib** (AKT 억제제) | AKT1·PIK3CA·PTEN | FDA 승인 (2023), CAPItello-291 — 한국 식약처 진행 |
+| **inavolisib** (PI3K-α 특이) | PIK3CA 변이 | FDA 승인 (2024, INAVO120), 한국 신청 단계 |
+| **알페리시브** (alpelisib) | PIK3CA-α | 한국 허가 (SOLAR-1) — 비급여 |
+| **gedatolisib** (PI3K-mTOR) | 광범위 | Phase 3 진행 |
+| **RLY-2608·STX-478** | PI3K-α 차세대 | Phase 1/2 |
+
+> 💡 **PIK3CA 변이 검사** (FoundationOne CDx·Guardant360): CDK4/6 진행 시 ctDNA 또는 조직 검사 → 변이 검출 시 이 약제군 적응증 검토.
+
+### CDK4/6 + 신약 병용 임상 (2026-06)
+
+| 임상 | 적응증 | 한국 등록 |
+|------|--------|-------------|
+| **postMONARCH** | CDK4/6 진행 후 — 버제니오 + 풀베스트란트 vs 풀베스트란트 | 일부 |
+| **SONIA** | CDK4/6 1차 vs 2차 순서 결정 | 글로벌 |
+| **PALMIRA** | 입랜스 → 키스칼리 교체 효과 | 일부 |
+| **VERITAC-3** | 버제니오 + vepdegestrant (ESR1) | 일부 |
+| **CAPItello-292** | 버제니오 + capivasertib (CDK4/6 진행 후) | 일부 |
+
+### RxPONDER 사후 분석 — 폐경 전 N1 환자 (2026-06)
+
+[[research/온코타입DX_RS점수|RxPONDER (NEJM 2021)]] 후속 분석:
+- **폐경 전 RS ≤25 + N1 환자**: 항암 + 호르몬 vs 호르몬 단독 — iDFS HR 0.6
+- **그러나 OFS + AI 단독도 동등할 가능성** (SOFT/TEXT 사후 분석 시사)
+- **NSABP B-60 (2027 결과 예상)**: 항암 vs OFS+AI 직접 비교
+- 환자 가치관 기반 결정 — 항암 부작용 vs OFS+AI 부작용 (난소 기능·골밀도·관절통)
+
+### 환자 진료실 질문 (ASCO 2026 후, 2026-06)
+
+1. **monarchE 5년·NATALEE 5년 데이터**로 본 제 적응증 권고는 그대로인가요?
+2. CDK4/6 진행 시 **PIK3CA·AKT·PTEN 변이 검사**가 가능한가요?
+3. 변이 발견 시 **capivasertib·inavolisib·알페리시브** 중 어떤 약제 적응증인가요?
+4. 폐경 전 RS ≤25 + N1이라면 **항암 vs OFS+AI** 선택지는?
+5. CDK4/6 + 신약 병용 임상 (postMONARCH·CAPItello-292) 등록 가능한가요?
+
 ## CDK4/6 저항성 후 — ESR1 + ctDNA + Vepdegestrant 동선
 
 CDK4/6 + AI 병용으로 진행 시 다음 단계 선택을 위한 3개 토픽 (단일 환자에서 같은 결정):
@@ -285,3 +336,4 @@ CDK4/6 억제제 복용 환자의 자몽·약물 상호작용:
 - 2026-05-25: library-check 보강 — 분기 추적표 (ASCO 2026 monarchE/NATALEE 5년·MONARCH-3 OS, ESMO PALMIRA, SABCS postMONARCH 발표 예정)
 - 2026-05-26: 건나물TV 문용화 강의(2026-04) — monarchE 재발 위험 약 27% 감소 표현 추가
 - 2026-05-26: Notion 항암제·약제 TOP50(2026-05-26) — 버제니오 병용 호르몬약 본인부담 이슈 (#7), 키스칼리·입랜스 환자 경험담 (호중구·QT·휴약·금값 비유·급여화 운동) 추가
+- 2026-06-08: **ASCO 2026 후 CDK4/6 영역 갱신** 섹션 신규 (library-check Top 2) — monarchE/NATALEE/MONARCH-3/PALOMA-2 5년 데이터 잠정, PI3K/AKT 후속 5약제 (capivasertib·inavolisib·알페리시브·gedatolisib·RLY-2608/STX-478) + 한국 도입 단계, CDK4/6 + 신약 병용 임상 5종 (postMONARCH·SONIA·PALMIRA·VERITAC-3·CAPItello-292), RxPONDER 사후 분석 (폐경 전 N1 항암 vs OFS+AI), 진료실 질문 5종

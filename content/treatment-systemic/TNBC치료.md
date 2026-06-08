@@ -3,7 +3,7 @@ title: 트리플 네거티브 유방암 (TNBC) 치료
 category: treatment-systemic
 tags: [TNBC, 트리플네거티브, 면역항암제, PARP억제제, 화학요법, 아테졸리주맙, 펨브롤리주맙, KEYNOTE-522, KEYNOTE-355, ASCENT, ASCENT-04, AR양성, BRCA, Lehmann_subtype, BL1, BL2, M, MSL, LAR, IM, 뇌전이]
 created: 2026-04-24
-last_updated: 2026-05-27
+last_updated: 2026-06-08
 sources:
   - "한원식. 유방암 진단을 받았다면 꼭 알아야 할 것들. 의학채널 비온뒤. 2024-01-30. https://youtu.be/e6xr1NpsXXU"
   - "심성훈. 유방암이라고 다 똑같은 유방암이 아니다?! 국립암센터. 2025-07-04. https://youtu.be/hXWvtk0HTr8"
@@ -136,8 +136,22 @@ TNBC는 표적이 적어 임상시험이 가장 활발한 영역:
 | **ASCENT-04/KEYNOTE-D19** (NEJM 2026) | PD-L1+ 전이성 1차 | SG + pembro 중앙 PFS **11.2개월** vs chemo+pembro 7.8개월, ORR 60% vs 53%, DOR 16.5 vs 9.2 |
 | **TROPION-Breast02** (Annals of Oncology 2026) | 면역항암 부적합 1차 | Dato-DXd 중앙 PFS **10.8개월** vs chemo 5.6, 중앙 OS **23.7개월** vs 18.7 |
 | **carbo+nivolumab** (Nature Comm 2026) | 1차 전이성 | 전체군 PFS 유의 개선 **실패**, PD-L1+에서만 호전 경향 |
+| **TROPION-Breast04** (한국 등록 진행 — 안성귀 강의 2024) | 조기 TNBC 신보조 — Dato-DXd + 더발루맙 vs 표준 (키트루다 + 화학) | 등록 환자 **대조군에 키트루다·림파자 100% 지원** — 대조군 손해 ❌ |
 
 → 학술 출처와 상세는 [[2026임상연구업데이트]]
+
+### TROPION-Breast04 — 조기 TNBC 한국 임상시험 등록 (2026-06)
+
+안성귀 교수 (강남세브란스) 강의 (2024-01) 핵심:
+- **대상**: 조기 TNBC 신보조
+- **요법**: 표준 (키트루다 + 화학) vs **Dato-DXd + 더발루맙** (AstraZeneca)
+- **참여 병원**: 강남세브란스 등 한국 등록 진행 중
+- **임상 디자인 매력**:
+  - 대조군에 **키트루다 + 림파자 (BRCA+ 시) 100% 지원** — 대조군 손해 ❌
+  - 신약군 (Dato-DXd) 효과 양호·탈모 적음
+  - **완전관해 시 chemo 종료** — 깊은 반응 시 약제 부담 ↓
+  - **non-pCR 시 키트루다·항암제 다시 사용 가능**
+- → [[research/임상시험|등록 동선 상세]]
 
 ### PARP 억제제 ([[BRCA유전자]] 돌연변이 보인자)
 - **올라파립 (린파르자)**: gBRCA1/2 변이, HER2- 전이성 유방암

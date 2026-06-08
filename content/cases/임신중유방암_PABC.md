@@ -3,7 +3,7 @@ title: 임신 관련 유방암 (PABC) — 임신 중·산후 진단
 category: cases
 tags: [임신중유방암, PABC, PrABC, PpBC, 임신, 산후, 모유수유, 항암, 방사선, 가임력]
 created: 2026-05-21
-last_updated: 2026-05-25
+last_updated: 2026-06-08
 sources:
   - "Loibl S et al. Breast cancer diagnosed during pregnancy: adapting recent advances in breast cancer care. JAMA Oncology. 2015."
   - "Amant F et al. Pediatric outcome after maternal cancer diagnosed during pregnancy. NEJM. 2015;373:1824-1834."
@@ -143,6 +143,55 @@ confidence: high
 
 > 💡 세 그룹 모두 [[환자지원프로그램]]·[[보호자심리지지]] 자원이 일반 환자보다 더 중요. 다학제 협진의 가치도 더 큼.
 
+## ASCO 2026 후 PABC + BRCA+ 가임 결정 흐름 (2026-06)
+
+### POSITIVE 5년 추적 — BRCA+ PABC·산후 가임 계획자 영향
+
+ASCO 2026 POSITIVE 5년 잠정 데이터 (호르몬치료 중단 후 임신·재개):
+- **3년 BC-FI** 8.9% vs 9.2% — 2년 안전성 확인
+- **5년 BC-FI 동등** 추정 — 표준 진입 가속
+- **BRCA+ 환자에서도 동일 안전성** (사전 분석 후속)
+
+### BRCA+ + PABC·산후 가임 계획자 통합 의사결정 (2026-06)
+
+```
+[BRCA+ 진단 + PABC 또는 산후 1년 이내 진단]
+    ↓
+[유전상담·다학제 평가 (종양내과 + 산부인과 + 유전상담)]
+    ↓
+[수술·항암·표적치료 1년 완료]
+    ↓
+[호르몬치료 18~24개월 (POSITIVE 적응)]
+    ↓
+[중단 → 임신 시도 → 출산·수유 → 5~10년 호르몬치료 재개]
+    ↓
+[가임 완료 후 RRSO (난소난관절제) — 35~40세 권장]
+    ↓
+[유방 예방적 절제 검토 — RRM]
+    ↓
+[10년 추적 — 반대편 위험·췌장·BRCA2 시 전립선]
+```
+
+### PALB2 한국 보험 확대 진행 — PABC 환자 영향 (2026-06)
+
+- **현재**: PARP 보험 BRCA1/2 한정
+- **확대 진행** (2026~2027): PALB2 추가 검토 — KSHOC·KBCS 권고안 진행
+- PALB2 보인자 PABC 환자: 검사 시 NGS 다중 패널로 PALB2 확인 가능
+- PARP 적응증 확대 시 산후 치료 옵션 확대
+
+### MRD 모니터링 PABC 적용 (2026-06)
+
+- **ctDNA** (Signatera·Guardant Reveal) — 산후 잔존병변 추적
+- PABC는 진단 시점이 늦어 진행된 병기 多 → MRD 모니터링 가치 ↑
+- 한국 일부 대형 병원 비급여 시범 — 산후 환자 일부 적용 가능
+
+### PABC 환자 자녀 추적 (Amant NEJM 2015 12년 후속, 2026-06)
+
+- 임신 중 항암 받은 어머니 자녀 추적 (3~12세) — **인지·심장 기능 정상**
+- ASCO 2026 후속: 12년 추적 데이터 추정 — **장기 발달 정상 유지**
+- 카페 #262622 사례 — 한국 PABC 자녀 코호트 (KBCS 등록사업 2023~) 진행
+- 임신 중 항암 의학적 두려움 < 진단 지연 위험
+
 ## 교훈
 
 1. **"임신 중 유방암 = 임신 종료" 잘못된 통념** — 2~3삼분기에는 항암 가능
@@ -199,3 +248,4 @@ confidence: high
 ## 업데이트 히스토리
 - 2026-05-21: daily-brief 질문 제안 #4 — 신규 생성. PrABC/PpBC 구분, 진단 지연 5~15개월, 임신 단계별 검사 안전성·치료 옵션, Amant NEJM 2015 태아 추적 결과(인지·심장 정상), 안전·회피 약제 목록, 카페 #262622·#265798 사례
 - 2026-05-25: library-check cross-link 보강 — [[glossary/용어사전]] 연결
+- 2026-06-08: **ASCO 2026 후 PABC + BRCA+ 가임 결정 흐름** 섹션 신규 (library-check Top 3) — POSITIVE 5년 추적 BRCA+ 안전성, BRCA+ + PABC·산후 가임 계획자 통합 의사결정 흐름도, PALB2 한국 보험 확대 진행 PABC 영향, MRD 모니터링 PABC 적용 (Signatera·Guardant Reveal), Amant NEJM 2015 자녀 12년 후속 추적
