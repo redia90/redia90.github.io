@@ -1,104 +1,77 @@
-type DisqusHost = HTMLElement & {
+type CusdisThread = HTMLElement & {
   dataset: DOMStringMap & {
-    shortname: string
-    pageId: string
-    pageUrl: string
-    pageTitle: string
-    language?: string
+    host?: string
+    appId?: string
+    pageId?: string
+    pageUrl?: string
+    pageTitle?: string
+    lang?: string
+    theme?: string
   }
 }
 
-/** Disqus `this` in disqus_config / reset callbacks */
-interface DisqusConfigThis {
-  page: { url: string; identifier: string; title: string }
-  language?: string
+type CusdisApi = {
+  renderTo?: (target: Element) => void
 }
 
-let themeResetTimer: number | undefined
+const CUSDIS_SCRIPT_ID = "cusdis-sdk"
 
-function getDisqusTheme() {
+function getCusdisTheme() {
   return document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
 }
 
-function applyDisqusThemeHint(host: DisqusHost) {
-  const theme = getDisqusTheme()
-  const isDark = theme === "dark"
-  const thread = host.querySelector("#disqus_thread") as HTMLElement | null
+function getThread() {
+  return document.querySelector("#cusdis_thread") as CusdisThread | null
+}
 
-  host.dataset.theme = theme
-  host.style.colorScheme = theme
-  host.style.backgroundColor = "var(--light)"
-  host.style.color = isDark ? "#d4d4d4" : "#2b2b2b"
+function applyCusdisTheme(thread: CusdisThread) {
+  thread.dataset.theme = getCusdisTheme()
+}
 
+function loadCusdis(thread: CusdisThread) {
+  if (!thread.dataset.host || !thread.dataset.appId || !thread.dataset.pageId) {
+    return
+  }
+
+  applyCusdisTheme(thread)
+
+  const w = window as unknown as { CUSDIS?: CusdisApi }
+  if (w.CUSDIS?.renderTo) {
+    w.CUSDIS.renderTo(thread)
+    return
+  }
+
+  if (document.getElementById(CUSDIS_SCRIPT_ID)) {
+    return
+  }
+
+  const script = document.createElement("script")
+  script.id = CUSDIS_SCRIPT_ID
+  script.src = `${thread.dataset.host.replace(/\/$/, "")}/js/cusdis.es.js`
+  script.async = true
+  script.defer = true
+  script.onload = () => {
+    const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
+    api?.renderTo?.(thread)
+  }
+  document.body.appendChild(script)
+}
+
+function renderCusdis() {
+  const thread = getThread()
   if (thread) {
-    thread.style.colorScheme = theme
-    thread.style.backgroundColor = "var(--light)"
-    thread.style.color = isDark ? "#d4d4d4" : "#2b2b2b"
+    loadCusdis(thread)
   }
 }
 
-function loadDisqus(host: DisqusHost) {
-  const shortname = host.dataset.shortname
-  const identifier = host.dataset.pageId
-  const url = host.dataset.pageUrl
-  const title = host.dataset.pageTitle || document.title
-  const language = host.dataset.language
-
-  if (!shortname || !identifier || !url) {
+document.addEventListener("nav", renderCusdis)
+document.addEventListener("themechange", () => {
+  const thread = getThread()
+  if (!thread) {
     return
   }
 
-  applyDisqusThemeHint(host)
-
-  const w = window as unknown as {
-    DISQUS?: { reset: (opts: { reload: boolean; config: () => void }) => void }
-    disqus_config?: () => void
-  }
-
-  const applyPage = function (this: DisqusConfigThis) {
-    this.page.url = url
-    this.page.identifier = identifier
-    this.page.title = title
-    if (language) {
-      this.language = language
-    }
-  }
-
-  if (w.DISQUS) {
-    w.DISQUS.reset({
-      reload: true,
-      config: function () {
-        applyPage.call(this as unknown as DisqusConfigThis)
-      },
-    })
-  } else {
-    w.disqus_config = function () {
-      applyPage.call(this as unknown as DisqusConfigThis)
-    }
-    const s = document.createElement("script")
-    s.src = `https://${shortname}.disqus.com/embed.js`
-    s.async = true
-    s.setAttribute("data-timestamp", Date.now().toString())
-    document.body.appendChild(s)
-  }
-}
-
-function resetDisqusTheme() {
-  const disqusHost = document.querySelector(".quartz-comments-disqus") as DisqusHost | null
-  if (!disqusHost) {
-    return
-  }
-
-  applyDisqusThemeHint(disqusHost)
-  window.clearTimeout(themeResetTimer)
-  themeResetTimer = window.setTimeout(() => loadDisqus(disqusHost), 250)
-}
-
-document.addEventListener("nav", () => {
-  const disqusHost = document.querySelector(".quartz-comments-disqus") as DisqusHost | null
-  if (disqusHost) {
-    loadDisqus(disqusHost)
-  }
+  applyCusdisTheme(thread)
+  const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
+  api?.renderTo?.(thread)
 })
-
-document.addEventListener("themechange", resetDisqusTheme)

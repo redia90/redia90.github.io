@@ -35,10 +35,10 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [
     Component.GlossaryPopup(),
     Component.Comments({
-      provider: "disqus",
+      provider: "cusdis",
       options: {
-        // Disqus 관리자에서 만든 사이트 shortname과 동일해야 합니다.
-        shortname: "redia90-github-io",
+        appId: process.env.CUSDIS_APP_ID,
+        host: process.env.CUSDIS_HOST ?? "https://cusdis.com",
         language: "ko",
       },
     }),

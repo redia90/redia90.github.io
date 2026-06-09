@@ -40,6 +40,9 @@ jobs:
             -o /tmp/previous-contentIndex.json || echo '{}' > /tmp/previous-contentIndex.json
 
       - name: Build Quartz
+        env:
+          CUSDIS_APP_ID: ${{ vars.CUSDIS_APP_ID || secrets.CUSDIS_APP_ID }}
+          CUSDIS_HOST: ${{ vars.CUSDIS_HOST || 'https://cusdis.com' }}
         run: npx quartz build
 
       - name: Detect New Content
