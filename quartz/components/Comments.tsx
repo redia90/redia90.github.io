@@ -89,9 +89,9 @@ export default ((opts: CommentsOptions) => {
 .quartz-comments-cusdis iframe {
   display: block;
   width: 100%;
-  min-height: 520px;
+  min-height: 640px;
   border: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .quartz-comments-config-missing {

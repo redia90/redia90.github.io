@@ -15,8 +15,8 @@ type CusdisApi = {
 }
 
 const CUSDIS_SCRIPT_ID = "cusdis-sdk"
-const CUSDIS_MIN_HEIGHT = 520
-const CUSDIS_HEIGHT_BUFFER = 96
+const CUSDIS_MIN_HEIGHT = 640
+const CUSDIS_HEIGHT_BUFFER = 180
 
 function getCusdisTheme() {
   return document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
@@ -40,7 +40,7 @@ function normalizeCusdisIframe(thread = getThread()) {
     return
   }
 
-  iframe.setAttribute("scrolling", "no")
+  iframe.setAttribute("scrolling", "auto")
   iframe.style.display = "block"
   iframe.style.width = "100%"
   iframe.style.minHeight = `${CUSDIS_MIN_HEIGHT}px`
@@ -48,7 +48,17 @@ function normalizeCusdisIframe(thread = getThread()) {
     iframe.style.height = `${CUSDIS_MIN_HEIGHT}px`
   }
   iframe.style.border = "0"
-  iframe.style.overflow = "hidden"
+  iframe.style.overflow = "auto"
+}
+
+function scheduleCusdisNormalize(thread = getThread()) {
+  if (!thread) {
+    return
+  }
+
+  window.setTimeout(() => normalizeCusdisIframe(thread), 0)
+  window.setTimeout(() => normalizeCusdisIframe(thread), 500)
+  window.setTimeout(() => normalizeCusdisIframe(thread), 1500)
 }
 
 function loadCusdis(thread: CusdisThread) {
@@ -61,7 +71,7 @@ function loadCusdis(thread: CusdisThread) {
   const w = window as unknown as { CUSDIS?: CusdisApi }
   if (w.CUSDIS?.renderTo) {
     w.CUSDIS.renderTo(thread)
-    window.setTimeout(() => normalizeCusdisIframe(thread), 0)
+    scheduleCusdisNormalize(thread)
     return
   }
 
@@ -77,7 +87,7 @@ function loadCusdis(thread: CusdisThread) {
   script.onload = () => {
     const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
     api?.renderTo?.(thread)
-    window.setTimeout(() => normalizeCusdisIframe(thread), 0)
+    scheduleCusdisNormalize(thread)
   }
   document.body.appendChild(script)
 }
@@ -99,7 +109,7 @@ document.addEventListener("themechange", () => {
   applyCusdisTheme(thread)
   const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
   api?.renderTo?.(thread)
-  window.setTimeout(() => normalizeCusdisIframe(thread), 0)
+  scheduleCusdisNormalize(thread)
 })
 
 window.addEventListener("message", (event) => {
@@ -119,8 +129,8 @@ window.addEventListener("message", (event) => {
       return
     }
 
-    iframe.setAttribute("scrolling", "no")
-    iframe.style.overflow = "hidden"
+    iframe.setAttribute("scrolling", "auto")
+    iframe.style.overflow = "auto"
     iframe.style.height = `${Math.max(CUSDIS_MIN_HEIGHT, height + CUSDIS_HEIGHT_BUFFER)}px`
   } catch {
     return
