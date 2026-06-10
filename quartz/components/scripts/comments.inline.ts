@@ -15,6 +15,7 @@ type CusdisApi = {
 }
 
 const CUSDIS_SCRIPT_ID = "cusdis-sdk"
+const CUSDIS_MIN_HEIGHT = 220
 
 function getCusdisTheme() {
   return document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
@@ -28,6 +29,24 @@ function applyCusdisTheme(thread: CusdisThread) {
   thread.dataset.theme = getCusdisTheme()
 }
 
+function findCusdisIframe(thread = getThread()) {
+  return thread?.querySelector("iframe") as HTMLIFrameElement | null
+}
+
+function normalizeCusdisIframe(thread = getThread()) {
+  const iframe = findCusdisIframe(thread)
+  if (!iframe) {
+    return
+  }
+
+  iframe.setAttribute("scrolling", "no")
+  iframe.style.display = "block"
+  iframe.style.width = "100%"
+  iframe.style.minHeight = `${CUSDIS_MIN_HEIGHT}px`
+  iframe.style.border = "0"
+  iframe.style.overflow = "hidden"
+}
+
 function loadCusdis(thread: CusdisThread) {
   if (!thread.dataset.host || !thread.dataset.appId || !thread.dataset.pageId) {
     return
@@ -38,6 +57,7 @@ function loadCusdis(thread: CusdisThread) {
   const w = window as unknown as { CUSDIS?: CusdisApi }
   if (w.CUSDIS?.renderTo) {
     w.CUSDIS.renderTo(thread)
+    window.setTimeout(() => normalizeCusdisIframe(thread), 0)
     return
   }
 
@@ -53,6 +73,7 @@ function loadCusdis(thread: CusdisThread) {
   script.onload = () => {
     const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
     api?.renderTo?.(thread)
+    window.setTimeout(() => normalizeCusdisIframe(thread), 0)
   }
   document.body.appendChild(script)
 }
@@ -74,4 +95,30 @@ document.addEventListener("themechange", () => {
   applyCusdisTheme(thread)
   const api = (window as unknown as { CUSDIS?: CusdisApi }).CUSDIS
   api?.renderTo?.(thread)
+  window.setTimeout(() => normalizeCusdisIframe(thread), 0)
+})
+
+window.addEventListener("message", (event) => {
+  if (typeof event.data !== "string") {
+    return
+  }
+
+  try {
+    const message = JSON.parse(event.data) as { from?: string; event?: string; data?: unknown }
+    if (message.from !== "cusdis" || message.event !== "resize") {
+      return
+    }
+
+    const iframe = findCusdisIframe()
+    const height = Number(message.data)
+    if (!iframe || !Number.isFinite(height)) {
+      return
+    }
+
+    iframe.setAttribute("scrolling", "no")
+    iframe.style.overflow = "hidden"
+    iframe.style.height = `${Math.max(CUSDIS_MIN_HEIGHT, height)}px`
+  } catch {
+    return
+  }
 })

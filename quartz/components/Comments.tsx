@@ -62,8 +62,7 @@ export default ((opts: CommentsOptions) => {
   Comments.css = `
 .quartz-comments-cusdis {
   margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--lightgray);
+  padding-top: 0.25rem;
   background: var(--light);
   color: var(--darkgray);
   color-scheme: light dark;
@@ -85,6 +84,14 @@ export default ((opts: CommentsOptions) => {
 .quartz-comments-cusdis #cusdis_thread {
   background: var(--light);
   color: inherit;
+}
+
+.quartz-comments-cusdis iframe {
+  display: block;
+  width: 100%;
+  min-height: 220px;
+  border: 0;
+  overflow: hidden;
 }
 
 .quartz-comments-config-missing {
