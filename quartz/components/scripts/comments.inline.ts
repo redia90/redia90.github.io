@@ -15,7 +15,8 @@ type CusdisApi = {
 }
 
 const CUSDIS_SCRIPT_ID = "cusdis-sdk"
-const CUSDIS_MIN_HEIGHT = 220
+const CUSDIS_MIN_HEIGHT = 520
+const CUSDIS_HEIGHT_BUFFER = 96
 
 function getCusdisTheme() {
   return document.documentElement.getAttribute("saved-theme") === "dark" ? "dark" : "light"
@@ -43,6 +44,9 @@ function normalizeCusdisIframe(thread = getThread()) {
   iframe.style.display = "block"
   iframe.style.width = "100%"
   iframe.style.minHeight = `${CUSDIS_MIN_HEIGHT}px`
+  if (!iframe.style.height) {
+    iframe.style.height = `${CUSDIS_MIN_HEIGHT}px`
+  }
   iframe.style.border = "0"
   iframe.style.overflow = "hidden"
 }
@@ -117,7 +121,7 @@ window.addEventListener("message", (event) => {
 
     iframe.setAttribute("scrolling", "no")
     iframe.style.overflow = "hidden"
-    iframe.style.height = `${Math.max(CUSDIS_MIN_HEIGHT, height)}px`
+    iframe.style.height = `${Math.max(CUSDIS_MIN_HEIGHT, height + CUSDIS_HEIGHT_BUFFER)}px`
   } catch {
     return
   }
