@@ -32,17 +32,7 @@ const KoreanExplorer = () =>
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [
-    Component.GlossaryPopup(),
-    Component.Comments({
-      provider: "cusdis",
-      options: {
-        appId: process.env.CUSDIS_APP_ID,
-        host: process.env.CUSDIS_HOST ?? "https://cusdis.com",
-        language: "ko",
-      },
-    }),
-  ],
+  afterBody: [Component.GlossaryPopup()],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/redia90/redia90.github.io",
