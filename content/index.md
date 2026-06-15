@@ -69,7 +69,7 @@ socialImage: og-image.png
 ## 치료 — 보조 케어·합병증
 
 - [[treatment-supportive/가임력보존|가임력 보존 — 항암 시작 전 난자·배아 동결]]
-- [[treatment-supportive/림프부종|림프부종 — 예방·진단·치료·어깨/팔 재활]]
+- <a href="./treatment-supportive/%EB%A6%BC%ED%94%84%EB%B6%80%EC%A2%85" class="internal">림프부종 — <span class="no-break">예방·진단·치료·어깨/팔</span> 재활</a>
 - [[treatment-supportive/약사협진_약물상호작용|약사 협진 — 약물 상호작용·다약제 검토]]
 - [[treatment-supportive/이차암|유방암 치료 후 이차암 (Second Primary Malignancy)]]
 - [[treatment-supportive/통증관리|유방암 통증 관리 — 수술·항암·골전이·말기 단계별]]
@@ -98,11 +98,11 @@ socialImage: og-image.png
 
 ## 생활 — 정신·환자 경험
 
+- [[mental-experience/처음온사람안내|처음 온 사람 안내 — 진단 직후 길잡이]]
 - [[mental-experience/보호자심리지지|암 환자 보호자 — 심리지지와 소통]]
 - [[mental-experience/보조요법주의|유방암 보조요법·민간요법 주의사항]]
 - [[mental-experience/치료후삶|유방암 치료 후 삶 — 장기 생존자 케어]]
 - [[mental-experience/유방암환자정신건강|유방암 환자 정신건강 — 불안·우울·재발공포·외상후 성장]]
-- [[mental-experience/처음온사람안내|처음 온 사람 안내 — 진단 직후 길잡이]]
 - [[mental-experience/환자의사결정도구|환자 의사결정 도구 — 항암·수술·재건·호르몬 결정 가이드]]
 
 ## 생활 — 보험·행정·권리
