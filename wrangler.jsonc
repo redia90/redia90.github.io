@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "wiki",
+  "main": "./cloudflare-worker.ts",
+  "compatibility_date": "2026-05-21",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PUSH_SUBSCRIPTIONS",
+        "class_name": "PushSubscriptions",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["PushSubscriptions"],
+    },
+  ],
+}

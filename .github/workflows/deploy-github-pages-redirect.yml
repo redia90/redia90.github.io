@@ -1,0 +1,33 @@
+name: Redirect GitHub Pages to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - v5
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "github-pages-redirect"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    environment:
+      name: github-pages
+      url: https://redia90.github.io/
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload redirect artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: github-pages-redirect
+
+      - name: Deploy redirect to GitHub Pages
+        uses: actions/deploy-pages@v4

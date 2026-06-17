@@ -1,0 +1,79 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-label="유방암 위키 아이콘"
+>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="48" x2="432" y2="464" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8fb" />
+      <stop offset="0.56" stop-color="#f6dce8" />
+      <stop offset="1" stop-color="#e9f2ef" />
+    </linearGradient>
+    <linearGradient id="ribbon" x1="182" y1="126" x2="338" y2="386" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f073a6" />
+      <stop offset="0.48" stop-color="#dc4f87" />
+      <stop offset="1" stop-color="#b8366e" />
+    </linearGradient>
+    <linearGradient id="page" x1="144" y1="280" x2="368" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f4fbf8" />
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6f3452" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <circle cx="256" cy="232" r="154" fill="#ffffff" opacity="0.56" />
+  <circle cx="398" cy="126" r="38" fill="#84a59d" opacity="0.2" />
+  <circle cx="104" cy="392" r="54" fill="#284b63" opacity="0.1" />
+
+  <g filter="url(#softShadow)">
+    <path
+      d="M150 292c22-20 52-28 88-20 18 4 34 12 48 23 18-18 45-29 79-29v130c-33 0-59 7-78 22-8 6-20 6-28 0-22-16-58-22-109-14V292Z"
+      fill="url(#page)"
+      stroke="#d9ebe6"
+      stroke-width="10"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M256 292c-20-14-55-20-106-10v122c50-8 86-2 109 14 7 5 18 5 25 0 20-15 47-22 81-22V266c-36 0-64 10-82 29"
+      fill="none"
+      stroke="#284b63"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.78"
+    />
+    <path
+      d="M257 292v120"
+      stroke="#84a59d"
+      stroke-width="8"
+      stroke-linecap="round"
+      opacity="0.74"
+    />
+
+    <path
+      d="M224 104c38 20 58 52 56 95-2 37-22 73-60 109l-34-38c31-28 47-53 48-75 1-19-10-36-32-48l22-43Z"
+      fill="url(#ribbon)"
+    />
+    <path
+      d="M288 104c-38 20-58 52-56 95 2 37 22 73 60 109l34-38c-31-28-47-53-48-75-1-19 10-36 32-48l-22-43Z"
+      fill="url(#ribbon)"
+    />
+    <path
+      d="M215 155c18 14 32 28 41 43 9-15 23-29 41-43"
+      fill="none"
+      stroke="#fff7fb"
+      stroke-width="14"
+      stroke-linecap="round"
+      opacity="0.74"
+    />
+  </g>
+
+  <path d="M181 336h42" stroke="#84a59d" stroke-width="10" stroke-linecap="round" opacity="0.82" />
+  <path d="M181 370h56" stroke="#84a59d" stroke-width="10" stroke-linecap="round" opacity="0.68" />
+  <path d="M292 336h42" stroke="#84a59d" stroke-width="10" stroke-linecap="round" opacity="0.82" />
+  <path d="M292 370h48" stroke="#84a59d" stroke-width="10" stroke-linecap="round" opacity="0.68" />
+</svg>

@@ -1,0 +1,82 @@
+name: Deploy Quartz site to Cloudflare Workers
+
+on:
+  push:
+    branches:
+      - v5
+  workflow_dispatch:
+
+env:
+  QUARTZ_BASE_URL: ${{ vars.QUARTZ_BASE_URL || 'wiki.breast-cancer.workers.dev' }}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "cloudflare-workers"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    environment:
+      name: cloudflare-workers
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Quartz Plugins
+        run: npx quartz plugin install
+
+      - name: Capture Current Deployed Content Index
+        run: |
+          curl -fsSL "https://${QUARTZ_BASE_URL}/static/contentIndex.json" \
+            -o /tmp/previous-contentIndex.json || echo '{}' > /tmp/previous-contentIndex.json
+
+      - name: Build Quartz
+        run: npx quartz build
+
+      - name: Detect New Content
+        id: new_content
+        run: |
+          node scripts/detect-new-content.mjs \
+            /tmp/previous-contentIndex.json \
+            public/static/contentIndex.json \
+            /tmp/push-notification.json >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Workers
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        env:
+          VAPID_PUBLIC_KEY: ${{ secrets.VAPID_PUBLIC_KEY }}
+          VAPID_PRIVATE_JWK: ${{ secrets.VAPID_PRIVATE_JWK }}
+          PUSH_NOTIFY_SECRET: ${{ secrets.PUSH_NOTIFY_SECRET }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          command: deploy
+          secrets: |
+            VAPID_PUBLIC_KEY
+            VAPID_PRIVATE_JWK
+            PUSH_NOTIFY_SECRET
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify PWA Subscribers
+        if: steps.new_content.outputs.has_new == 'true'
+        env:
+          PUSH_NOTIFY_SECRET: ${{ secrets.PUSH_NOTIFY_SECRET }}
+        run: |
+          curl -fsSL -X POST "https://${QUARTZ_BASE_URL}/api/push/notify" \
+            -H "Authorization: Bearer ${PUSH_NOTIFY_SECRET}" \
+            -H "Content-Type: application/json" \
+            --data-binary @/tmp/push-notification.json
