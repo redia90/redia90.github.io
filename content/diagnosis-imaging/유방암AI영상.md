@@ -3,7 +3,7 @@ title: 유방암 AI 영상·디지털 진단 — DBT·AI 판독·CAD·디지털 
 category: diagnosis-imaging
 tags: [AI영상, AI진단, 디지털병리, DBT, 토모신세시스, CAD, 영상의학AI, 디지털병리AI, NCCN AI, 트라스파라, MASAI, ScreenPoint, Mirai, Volpara]
 created: 2026-05-25
-last_updated: 2026-06-02
+last_updated: 2026-06-17
 sources:
   - "FDA AI/ML-Based Medical Devices Approved List. 2024."
   - "NCCN Breast Cancer Screening v1.2026 (AI Risk Models)."
@@ -341,6 +341,7 @@ ASCO 2026 직후 진료실에서 묻기 좋은 AI 관련 질문 추가:
 
 ## 관련 개념
 - [[유방암검진2026]] — AI 검진·치밀유방 검사
+- [[diagnosis-imaging/유방영상검사가이드]] — **4가지 영상검사 비교(맘모·초음파·MRI·DBT)·BI-RADS·치밀유방·가돌리늄·MRI 적응증 — 영상 표준 가이드**
 - [[유방암진단체계]] — 진단 검사 흐름 (영상 + 조직)
 - [[유방암위험인자]] — AI 위험 평가 도구
 - [[정밀의학도구]] — AI subtype·NCCN AI 통합·MASAI·Mirai·디지털 병리 AI entry 동선

@@ -132,3 +132,62 @@ socialImage: og-image.png
 ## 용어사전
 
 - [[glossary/용어사전|유방암 용어사전]]
+
+---
+
+## 주제별 Canonical 페이지 가이드 (중복 통합 기준)
+
+여러 페이지에서 같은 주제가 반복될 때, **가장 권위 있는 페이지(canonical)** 를 기준으로 본다. 다른 페이지는 도메인 맥락(부작용 키트·보호자 체크리스트·식이 등)을 위해 짧게 인용 + wikilink 권장.
+
+| 주제 | Canonical 페이지 | 보조·맥락 페이지 (인용·링크만) |
+|------|---------------------|-----------------------------------|
+| **TCHP 약제 구성 (T·C·H·P 풀네임)** | [[treatment-systemic/신보조화학요법]] | [[treatment-systemic/HER2표적치료]] · [[cases/TCHP항암_요양병원케이스]] |
+| **TCHP 회차별 부작용 매트릭스 (1~6차 + 사례번호)** | [[cases/TCHP항암_요양병원케이스]] | [[treatment-systemic/항암화학요법]] — 표준 패턴 요약만 |
+| **항암 부작용 표준 분류 (탈모·오심·점막염·신경병증 등)** | [[treatment-systemic/항암화학요법]] | [[cases/TCHP항암_요양병원케이스]] (사례 디테일) · [[nutrition-exercise/항암중식이주의]] (식이 관점) |
+| **38℃ 발열·응급 신호 (FN)** | [[treatment-systemic/항암화학요법]] § 건국대병원 환자 안내문 (★ 해열제 금지 표) | [[diagnosis-workflow/전이경고신호]] · [[treatment-radiation/방사선장기부작용]] · [[treatment-supportive/혈관접근장치]] (각자 도메인 맥락) |
+| **호르몬 약제 4세대 비교 (SERM·AI·SERD·PROTAC)** | [[treatment-systemic/호르몬치료약제비교]] | [[treatment-systemic/호르몬치료]] (서사·환자 자가관리) |
+| **AI 3종 비교 (레트로졸·아나스트로졸·엑세메스탄)** | [[treatment-systemic/호르몬치료약제비교]] § AI 3종 직접 비교 | — |
+| **CDK4/6 (팰보·키스칼리·버제니오) 약제 정보** | [[treatment-systemic/CDK46억제제]] | [[treatment-systemic/호르몬치료]] · [[treatment-systemic/호르몬치료약제비교]] |
+| **DESTINY-Breast05/11 임상 데이터** | [[research/2026임상연구업데이트]] | [[treatment-systemic/신보조화학요법]] · [[treatment-systemic/HER2표적치료]] · [[treatment-systemic/HER2-low치료]] (임상 적용 맥락) |
+| **KEYNOTE-522 TNBC 데이터** | [[treatment-systemic/TNBC치료]] | [[treatment-systemic/신보조화학요법]] (적응증 표) |
+| **monarchE / NATALEE / OlympiA / POSITIVE** | [[research/2026임상연구업데이트]] | [[treatment-systemic/CDK46억제제]] · [[treatment-systemic/PARP억제제]] · [[treatment-systemic/호르몬치료]] |
+| **Oncotype DX RS 점수·해석** | [[research/온코타입DX_RS점수]] | [[diagnosis-tests/유전자발현프로파일링]] (5종 검사 종합) |
+| **5종 유전자발현 프로파일링 비교** | [[diagnosis-tests/유전자발현프로파일링]] | [[treatment-systemic/호르몬치료]] (BCI 5년 시점 결정) |
+| **BRCA 유전자 기전·돌연변이** | [[biology/BRCA유전자]] | [[diagnosis-tests/유전자검사]] (검사 종류·비용) · [[diagnosis-workflow/유방암유전상담]] (상담 동선) |
+| **HER2-low / T-DXd / ADC** | [[treatment-systemic/HER2-low치료]] | [[treatment-systemic/HER2표적치료]] · [[biology/유방암분자서브타입]] |
+| **림프부종 예방·진단·치료** | [[treatment-supportive/림프부종]] | [[treatment-surgery/유방암수술]] · [[nutrition-exercise/운동수면위생]] |
+| **호중구감소증·G-CSF (뉴라스타)** | [[treatment-systemic/항암화학요법]] § 2세대 G-CSF | [[cases/TCHP항암_요양병원케이스]] (사례) |
+| **요양병원 선택·실비 활용** | [[preparation-facilities/요양병원선택]] | [[cases/TCHP항암_요양병원케이스]] (단일 케이스) · [[insurance-admin/실비보험가이드]] |
+| **PCA·무통주사 통증 관리** | [[treatment-supportive/통증관리]] | [[treatment-surgery/유방암수술]] (수술 직후 맥락) |
+| **유방재건 즉시 vs 지연 비교** | [[treatment-surgery/유방재건수술]] | [[treatment-surgery/유방암수술]] (수술 선택 맥락) · [[insurance-admin/유방암보험청구쟁점]] (보험 측면) |
+| **산정특례 5년 갱신** | [[insurance-admin/산정특례갱신가이드]] | [[insurance-admin/보험행정]] (전반 행정 hub) |
+| **신약 FDA→식약처→보험 단계 매트릭스** | [[insurance-admin/보험행정]] § ASCO 2026 후 신약 매트릭스 (12약제) | [[insurance-admin/유방암보험청구쟁점]] (약제별 청구 포인트) |
+| **실비 1~4세대 분류·약관 비교** | [[insurance-admin/실비보험가이드]] | [[insurance-admin/유방암보험청구쟁점]] (세대별 청구 사례) |
+| **손해사정사 면담·동의서·부지급** | [[insurance-admin/손해사정사대응]] | [[insurance-admin/유방암보험청구쟁점]] (분쟁 쟁점) |
+| **PSP·청원·환자 지원 프로그램** | [[insurance-admin/환자지원프로그램]] | [[insurance-admin/보험행정]] (4기 행정 체크리스트) |
+| **신약 학술 데이터·NEJM 인용** (전체 임상) | [[research/2026임상연구업데이트]] | [[research/유방암치료트렌드2026]] · [[research/유방암신약파이프라인2026]] |
+| **신약 파이프라인 단계·도입 추적** (한국) | [[research/유방암신약파이프라인2026]] | [[insurance-admin/보험행정]] (보험 적용 단계) |
+| **치료 트렌드 5축 (수술·약물·정밀의학·보험·AI)** | [[research/유방암치료트렌드2026]] | [[research/2026임상연구업데이트]] · 약제별 canonical |
+| **HER2-low 분류 (3+·2+/FISH·1+·0·ultralow)** | [[biology/유방암분자서브타입]] | [[treatment-systemic/HER2-low치료]] (임상 적용) |
+| **유전상담 NCCN 적응증·Cascade·심리** | [[diagnosis-workflow/유방암유전상담]] | [[diagnosis-tests/유전자검사]] (검사 종류·비용) · [[biology/BRCA유전자]] (기전·침투율) |
+| **영상검사 4종 비교·BI-RADS·DBT·치밀유방** | [[diagnosis-imaging/유방영상검사가이드]] | [[diagnosis-workflow/유방암진단체계]] (진단 체계 맥락) |
+| **AI 영상·디지털 병리 (Paige·Lunit·Mirai)** | [[diagnosis-imaging/유방암AI영상]] | [[diagnosis-tests/조직검사결과해석]] (HER2 0/1+ 결과지 맥락) |
+| **콩 이소플라본·파이토에스트로겐·LACE·식품 vs 보충제** | [[nutrition-exercise/호르몬양성식이]] | [[nutrition-exercise/식이영양관리]] (일반 식이 요약) · [[mental-experience/보조요법주의]] (보충제 일반) |
+| **항암 중 식이·생식·날음식 회피·1500kcal** | [[nutrition-exercise/항암중식이주의]] | [[nutrition-exercise/식이영양관리]] (일반 원칙) |
+| **회복기 영양·근육 재건·체중 관리** | [[nutrition-exercise/회복기영양가이드]] | [[nutrition-exercise/한국유방암영양가이드]] (KBCS 권고) |
+| **한국 학회 영양 권고 (KBCS·임상영양학회)** | [[nutrition-exercise/한국유방암영양가이드]] | [[nutrition-exercise/식이영양관리]] (일반 원칙) |
+| **운동·수면·체온·위생 (CDT·근력·림프부종 예방)** | [[nutrition-exercise/운동수면위생]] | [[treatment-supportive/림프부종]] (CDT 상세) |
+| **설탕·탄수화물·당지수·인슐린** | [[nutrition-exercise/설탕탄수화물관리]] | [[nutrition-exercise/식이영양관리]] (일반 원칙) |
+| **면역항암제 임상 약제 (펨브로·아테졸·트로델비 병합)** | [[treatment-systemic/TNBC치료]] | [[biology/유방암면역_미생물군]] (면역 생물학 맥락) |
+| **면역 바이오마커 (TIL·sTIL·PD-L1·TMB·MSI)** | [[biology/유방암면역_미생물군]] | [[diagnosis-tests/면역조직화학검사(IHC)]] (염색 기법) |
+| **휴면 암세포·재발 메커니즘 (Dormancy·EBCTCG 20년)** | [[biology/휴면암세포_재발메커니즘]] | [[research/전이메커니즘_Prrx1]] (전이 분자 기전) · [[treatment-systemic/호르몬치료]] (10년 연장 근거) |
+| **호스피스·완화의료·연명의료의향서** | [[preparation-facilities/호스피스완화의료]] | [[insurance-admin/보험행정]] (4기 행정) · [[mental-experience/처음온사람안내]] |
+| **환자 의사결정 도구 (PREDICT·DA·SDM)** | [[mental-experience/환자의사결정도구]] | [[research/정밀의학도구]] (의사용 도구) |
+| **보조요법·민간요법·홍삼·메가비타민 회피** | [[mental-experience/보조요법주의]] | [[nutrition-exercise/호르몬양성식이]] (식품 vs 보충제) · [[treatment-supportive/약사협진_약물상호작용]] |
+| **작은 HER2 (≤1cm) APT·ATEMPT·ATEMPT 2.0·T-DM1 관리·chemo-free 미래** | [[treatment-systemic/HER2표적치료]] § APT 및 안성귀 강의 | [[treatment-systemic/신보조화학요법]] (NAC 영역 한정) |
+| **카보플라틴 AUC 5 감량·페로오바 (안성귀 강남세브란스)** | [[treatment-systemic/HER2표적치료]] | [[treatment-systemic/신보조화학요법]] (신보조 맥락) |
+| **재발 공포 (FCR)·Lebel JCS 2025·CBT·ACT·온라인 CBT** | [[mental-experience/유방암환자정신건강]] § FCR | [[mental-experience/치료후삶]] (치료후 생활·정기 검진 동선) |
+| **앤더슨 RCT·스트레스 → 교감신경 → 휴면 세포** | [[mental-experience/유방암환자정신건강]] (정신건강 임상) | [[biology/휴면암세포_재발메커니즘]] (분자 기전) |
+| **호스피스·사전연명의료의향서** | [[preparation-facilities/호스피스완화의료]] | [[mental-experience/처음온사람안내]] (말기 길잡이) |
+
+> 💡 **사용 원칙**: 새 자료를 ingest할 때 위 표를 먼저 확인 → canonical 페이지에 통합. 보조 페이지에는 **한 문단 + wikilink**만 남긴다. 같은 표를 두 곳에 복제하지 않는다.

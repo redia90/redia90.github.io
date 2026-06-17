@@ -3,7 +3,7 @@ title: BRCA1 / BRCA2 유전자
 category: biology
 tags: [BRCA1, BRCA2, 유전성유방암, 유전자검사, PARP억제제, 상동재조합, HRR, 예방절제, 침투율, 한국인변이]
 created: 2026-04-24
-last_updated: 2026-06-03
+last_updated: 2026-06-17
 sources:
   - "Kuchenbaecker KB et al. Risks of Breast, Ovarian, and Contralateral Breast Cancer for BRCA1 and BRCA2 Mutation Carriers. JAMA. 2017;317:2402-2416."
   - "NCCN Genetic/Familial High-Risk Assessment: Breast, Ovarian, and Pancreatic. v3.2024."
@@ -168,24 +168,17 @@ BRCA 변이 + 가임 계획 환자는 **예방적 절제·가임력 보존·임�
 
 ## ASCO 2026 직후 BRCA 영역 갱신 (2026-06)
 
-### OlympiA 10년 추적 — BRCA 보조 1년 표준 강화
+### OlympiA 10년 추적 — BRCA 보조 1년 표준 강화 (요약)
 
-ASCO 2026·SABCS 2025 잠정 데이터:
-- **10년 iDFS 우위 유지** — 약 7~9%p 절대 차이 추정
-- **OS 우위 누적** — HR 0.7 수준
-- **장기 부작용** (백혈병·MDS): 약 1% (위약 0.5%) — 임상적으로 미미
-- **결론**: 올라파립 1년이 **장기 안전성·효과 균형 우수** — 2년 연장 (PETREMAC) 결과 대기 중
-- → [[PARP억제제|상세]]
+ASCO 2026·SABCS 2025 잠정: **iDFS·OS 우위 10년 누적 유지, 백혈병/MDS 1% (위약 0.5%) — 미미.** 올라파립 1년 보조요법 표준 강화, 2년 연장(PETREMAC) 결과 대기.
 
-### POSITIVE 5년 추적 — BRCA + 가임 계획자 호르몬 중단 안전성
+→ **풀 데이터·임상 흐름도·BRCA reversion ctDNA·차세대 병합 임상**: [[treatment-systemic/PARP억제제#asco-2026-직후-parp-영역--데이터-갱신-2026-06|PARP억제제 § ASCO 2026 직후 PARP 영역]] (canonical)
 
-ASCO 2026 POSITIVE 5년 잠정:
-- 호르몬치료 중단 → 임신·재개 환자 **5년 BC-FI** 안전성 유지 추정
-- 3년 BC-FI 8.9% vs 9.2% (2년 안전성) → 5년에서도 동등 시 표준 진입 가속
-- **BRCA+ 환자에서도 동일 안전성** 확인 (사전 분석 후속)
-- **실전 동선**: 18~24개월 호르몬치료 → 중단 → 임신·출산·수유 → 5~10년 호르몬치료 재개
-- BRCA+ 환자는 **RRSO 시점·예방절제 시점**과 통합 의사결정 필요
-- → [[가임력보존|POSITIVE 상세]]
+### POSITIVE 5년 추적 — BRCA+ 가임 계획자 (요약)
+
+ASCO 2026 POSITIVE 5년 잠정 — **BRCA+ 환자에서도 호르몬치료 중단 후 임신·재개 안전성 유지** (사전 분석 후속). BRCA+ 환자는 **RRSO 시점·예방절제 시점**과 통합 의사결정 필요.
+
+→ **POSITIVE 풀 데이터 (3년 BC-FI 8.9% vs 9.2%)·18~24개월 표준 동선·5년 데이터 의사결정 표 갱신**: [[treatment-supportive/가임력보존#positive-연구-2023-nejm|가임력보존 § POSITIVE]] (canonical)
 
 ### PALB2 한국 보험 적용 확대 진행 (2026-06)
 
@@ -265,3 +258,4 @@ PARP 사용 중 진행 시 **ctDNA 시퀀싱**으로 BRCA reversion 검출:
 - 2026-05-21: [[유방암보험청구쟁점]] 링크 — BRCA 예방적 절제 보험 청구(대법원 2021다234368 판례) 동선 연결
 - 2026-05-21: 대폭 보강 — Kuchenbaecker JAMA 2017 침투율 표(생애 누적·반대편·췌장·전립선), 한국인 변이 빈도, 분자 메커니즘(HRR·합성치사·BRCAness), NCCN 검사 적응증, 예방적 수술 효과 수치, 약물 예방, OlympiA·OlympiAD·EMBRACA 임상 데이터, POSITIVE 연구(임신 가능성), 한국 보험 적용, 카페 사례(#310014 등) 통합 (daily-brief Top 1 보강)
 - 2026-06-03: **ASCO 2026 직후 BRCA 영역 갱신** 섹션 신규 (daily-brief Top 3) — OlympiA 10년 추적 잠정, POSITIVE 5년 BRCA+ 가임 안전성, PALB2 한국 보험 확대 협상 진행, BRCA reversion ctDNA 모니터링 임상 도입, 진료실 질문 6종 추가
+- 2026-06-17: **중복 통합 3차 패스** — OlympiA 10년 추적 verbose 5항목 블록을 1행 요약 + [[PARP억제제]] canonical 위임으로 압축, POSITIVE 5년 BRCA+ 가임 안전성 6항목 블록을 BRCA+ 관점 2행 요약 + [[가임력보존]] canonical 위임으로 압축. 풀 데이터·임상 흐름도는 각 canonical에서.

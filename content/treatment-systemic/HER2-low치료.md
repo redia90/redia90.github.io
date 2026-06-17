@@ -3,7 +3,7 @@ title: HER2-low 유방암 치료 — ADC 혁명
 category: treatment-systemic
 tags: [HER2low, HER2ultralow, ADC, 엔허투, T-DXd, DESTINY-Breast04, DESTINY-Breast06, DESTINY-Breast05, DESTINY-Breast09, DESTINY-Breast11, 항체약물접합체, 전이성유방암, ILD, 간질성폐렴, 보험단계, 환자케이스]
 created: 2026-04-26
-last_updated: 2026-05-27
+last_updated: 2026-06-16
 sources:
   - "Threads @junetapa. #암_유방암_자세히알자. HER2-low와 ADC 혁명. 2026-01-10 (추정). https://www.threads.com/@junetapa/post/DTVE5Xaj5x_"
   - "Modi S et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. NEJM. 2022;387:9-20. (DESTINY-Breast04)"
@@ -66,23 +66,12 @@ confidence: medium
 - **임상적 함의**: **HER2-low/ultralow 환자에서 호르몬 치료 진행 직후 → 화학요법 대신 T-DXd 전환** 가능성
 - **HER2-ultralow 공식 임상 데이터** 첫 강력한 근거
 
-### DESTINY-Breast05 (2026) — HER2+ 조기 잔존병변 보조요법
+### DESTINY-Breast05·09·11 — HER2+ 영역 (HER2-low 관점 요약)
 
-- **연구 설계**: 선행 항암 후 **non-pCR HER2+** → T-DXd 3년 vs T-DM1 14사이클
-- **3년 iDFS**: T-DXd **92.4%** vs T-DM1 **83.7%**
-- **임상적 함의**: HER2+ 잔존병변에서 T-DM1 → T-DXd 표준 전환 가능성
+> 📚 본 3개 임상은 HER2+ 적응증 — **풀 데이터·임상 적용**은 [[treatment-systemic/HER2표적치료#destiny-breast050911-한국-적용-2026-06--임상-적용-요약|HER2표적치료 § DESTINY-Breast05·09·11 한국 적용]] 참조. HER2-low 관점에서의 의의만:
 
-### DESTINY-Breast09 (2026) — HER2+ 1차 전이성
-
-- **연구 설계**: 전이성 HER2+ 1차 — T-DXd + pertuzumab vs THP (탁산+허셉틴+퍼제타)
-- **PFS**: T-DXd+pertuzumab **40.7개월** vs THP 27.0개월 (HR ~0.56)
-- **임상적 함의**: 1차 전이성 표준 변경 가능성 — 현재 표준 THP 도전
-
-### DESTINY-Breast11 (2025·2026) — 신보조요법 서열
-
-- T-DXd 단독·또는 T-DXd → THP 서열 vs 표준 신보조
-- pCR 향상 신호 — non-pCR 환자에서 추가 약제 옵션 영향
-- 조기 유방암 영역에서 ADC 전진 배치 흐름
+- **DESTINY-Breast05/09/11**의 ADC 전진 배치 흐름이 HER2-low로 확산되는 **선행 신호** — 잔존병변·1차 전이·신보조 모두에서 T-DXd 사용 영역 확대
+- HER2 IHC 0/1+ 경계 정밀 판독·디지털 병리 AI 수요 ↑ → [[diagnosis-tests/조직검사결과해석]] 갱신 동선과 직결
 
 ### DESTINY-Breast08 (Phase Ib, 진행)
 
@@ -302,3 +291,4 @@ DXd (토포이소머라제1 억제제 — 강력한 항암제)
 - 2026-05-21: DESTINY-Breast08 phase Ib (T-DXd + capecitabine/capivasertib/anastrozole/fulvestrant 병합, ORR 40~71%·grade 3+ AE 47~67%) 인용; [[2026임상연구업데이트]] 링크
 - 2026-05-26: Notion 항암제·약제 TOP50(2026-05-26) — HER2-low가 호스피스를 막은 환자 사례(#41), 엔허투 중증 적용 확대 국민청원 (8회차 5천만원, #48) 추가
 - 2026-05-27: 대폭 보강 (daily-brief Top 1) — DESTINY-Breast 시리즈 6건 통합 (DB04·DB05·DB06·DB08·DB09·DB11) 임상 데이터, 한국 보험 적용 단계별 동선 6단계 + 환자 동선 6단계, IHC 2+ FISH- 환자 케이스 시리즈 4종 (ER+ 폐경 후·폐경 전·TNBC 전환·호스피스 권유), 진료실 질문 8개
+- 2026-06-16: **중복 통합 2차 패스** — HER2+ 적응증 임상 (DESTINY-Breast05/09/11)을 [[HER2표적치료]] canonical로 위임. HER2-low 페이지에서는 ADC 전진 배치 흐름의 선행 신호로만 1문단 유지. DESTINY-Breast06 (HER2-low/ultralow 1차)은 본 페이지가 canonical로 그대로 유지.
