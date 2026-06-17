@@ -3,7 +3,7 @@ name: Redirect GitHub Pages to Cloudflare Workers
 on:
   push:
     branches:
-      - v5
+      - v4
   workflow_dispatch:
 
 permissions:
