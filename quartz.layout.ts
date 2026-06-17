@@ -28,6 +28,14 @@ const KoreanExplorer = () =>
     },
   })
 
+const RecentUpdates = () =>
+  Component.RecentNotes({
+    title: "최근 업데이트",
+    limit: 5,
+    showTags: false,
+    filter: (file) => file.slug !== "index" && !file.slug?.startsWith("tags/"),
+  })
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -72,6 +80,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
+    RecentUpdates(),
     Component.Backlinks(),
   ],
 }
@@ -98,5 +107,5 @@ export const defaultListPageLayout: PageLayout = {
     }),
     KoreanExplorer(),
   ],
-  right: [],
+  right: [RecentUpdates()],
 }
