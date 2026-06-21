@@ -1,9 +1,9 @@
 ---
 title: 면역조직화학검사 (IHC) — ER·PR·HER2·Ki67 결과 해석
 category: diagnosis-tests
-tags: [IHC, 면역조직화학, ER, PR, HER2, Ki67, Allred, H-score, ASCO, CAP, 판독, 재검사, HER2low, AI보조판독]
+tags: [IHC, 면역조직화학, ER, PR, HER2, Ki67, Allred, H-score, ASCO, CAP, 판독, 재검사, HER2low, AI보조판독, 디지털병리AI, DESTINY-Breast06, HER2ultralow]
 created: 2026-05-21
-last_updated: 2026-05-26
+last_updated: 2026-06-21
 sources:
   - "ASCO/CAP HER2 Testing in Breast Cancer Guideline. 2018·2023 update."
   - "Allison KH et al. ER/PR Testing in Breast Cancer: ASCO/CAP Update. Arch Pathol Lab Med. 2020."
@@ -224,12 +224,44 @@ ER·PR 결과를 정량화하는 가장 흔한 점수 (한국 병리과 표준):
 
 > 💡 **결과지 사진을 휴대폰에 보관**하고 진료실에서 직접 보면서 확인 — 같은 종양이라도 일자·검체별 결과가 다를 수 있어 환자가 기록을 가지고 있어야 한다.
 
+## 디지털 병리 AI — HER2-low/ultralow 판정 정확도
+
+DESTINY-Breast04(HER2-low 2차)·DESTINY-Breast06(HER2-low/ultralow 1차) 이후 **HER2 IHC 0 vs 1+ 경계**가 치료 결정 분기점이 되었다.
+
+### 왜 AI 보조 판독이 중요해졌나
+
+| 상황 | 기존 문제 | AI 보조 효과 |
+|------|-----------|-------------|
+| HER2 IHC 0/1+ 경계 | 병리의사 간 판독 일치도 **Kappa 0.65** — 낮음 | Kappa **0.85** 이상 (Paige HER2 Complete) |
+| HER2 IHC 2+/FISH | 일치도 0.75~0.80 | 0.88~0.92 (Paige·Roche uPath) |
+| Ki-67 정량 | 수동 계수 편차 큼 | 자동 정량 ↑ |
+| PD-L1 CPS | CPS ≥1 경계 일치도 낮음 | Lunit SCOPE PD-L1 보조 향상 |
+
+### 한국 대형 병원 도입 현황 (2026 Q2)
+
+| 도구 | 적용 병원 | 주요 기능 |
+|------|-----------|-----------|
+| **Lunit SCOPE HER2** | 서울대·삼성·아산 시범 운영 | HER2 IHC 0/1+/2+/3+ 자동 분류 |
+| **Lunit SCOPE PD-L1** | 삼성서울·서울대·아산 확대 | TNBC 면역치료 CPS 정량 |
+| **Paige HER2 Complete** | 일부 도입 | HER2-low 경계 보조 |
+| **Visiopharm HER2** | 연구 단계 | HER2-low 정량 분석 |
+
+### 환자 입장 — 진료실에서 물을 수 있는 질문
+
+1. "제 HER2 IHC 결과가 0 또는 1+인데, **AI 보조 재판독**을 받을 수 있나요?" (엔허투 적응증 여부 결정)
+2. "병리 검사에 **디지털 병리 AI**가 적용되었나요?" (HER2-low/PD-L1 정확도)
+3. "**DESTINY-Breast06 기준** HER2-low/ultralow 적응 여부를 제 결과로 판단할 수 있나요?"
+4. "**PD-L1 CPS** 측정에 AI 보조가 가능한가요?" (TNBC 면역치료 결정)
+
+> 💡 **DESTINY-Breast06 (ASCO 2026) 맥락**: HER2-low(IHC 1+/2+·FISH-)·HER2-ultralow(0이지만 미량 발현) 전이성 1차 T-DXd가 OS 우위 확인 추정 → HER2 0/1+ 경계 판독 정확도가 **1차 치료 결정**에 직결. AI 보조 병리는 이 분기점을 정확하게 만드는 핵심 도구.
+
 ## 임상적 의의
 
 - IHC는 비싸지 않고 빠르며 거의 모든 병원에서 가능 — 진단 1차 도구로 표준화됨
 - ER·PR·HER2 4-항목 조합으로 **루미날 A/B, HER2+, TNBC, HER2-low** 5개 서브타입 결정
 - HER2-low 개념 등장으로 ADC([[HER2-low치료|엔허투]]) 적응증이 60%까지 확대 — IHC 1+/2+ 환자에게도 새 옵션
 - 재발·전이 시 재검사·재판독이 치료 선택을 바꿀 수 있어 환자가 적극 요청 가능
+- **디지털 병리 AI**: HER2 IHC 0/1+ 경계 판독 일치도를 0.65→0.85로 향상 — DESTINY-Breast06 1차 적응증 정확도 직결
 
 ## 한국 임상 가이드라인 / 보험 적용 여부
 
@@ -279,3 +311,4 @@ ER·PR 결과를 정량화하는 가장 흔한 점수 (한국 병리과 표준):
 - 2026-05-21: library-check broken link 해소 — ER·PR·HER2·Ki67·E-cadherin IHC 결과 해석, HER2-low/ultralow 등장, 판독 일치도 70~80%, 재발·전이 시 재검사 통합 신규 생성
 - 2026-05-25: library-check cross-link 보강 — [[검사결과지읽기도우미]]·[[glossary/용어사전]] 연결
 - 2026-05-26: 대폭 보강 (daily-brief Top 3) — Allred score (TS+IS, 0~8) 정량 시스템, H-score, ER Low Positive 별도 보고 권고 (ASCO/CAP 2020), Ki67 컷오프 변화 (IKWG·St Gallen·monarchE), Ki67 판독 표준화 권고, 항목별 판독 일치도 Kappa 표, 검체 한계 (고정·보관·검사실 차이), 재판독·재검사 동선 (한국 실전 절차·비용·치료 변경 사례), 환자가 결과지에서 직접 확인할 7항목
+- 2026-06-21: **디지털 병리 AI — HER2-low/ultralow 판정 정확도** 전용 섹션 신규 (library-check 보강 추천) — DESTINY-Breast06 1차 적응증 맥락에서 HER2 IHC 0/1+ 경계 중요성, 판독 일치도 Kappa 0.65→0.85 AI 효과, 한국 4개 도구 도입 현황 표 (Lunit SCOPE/Paige/Visiopharm), 환자 진료실 질문 4개 (AI 재판독·DESTINY-Breast06 적응·PD-L1 CPS), 미해결 항목에서 본문으로 격상

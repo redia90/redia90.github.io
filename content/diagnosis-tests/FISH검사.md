@@ -1,9 +1,9 @@
 ---
 title: FISH 검사 — HER2 유전자 증폭 확인 (ISH)
 category: diagnosis-tests
-tags: [FISH, ISH, HER2, 유전자증폭, IHC2plus, ASCO, CAP, 동원체비, HER2-CEP17, 검사비용, 검사일정, 재검사, 세컨드오피니언]
+tags: [FISH, ISH, HER2, 유전자증폭, IHC2plus, ASCO, CAP, 동원체비, HER2-CEP17, 검사비용, 검사일정, 재검사, 세컨드오피니언, HER2low, 디지털병리AI, DESTINY-Breast06]
 created: 2026-05-21
-last_updated: 2026-05-26
+last_updated: 2026-06-21
 sources:
   - "ASCO/CAP HER2 Testing in Breast Cancer Guideline. 2018·2023 update."
   - "한원식. 유방암 진단을 받았다면 꼭 알아야 할 것들. 의학채널 비온뒤. 2024-01-30. https://youtu.be/e6xr1NpsXXU"
@@ -186,12 +186,30 @@ DESTINY-Breast04 이후 **IHC 2+ FISH 음성 = HER2-low** 환자도 엔허투 �
 - [[보험행정]] — 산정특례 적용 후 FISH 본인부담
 - [[glossary/용어사전]] — FISH·CEP17·HER2 등 검사 용어 풀이
 
+## DESTINY-Breast06 맥락 — FISH가 닿지 않는 HER2-low 경계
+
+DESTINY-Breast06 (ASCO 2026, HER2-low/ultralow 전이성 1차 T-DXd OS 우위 확인)으로 **IHC 0 vs 1+ 경계**가 1차 치료 결정 분기점이 됐다:
+
+- FISH는 HER2 증폭 확인 도구 — **HER2-low (IHC 1+ 또는 2+/FISH-)** 는 FISH 음성군
+- 따라서 HER2-low 정확도는 **IHC 단독 판독 정확도**에 달림
+- FISH 음성 (Group 1)이지만 IHC 1+ vs 0 경계가 모호한 케이스 → AI 보조 IHC 재판독 가치 ↑
+
+### AI 보조 FISH·IHC 판독 — 2026 Q2 도입 현황
+
+| 도구 | 적용 | 정확도 변화 |
+|------|------|-------------|
+| **Paige FISH / Roche uPath** | FISH 신호 자동 계수 | 일치도 0.85 → 0.92 |
+| **Lunit SCOPE HER2** | IHC HER2 0/1+ 자동 분류 | Kappa 0.65 → 0.85 |
+| **Visiopharm HER2** | HER2-low 정량 보조 | 연구 단계 |
+
+> 💡 환자 실전 질문: "제 FISH 음성 결과에서 IHC가 0인지 1+인지 모호한 경우, **AI 보조 재판독**을 의뢰할 수 있나요?" — HER2-low 적응증(엔허투) 판단에 직결.
+
 ## 미해결 질문 / 연구 방향
 > 💡 NGS 기반 ERBB2 증폭 검사가 FISH를 대체할 가능성
 >    → **답변 (2026-05)**: **FoundationOne CDx·MSK-IMPACT** 등 NGS가 ERBB2 copy number 정량 가능. 일부 연구에서 FISH와 일치도 90%+ 보고. 그러나 **FDA 표준은 FISH** 여전 — NGS는 보조 또는 다른 변이 동시 검출 시 가치. 표준 대체는 5~10년 추가 필요.
 >
 > 💡 AI 보조 FISH 판독 — Group 2~4 모호군 정확도
->    → **답변**: **Paige FISH·Roche uPath** 등 AI 자동 신호 계수 도구 도입 — 판독자 간 일치도 ↑ (0.85 → 0.92). Group 2~4 모호군에서 추가 세포 계수·표준화 도움. 한국 일부 대형 병원 도입 진행.
+>    → **답변 (2026-06)**: **Paige FISH·Roche uPath·Lunit SCOPE HER2** 등 AI 자동 신호 계수 도구 도입 — IHC 판독자 간 일치도 Kappa 0.65 → 0.85, FISH 0.85 → 0.92. Group 2~4 모호군에서 추가 세포 계수·표준화 도움. **DESTINY-Breast06 1차 적응증 맥락에서 IHC 0/1+ 경계 AI 재판독의 임상 가치 ↑**. 한국 일부 대형 병원 도입 진행.
 
 ## 주의사항
 > ⚠️ FISH 결과가 임상 양상(종양 크기·림프절·재발 속도)과 맞지 않으면 재판독·재검사·세컨드 오피니언을 검토한다.
@@ -205,3 +223,4 @@ DESTINY-Breast04 이후 **IHC 2+ FISH 음성 = HER2-low** 환자도 엔허투 �
 - 2026-05-21: library-check broken link 해소 — FISH/CISH/SISH 원리, ASCO/CAP 5그룹 판정 기준, IHC 2+ 흐름, 재발 시 재검사 필요성 신규 생성
 - 2026-05-24: 보강 — HER2 판정 흐름 통합 다이어그램, Group 2~4 모호군 임상 결정 흐름표, 2026 임상 데이터에서 HER2 판독 중요성 (JNCI 2026·DESTINY-Breast05·09) 추가 (daily-brief 보강)
 - 2026-05-26: 대폭 보강 (library-check Top 2) — 검사 비용·일정·동선 (소요 5~10일·산정특례 5~10만원·외부 의뢰 동선), IHC 2+ 케이스 환자 실전 동선 (확인 4가지·결과 조합 6종·외래 질문 7개), 판독자 간 일치도 70~80% 한계, [[검사결과지읽기도우미]]·[[전이경고신호]]·[[유방암치료트렌드2026]]·[[보험행정]]·[[glossary/용어사전]] 5개 cross-link 추가
+- 2026-06-21: **DESTINY-Breast06 맥락 + AI 보조 FISH·IHC 판독** 섹션 신규 (library-check 보강 추천) — FISH 음성인 HER2-low IHC 0/1+ 경계가 1차 치료 결정 분기점임 설명, AI 3종 도입 현황 표 (Paige/Lunit SCOPE/Visiopharm), 미해결 AI 답변 격상·갱신
