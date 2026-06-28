@@ -26,7 +26,7 @@ socialImage: og-image.png
 ## 진단 — 검사·바이오마커
 
 - [[diagnosis-tests/면역조직화학검사(IHC)|면역조직화학검사 (IHC) — ER·PR·HER2·Ki67 결과 해석]]
-- [[diagnosis-tests/조직검사결과해석|유방 조직검사 결과 해석]] **
+- [[diagnosis-tests/조직검사결과해석|유방 조직검사 결과 해석]]
   - [[diagnosis-tests/조직검사결과해석_병변분류|병변 분류·위험도·치료 결정 — 비증식성·증식성·비정형·ADH·엽상종양]]
   - [[diagnosis-tests/조직검사결과해석_수용체등급|수용체·등급 판독 — ER/PR/HER2/Ki-67/Grade·ASCO 2026 갱신]]
 - [[diagnosis-tests/유전자검사|유전자검사 — BRCA·NGS·유전상담]]
@@ -44,17 +44,17 @@ socialImage: og-image.png
 
 - [[diagnosis-workflow/검사결과지읽기도우미|검사 결과지 읽기 도우미 — 병리·수용체·병기 핵심 항목]]
 - [[diagnosis-workflow/유방암검진2026|유방암 검진 — 한국 국가검진·NCCN·고위험 가이드 2026]]
-- [[diagnosis-workflow/유방암유전상담|유방암 유전상담 — 검사 적응증·가족 동선·보험·심리]] **
+- [[diagnosis-workflow/유방암유전상담|유방암 유전상담 — 검사 적응증·가족 동선·보험·심리]]
   - [[diagnosis-workflow/유방암유전상담_BRCA검사|BRCA 검사 — 적응증·결과 해석·예방 의사결정·PALB2/CHEK2]]
   - [[diagnosis-workflow/유방암유전상담_상담실전|상담 실전 — 진료실 흐름·cascade testing·심리·진료실 질문]]
 - [[diagnosis-workflow/전이경고신호|유방암 전이 경고 신호 — 부위별 증상과 검사 선택]]
-- [[diagnosis-workflow/유방암진단체계|유방암 진단 체계]] **
+- [[diagnosis-workflow/유방암진단체계|유방암 진단 체계]]
   - [[diagnosis-workflow/유방암진단체계_진단흐름|진단 흐름 — 검사 선택 의사결정·시점별 매트릭스·조직검사·IHC·백신 림프절]]
   - [[diagnosis-workflow/유방암진단체계_병기NCCN|병기·NCCN 기준 — TNM 상세·전이 평가·예후 도구·DCIS·양성 종양]]
 
 ## 치료 — 수술·재건
 
-- [[treatment-surgery/유방재건수술|유방 재건수술]] **
+- [[treatment-surgery/유방재건수술|유방 재건수술]]
   - [[treatment-surgery/유방재건수술_방식선택|방식 선택 가이드 — 자가조직·보형물·ADM·시기 결정]]
   - [[treatment-surgery/유방재건수술_실전가이드|실전 가이드 — 써지브라·환자경험·비용·합병증·상담질문]]
 - [[treatment-surgery/유방암수술|유방암 수술]]
@@ -72,14 +72,14 @@ socialImage: og-image.png
   - [[treatment-systemic/호르몬치료_약제별가이드|약제별 가이드 — 타목시펜·AI·OFS·급여기준]]
   - [[treatment-systemic/호르몬치료_부작용관리|부작용 관리 — 관절통·골다공증·임상데이터]]
   - [[treatment-systemic/호르몬치료_신약2026|2026 신약 — ESR1·vepdegestrant·BCI·약제순서]]
-- [[treatment-systemic/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]] **
+- [[treatment-systemic/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]]
   - [[treatment-systemic/TNBC치료_약제치료|약제 상세 — 면역항암·ADC·PARP·화학요법·부작용]]
   - [[treatment-systemic/TNBC치료_임상데이터|임상 데이터 — Lehmann 서브타입·BRCA+ 동선·뇌전이·치료 알고리즘]]
 - [[treatment-systemic/호르몬치료약제비교|호르몬 치료 약제 비교 — 타목시펜·AI·SERD·PROTAC]]
-- <a href="./treatment-systemic/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a> **
+- <a href="./treatment-systemic/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a>
   - [[treatment-systemic/CDK46억제제_약제비교|약제 비교 — 3종 임상·보험·내성 후 선택]]
   - [[treatment-systemic/CDK46억제제_실전가이드|실전 가이드 — 부작용 관리·환자 경험·진료실 질문]]
-- [[treatment-systemic/HER2표적치료|HER2 표적치료]] **
+- [[treatment-systemic/HER2표적치료|HER2 표적치료]]
   - [[treatment-systemic/HER2표적치료_약제가이드|약제 가이드 — 허셉틴·퍼제타·T-DM1·T-DXd·TKI·부작용·임상시험]]
   - [[treatment-systemic/HER2표적치료_신보조2026|신보조·2026 — TCHP·DESTINY-Breast05·09·11·한국 적용]]
 - [[treatment-systemic/HER2-low치료|HER2-low 유방암 치료 — ADC 혁명]]
@@ -101,7 +101,7 @@ socialImage: og-image.png
 - [[treatment-supportive/통증관리|유방암 통증 관리]]
   - [[treatment-supportive/통증관리_단계별|단계별 통증 — 수술·PMPS·CIPN·AI관절통·골전이·말기]]
   - [[treatment-supportive/통증관리_약물관리|약물 관리 — 마약성 진통제·비약물·ADC 부작용]]
-- [[treatment-supportive/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]] **
+- [[treatment-supportive/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
   - [[treatment-supportive/혈관접근장치_종류선택|종류 비교·선택 — 환자 상황별 가이드·삽입·비용·제거]]
   - [[treatment-supportive/혈관접근장치_관리합병증|관리·합병증 — 일상 관리·혈전·감염·보험]]
 
@@ -162,12 +162,12 @@ socialImage: og-image.png
 
 ## 사례
 
-- [[cases/노인유방암|노인 유방암 (70세 이상) — CGA·치료 강도 조정·합병증 관리]] **
+- [[cases/노인유방암|노인 유방암 (70세 이상) — CGA·치료 강도 조정·합병증 관리]]
   - [[cases/노인유방암_평가치료|CGA 평가·치료 결정 — 수술·방사선·항암·호르몬·CDK4/6·합병증·워크플로우]]
   - [[cases/노인유방암_케이스지원|역학·케이스·돌봄 지원 — 환자 프로파일·치료 결과·보호자·요양·연구 방향]]
 - [[cases/장기생존_4기경험담|유방암 4기·전이 장기생존 경험담 모음]]
 - [[cases/임신중유방암_PABC|임신 관련 유방암 (PABC) — 임신 중·산후 진단]]
-- [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]] **
+- [[cases/TCHP항암_요양병원케이스|TCHP 6회 항암 — 요양병원 병행 회복 케이스]]
   - [[cases/TCHP항암_증상관리|TCHP 항암 — 치료 선택·증상관리·호중구 타이밍·요양병원 체크리스트]]
   - [[cases/TCHP항암_사례집|TCHP 항암 — 카페 사례집 (TOP50 2·3·4페이지 + 건국대병원 비교)]]
 
