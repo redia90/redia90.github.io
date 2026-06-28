@@ -48,6 +48,8 @@ const CHILD_PAGES = new Set([
 
 const KoreanExplorer = () =>
   Component.Explorer({
+    folderClickBehavior: "collapse",
+    folderDefaultState: "collapsed",
     mapFn: (node) => {
       const folderNames: Record<string, string> = {
         biology: "생물학·위험인자",
@@ -77,7 +79,7 @@ const KoreanExplorer = () =>
         const underscoreIdx = node.slugSegment.indexOf("_")
         const suffix =
           underscoreIdx !== -1 ? node.slugSegment.slice(underscoreIdx + 1) : node.slugSegment
-        node.displayName = "  " + suffix
+        node.displayName = suffix
       }
     },
   })

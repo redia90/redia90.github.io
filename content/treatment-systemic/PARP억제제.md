@@ -214,7 +214,7 @@ ASCO 2026·SABCS 2025 보고 — OlympiA 10년 결과 잠정 정리:
 [BRCA reversion 검출 여부]
     ↓
 ├── 검출됨 (40~60%): PARP 효과 소실 → 화학요법·면역항암 전환
-└── 미검출: 다른 내성 기전 (PARP1 변이·MDR1·SLFN11)
+── 미검출: 다른 내성 기전 (PARP1 변이·MDR1·SLFN11)
        ↓
    [ATR/WEE1·POLθ 표적 임상시험 등록 가능성]
    [Ceralasertib (ATR), camonsertib, adavosertib (WEE1)]

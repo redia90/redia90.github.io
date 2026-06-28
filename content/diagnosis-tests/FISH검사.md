@@ -44,7 +44,7 @@ IHC 1+  → HER2 음성 = [[HER2-low치료|HER2-low]]
   ↓
 IHC 2+  → FISH **필수** — 본 페이지의 판정 기준 적용
          ├─ FISH 증폭 (+) → HER2 양성 → [[HER2표적치료]]
-         └─ FISH 비증폭 (−) → HER2-low → [[HER2-low치료]]
+         ─ FISH 비증폭 (−) → HER2-low → [[HER2-low치료]]
   ↓
 IHC 3+  → HER2 양성 (FISH 보통 생략)
          → [[HER2표적치료]] 표준
