@@ -170,7 +170,10 @@ socialImage: og-image.png
 | **치료 트렌드 5축 (수술·약물·정밀의학·보험·AI)** | [[research/유방암치료트렌드2026]] | [[research/2026임상연구업데이트]] · 약제별 canonical |
 | **HER2-low 분류 (3+·2+/FISH·1+·0·ultralow)** | [[biology/유방암분자서브타입]] | [[treatment-systemic/HER2-low치료]] (임상 적용) |
 | **유전상담 NCCN 적응증·Cascade·심리** | [[diagnosis-workflow/유방암유전상담]] | [[diagnosis-tests/유전자검사]] (검사 종류·비용) · [[biology/BRCA유전자]] (기전·침투율) |
-| **영상검사 4종 비교·BI-RADS·DBT·치밀유방** | [[diagnosis-imaging/유방영상검사가이드]] | [[diagnosis-workflow/유방암진단체계]] (진단 체계 맥락) |
+| **영상검사 4종 비교·BI-RADS 4 세분류·DBT·치밀유방 흐름도·한국 검진 비용** | [[diagnosis-imaging/유방영상검사가이드]] | [[diagnosis-tests/조직검사결과해석]] (BI-RADS 4A/4B/4C → 조직검사 진입) · [[diagnosis-workflow/유방암진단체계]] |
+| **감시 림프절 실패·ALND 전환·절제연 R0/R1** | [[treatment-surgery/유방암수술]] | [[diagnosis-tests/조직검사결과해석]] (절제연·LVI·EIC 결과지) |
+| **TCHP Nadir Day·요양병원 입소 시점** | [[cases/TCHP항암_요양병원케이스]] | [[treatment-systemic/항암화학요법]] (호중구 표준) |
+| **POSITIVE 5년·호르몬치료 중단 후 임신·18~24개월** | [[treatment-supportive/가임력보존]] | [[treatment-systemic/호르몬치료]] (POSITIVE 요약) |
 | **AI 영상·디지털 병리 (Paige·Lunit·Mirai)** | [[diagnosis-imaging/유방암AI영상]] | [[diagnosis-tests/조직검사결과해석]] (HER2 0/1+ 결과지 맥락) |
 | **콩 이소플라본·파이토에스트로겐·LACE·식품 vs 보충제** | [[nutrition-exercise/호르몬양성식이]] | [[nutrition-exercise/식이영양관리]] (일반 식이 요약) · [[mental-experience/보조요법주의]] (보충제 일반) |
 | **항암 중 식이·생식·날음식 회피·1500kcal** | [[nutrition-exercise/항암중식이주의]] | [[nutrition-exercise/식이영양관리]] (일반 원칙) |
