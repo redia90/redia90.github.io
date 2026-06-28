@@ -1,5 +1,5 @@
 ---
-title: HER2 표적치료 — 약제 가이드
+title: 약제 가이드
 category: treatment-systemic
 parent: "[[HER2표적치료]]"
 tags: [HER2, 허셉틴, 트라스투주맙, 퍼투주맙, T-DM1, T-DXd, 라파티닙, 투카티닙, ADC, 부작용]

@@ -1,5 +1,5 @@
 ---
-title: TNBC 치료 — 임상 데이터·분자 서브타입·치료 알고리즘
+title: 임상 데이터
 category: treatment-systemic
 parent: "[[TNBC치료]]"
 tags: [TNBC, Lehmann_subtype, BL1, BL2, M, MSL, LAR, IM, AR양성, BRCA, 뇌전이, 임상시험, OlympiA, TROPION-Breast02, TROPION-Breast04, ASCENT-04, 치료알고리즘, 2026임상]

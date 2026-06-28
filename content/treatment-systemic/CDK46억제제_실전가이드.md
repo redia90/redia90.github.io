@@ -1,5 +1,5 @@
 ---
-title: CDK4/6 억제제 — 부작용 관리·환자 경험·진료실 가이드
+title: 실전 가이드
 category: treatment-systemic
 parent: "[[CDK46억제제]]"
 tags: [CDK46억제제, 부작용, 호중구감소, 설사, QTc연장, 간독성, 환자경험, 진료실질문, ASCO2026, 가임력, RxPONDER]

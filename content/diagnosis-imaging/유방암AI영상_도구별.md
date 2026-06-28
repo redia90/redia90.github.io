@@ -1,5 +1,5 @@
 ---
-title: 유방암 AI 영상 도구별 상세 — 유방촬영술·DBT·초음파·MRI·병리·위험예측
+title: 도구별 상세
 category: diagnosis-imaging
 tags: [AI영상, AI진단, 디지털병리, DBT, 토모신세시스, CAD, 영상의학AI, 디지털병리AI, MASAI, ScreenPoint, Mirai, Volpara, Lunit, INSIGHT, HER2-low, 한국식약처]
 created: 2026-06-28

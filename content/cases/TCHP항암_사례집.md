@@ -1,5 +1,5 @@
 ---
-title: TCHP 항암 — 카페 사례집 (TOP50 2페이지·3페이지·4페이지 + 건국대병원 비교)
+title: 사례집
 category: cases
 tags: [TCHP, HER2양성, 항암부작용, 카페사례, 응급신호, 완전관해, pCR, 케사일라, 건국대병원, 요양병원]
 created: 2026-06-28

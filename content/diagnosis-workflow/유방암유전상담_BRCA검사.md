@@ -1,5 +1,5 @@
 ---
-title: 유방암 유전상담 — BRCA 검사 적응증·결과 해석·예방 의사결정
+title: BRCA 검사
 category: diagnosis-workflow
 parent: "[[유방암유전상담]]"
 tags: [BRCA, 유전자검사, VUS, 예방적수술, PALB2, CHEK2, ATM, cascade검사, NCCN, OlympiA, POSITIVE]

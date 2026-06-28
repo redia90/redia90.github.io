@@ -1,5 +1,5 @@
 ---
-title: TNBC 치료 — 약제 상세 (면역항암·ADC·PARP·화학요법)
+title: 약제 치료
 category: treatment-systemic
 parent: "[[TNBC치료]]"
 tags: [TNBC, 펨브롤리주맙, 키트루다, 트로델비, PARP억제제, 올라파립, 탈라조파립, 삭시투주맙고비테칸, 다트로웨이, Dato-DXd, ADC, 면역항암제, 백금화학요법, KEYNOTE-522, KEYNOTE-355, ASCENT, ASCENT-04, 부작용]

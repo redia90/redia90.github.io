@@ -1,5 +1,5 @@
 ---
-title: TCHP 항암 — 치료 선택·증상관리·호중구 타이밍·요양병원 체크리스트
+title: 증상 관리
 category: cases
 tags: [TCHP, HER2양성, 항암부작용, 증상관리, 호중구감소, Nadir, 요양병원, 도수치료, 영양주사]
 created: 2026-06-28

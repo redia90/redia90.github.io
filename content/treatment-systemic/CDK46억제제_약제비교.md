@@ -1,5 +1,5 @@
 ---
-title: CDK4/6 억제제 — 약제 비교·임상·보험·내성 후 선택
+title: 약제 비교
 category: treatment-systemic
 parent: "[[CDK46억제제]]"
 tags: [CDK46억제제, 팔보시클립, 리보시클립, 아베마시클립, PALOMA, MONALEESA, MONARCH, NATALEE, monarchE, 내성, PI3K, AKT, 보험]

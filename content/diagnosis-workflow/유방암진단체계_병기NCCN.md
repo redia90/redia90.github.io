@@ -1,5 +1,5 @@
 ---
-title: 유방암 진단 체계 — 병기·NCCN 기준
+title: 병기·NCCN
 category: diagnosis-workflow
 parent: "[[유방암진단체계]]"
 tags: [병기, TNM, NCCN, AJCC, 전이검사, 뼈스캔, PET-CT, 예후, Predict, DCIS, 양성종양]

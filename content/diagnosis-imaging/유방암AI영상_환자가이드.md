@@ -1,5 +1,5 @@
 ---
-title: 유방암 AI 영상 — 환자 가이드 (실전 동선·진료실 질문·Q2 2026 갱신·AI 윤리)
+title: 환자 가이드
 category: diagnosis-imaging
 tags: [AI영상, 환자가이드, 진료실질문, 치밀유방, DBT, HER2-low, AI윤리, 한국AI, 루닛, ASCO2026]
 created: 2026-06-28
