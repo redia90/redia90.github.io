@@ -12,7 +12,7 @@ socialImage: og-image.png
 
 > 이 위키는 진료를 대신하지 않습니다. 검사 결과, 치료 선택, 약 복용, 증상 변화는 반드시 담당 의료진과 상의하세요.
 
-<!-- 사이드바 Explorer 기준 74개 문서 · 15개 카테고리 -->
+<!-- 사이드바 Explorer 기준 79개 문서 · 15개 카테고리 -->
 
 ## 생물학·위험인자
 
@@ -53,7 +53,10 @@ socialImage: og-image.png
 
 - [[treatment-systemic/신보조화학요법|신보조화학요법 (수술 전 항암)]]
 - [[treatment-systemic/항암화학요법|유방암 항암화학요법]]
-- [[treatment-systemic/호르몬치료|유방암 호르몬 치료]]
+- [[treatment-systemic/호르몬치료|유방암 호르몬 치료 (허브)]]
+  - [[treatment-systemic/호르몬치료_약제별가이드|└ 약제별 가이드 — 타목시펜·AI·OFS·급여기준]]
+  - [[treatment-systemic/호르몬치료_부작용관리|└ 부작용 관리 — 관절통·골다공증·임상데이터]]
+  - [[treatment-systemic/호르몬치료_신약2026|└ 2026 신약 — ESR1·vepdegestrant·BCI·약제순서]]
 - [[treatment-systemic/TNBC치료|트리플 네거티브 유방암 (TNBC) 치료]]
 - [[treatment-systemic/호르몬치료약제비교|호르몬 치료 약제 비교 — 타목시펜·AI·SERD·PROTAC]]
 - <a href="./treatment-systemic/CDK46%EC%96%B5%EC%A0%9C%EC%A0%9C" class="internal"><span class="no-break">CDK4/6</span> 억제제 — 입랜스·키스칼리·버제니오</a>
@@ -72,7 +75,9 @@ socialImage: og-image.png
 - <a href="./treatment-supportive/%EB%A6%BC%ED%94%84%EB%B6%80%EC%A2%85" class="internal">림프부종 — <span class="no-break">예방·진단·치료·어깨/팔</span> 재활</a>
 - [[treatment-supportive/약사협진_약물상호작용|약사 협진 — 약물 상호작용·다약제 검토]]
 - [[treatment-supportive/이차암|유방암 치료 후 이차암 (Second Primary Malignancy)]]
-- [[treatment-supportive/통증관리|유방암 통증 관리 — 수술·항암·골전이·말기 단계별]]
+- [[treatment-supportive/통증관리|유방암 통증 관리 (허브)]]
+  - [[treatment-supportive/통증관리_단계별|└ 단계별 통증 — 수술·PMPS·CIPN·AI관절통·골전이·말기]]
+  - [[treatment-supportive/통증관리_약물관리|└ 약물 관리 — 마약성 진통제·비약물·ADC 부작용]]
 - [[treatment-supportive/혈관접근장치|항암 혈관 접근 장치 — PICC와 케모포트]]
 
 ## 연구·통계·최신 동향
