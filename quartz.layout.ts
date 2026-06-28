@@ -7,6 +7,7 @@ const KoreanExplorer = () =>
     folderDefaultState: "collapsed",
     mapFn: (node) => {
       const folderNames: Record<string, string> = {
+        // 최상위 카테고리
         biology: "생물학·위험인자",
         "diagnosis-tests": "진단 — 검사·바이오마커",
         "diagnosis-imaging": "진단 — 영상·AI",
@@ -22,41 +23,32 @@ const KoreanExplorer = () =>
         "preparation-facilities": "생활 — 준비물·기관 선택",
         cases: "사례",
         glossary: "용어사전",
+        // 허브 서브폴더 (폴더명 → 표시 이름)
+        "호르몬치료": "호르몬 치료",
+        "항암화학요법": "항암화학요법",
+        "TNBC치료": "TNBC 치료",
+        "CDK46억제제": "CDK4/6 억제제",
+        "HER2표적치료": "HER2 표적 치료",
+        "통증관리": "통증 관리",
+        "혈관접근장치": "혈관접근장치",
+        "약사협진": "약사 협진",
+        "유방암수술": "유방암 수술",
+        "유방재건수술": "유방 재건수술",
+        "유방암AI영상": "유방암 AI 영상",
+        "조직검사결과해석": "조직검사 결과 해석",
+        "유방암유전상담": "유방암 유전상담",
+        "유방암진단체계": "유방암 진단 체계",
+        "호스피스완화의료": "호스피스·완화의료",
+        "치료준비물": "치료 준비물",
+        "2026임상연구업데이트": "2026 임상연구 업데이트",
+        "노인유방암": "노인 유방암",
+        "TCHP항암": "TCHP 항암 케이스",
+        "운동수면위생": "운동·수면·위생",
       }
 
       if (node.isFolder) {
         const displayName = folderNames[node.slugSegment]
         if (displayName) node.displayName = displayName
-        return
-      }
-
-      // 자식 페이지 목록 (parent 필드 있는 파일들) — 클로저 없이 인라인 정의
-      const childPages = new Set([
-        "2026임상연구업데이트_주요결과", "2026임상연구업데이트_한국적용",
-        "CDK46억제제_실전가이드", "CDK46억제제_약제비교",
-        "HER2표적치료_신보조2026", "HER2표적치료_약제가이드",
-        "TCHP항암_사례집", "TCHP항암_증상관리",
-        "TNBC치료_약제치료", "TNBC치료_임상데이터",
-        "노인유방암_케이스지원", "노인유방암_평가치료",
-        "수면위생가이드", "약사협진_실전가이드", "약사협진_핵심상호작용", "운동가이드",
-        "유방암AI영상_도구별", "유방암AI영상_환자가이드",
-        "유방암수술_2026트렌드", "유방암수술_수술방식", "유방암수술_환자동선",
-        "유방암유전상담_BRCA검사", "유방암유전상담_상담실전",
-        "유방암진단체계_병기NCCN", "유방암진단체계_진단흐름",
-        "유방재건수술_방식선택", "유방재건수술_실전가이드",
-        "조직검사결과해석_병변분류", "조직검사결과해석_수용체등급",
-        "치료준비물_입원수술항암", "치료준비물_카탈로그",
-        "통증관리_단계별", "통증관리_약물관리",
-        "항암화학요법_부작용관리", "항암화학요법_약제회차관리",
-        "혈관접근장치_관리합병증", "혈관접근장치_종류선택",
-        "호르몬치료_부작용관리", "호르몬치료_신약2026", "호르몬치료_약제별가이드",
-        "호스피스완화의료_의사결정", "호스피스완화의료_임상가이드",
-      ])
-
-      if (childPages.has(node.slugSegment)) {
-        const underscoreIdx = node.slugSegment.indexOf("_")
-        node.displayName =
-          underscoreIdx !== -1 ? node.slugSegment.slice(underscoreIdx + 1) : node.slugSegment
       }
     },
   })
