@@ -31,9 +31,9 @@ confidence: high
 
 | 주제 | 페이지 | 핵심 내용 |
 |------|--------|-----------|
-| **약제별 가이드** | [[treatment-systemic/호르몬치료_약제별가이드\|자세히 보기]] | 타목시펜·AI·OFS 기전·복용법·급여기준·환자Q&A |
-| **부작용 관리** | [[treatment-systemic/호르몬치료_부작용관리\|자세히 보기]] | 관절통·골다공증·안면홍조·관리 약제·스톡홀름 25년 데이터 |
-| **2026 신약** | [[treatment-systemic/호르몬치료_신약2026\|자세히 보기]] | ESR1·vepdegestrant·BCI·약제순서 모델·ASCO 2026 |
+| **약제별 가이드** | [[treatment-systemic/호르몬치료/약제별가이드\|자세히 보기]] | 타목시펜·AI·OFS 기전·복용법·급여기준·환자Q&A |
+| **부작용 관리** | [[treatment-systemic/호르몬치료/부작용관리\|자세히 보기]] | 관절통·골다공증·안면홍조·관리 약제·스톡홀름 25년 데이터 |
+| **2026 신약** | [[treatment-systemic/호르몬치료/신약2026\|자세히 보기]] | ESR1·vepdegestrant·BCI·약제순서 모델·ASCO 2026 |
 
 ---
 
@@ -92,7 +92,7 @@ confidence: high
 - [[treatment-supportive/통증관리]] — 호르몬치료 관절통·근육통 관리
 - [[treatment-supportive/약사협진]] — 타목시펜 ↔ SSRI·CDK4/6 ↔ CYP3A4
 - [[treatment-supportive/이차암]] — 타목시펜 자궁내막암·AI 골절 추적
-- [[diagnosis-tests/온코타입DX_RS점수]] — 호르몬 치료 단독으로 충분한지 판단
+- [[research/온코타입DX_RS점수]] — 호르몬 치료 단독으로 충분한지 판단
 - [[diagnosis-tests/유전자발현프로파일링]] — BCI 5년 시점 호르몬 연장 결정
 - [[research/2026임상연구업데이트]] — VERITAC-2/vepdegestrant, 신약 동선
 - [[research/정밀의학도구]] — RSClin·Guardant360·ESR1 검사 동선

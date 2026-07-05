@@ -27,8 +27,8 @@ confidence: high
 
 | 문서 | 내용 |
 |------|------|
-| [[treatment-supportive/약사협진_핵심상호작용\|핵심 약물 상호작용 상세]] | 9가지 핵심 상호작용 (타목시펜↔CYP2D6, CDK4/6↔CYP3A4, QTc, vepdegestrant, capivasertib, inavolisib, alpelisib, PARP, 마약성 진통제, 한약·보충제, OTC, 만성질환 동반약) |
-| [[treatment-supportive/약사협진_실전가이드\|약사협진 실전가이드]] | 협진 절차·환자 준비물·카페 팁·한국 자원·자주 묻는 사례 6건·환자 약 목록 양식·일반약·영양제 Q&A |
+| [[treatment-supportive/약사협진/핵심상호작용\|핵심 약물 상호작용 상세]] | 9가지 핵심 상호작용 (타목시펜↔CYP2D6, CDK4/6↔CYP3A4, QTc, vepdegestrant, capivasertib, inavolisib, alpelisib, PARP, 마약성 진통제, 한약·보충제, OTC, 만성질환 동반약) |
+| [[treatment-supportive/약사협진/실전가이드\|약사협진 실전가이드]] | 협진 절차·환자 준비물·카페 팁·한국 자원·자주 묻는 사례 6건·환자 약 목록 양식·일반약·영양제 Q&A |
 
 ---
 
